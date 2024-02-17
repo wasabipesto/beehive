@@ -1,110 +1,139 @@
 ---
-toc: false
+toc: true
 ---
 
 <style>
-
-.hero {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  font-family: var(--sans-serif);
-  margin: 4rem 0 8rem;
-  text-wrap: balance;
-  text-align: center;
-}
-
-.hero h1 {
+h1.hero {
   margin: 2rem 0;
-  max-width: none;
-  font-size: 14vw;
-  font-weight: 900;
-  line-height: 1;
+  font-size: 3rem;
   background: linear-gradient(30deg, var(--theme-foreground-focus), currentColor);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
-.hero h2 {
+.card {
   margin: 0;
-  max-width: 34em;
-  font-size: 20px;
-  font-style: initial;
-  font-weight: 500;
-  line-height: 1.5;
-  color: var(--theme-foreground-muted);
 }
-
-@media (min-width: 640px) {
-  .hero h1 {
-    font-size: 90px;
-  }
+.webrings table {
+  font: 14px var(--sans-serif);
+  margin: 0;
 }
-
+.webrings td {
+  padding: 0.5rem;
+}
+div.appliance {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 </style>
 
-<div class="hero">
-  <h1>Hello, Observable Framework</h1>
-  <h2>Welcome to your new project! Edit&nbsp;<code style="font-size: 90%;">docs/index.md</code> to change this page.</h2>
-  <a href="https://observablehq.com/framework/getting-started" target="_blank">Get started<span style="display: inline-block; margin-left: 0.25rem;">↗︎</span></a>
-</div>
+<h1 class="hero">Hello, I'm wasabipesto.</h1>
 
-<div class="grid grid-cols-2" style="grid-auto-rows: 504px;">
-  <div class="card">${
-    resize((width) => Plot.plot({
-      title: "Your awesomeness over time 🚀",
-      subtitle: "Up and to the right!",
-      width,
-      y: {grid: true, label: "Awesomeness"},
-      marks: [
-        Plot.ruleY([0]),
-        Plot.lineY(aapl, {x: "Date", y: "Close", tip: true})
-      ]
-    }))
-  }</div>
-  <div class="card">${
-    resize((width) => Plot.plot({
-      title: "How big are penguins, anyway? 🐧",
-      width,
-      grid: true,
-      x: {label: "Body mass (g)"},
-      y: {label: "Flipper length (mm)"},
-      color: {legend: true},
-      marks: [
-        Plot.linearRegressionY(penguins, {x: "body_mass_g", y: "flipper_length_mm", stroke: "species"}),
-        Plot.dot(penguins, {x: "body_mass_g", y: "flipper_length_mm", stroke: "species", tip: true})
-      ]
-    }))
-  }</div>
+I'm an engineer and also a human person.
+
+## About me
+
+I work in building construction as a controls engineer and project manager. I'm interested in thermodynamics, air quality, and building comfort in commercial and industrial settings.
+
+I fiddle with computers, like the one serving you this webpage. I usually build things in python or rust and deploy them in docker. I believe in simplicity, and I believe in interpreting that term liberally.
+
+I run a few tabletop games for my friends and family. I enjoy systems focusing on collaborative worldbuilding, genre-bending narratives, and interesting characters.
+
+I believe in quantifying things when it's possible and helpful. I believe in trying and failing and learning.
+
+---
+
+## My projects
+
+<div class="projects grid grid-cols-4">
+  <a href="https://calibration.city/" target="_blank">
+    <div class="card">
+      <h3>Calibration City</h3>
+      Preciction market calibration and accuracy analysis.
+    </div>
+  </a>
+  <a href="https://nicenumbers.net/" target="_blank">
+    <div class="card">
+      <h3>Nice Numbers</h3>
+      The distributed search for square-cube pandigitals.
+    </div>
+  </a>
+  <a href="https://meme.limo/" target="_blank">
+    <div class="card">
+      <h3>Automeme</h3>
+      A reasonably-fast, reasonably-simple meme generation tool.
+    </div>
+  </a>
+  <a href="https://github.com/wasabipesto/sandiego" target="_blank">
+    <div class="card">
+      <h3>Sandiego</h3>
+      Reclaiming my personal data with nice graphs.
+    </div>
+  </a>
+  <a href="https://github.com/wasabipesto/valinor" target="_blank">
+    <div class="card">
+      <h3>Sandiego</h3>
+      Declaratively running my services in docker.
+    </div>
+  </a>
+  <a href="https://github.com/wasabipesto/beehive" target="_blank">
+    <div class="card">
+      <h3>Beehive</h3>
+      Generating this site with Observable Framework.
+    </div>
+  </a>
+  <a href="https://wasabipesto.com/notion" target="_blank">
+    <div class="card">
+      <h3>Garden</h3>
+      Offloading my brain into Notion.
+    </div>
+  </a>
 </div>
 
 ---
 
-## Next steps
+## Webrings
 
-Here are some ideas of things you could try…
-
-<div class="grid grid-cols-4">
-  <div class="card">
-    Chart your own data using <a href="https://observablehq.com/framework/lib/plot"><code>Plot</code></a> and <a href="https://observablehq.com/framework/javascript/files"><code>FileAttachment</code></a>. Make it responsive using <a href="https://observablehq.com/framework/javascript/display#responsive-display"><code>resize</code></a>.
+<div class="webrings grid grid-cols-4">
+  <div class="card grid-rowspan-2 appliance">
+    <a href="https://applianceri.ng/next?host=wasabipesto.com" target="_blank">
+      <img src="assets/classe-nBoPjadlesc.png" width="200px">
+    </a>
   </div>
   <div class="card">
-    Create a <a href="https://observablehq.com/framework/routing">new page</a> by adding a Markdown file (<code>whatever.md</code>) to the <code>docs</code> folder.
+    <h3>Webring: <a href="https://fediring.net/">Fediring</a></h3>
+    <table>
+      <td><a href="https://fediring.net/previous?host=wasabipesto.com">Previous Entry</a></td>
+      <td style="text-align: right;"><a href="https://fediring.net/next?host=wasabipesto.com">Next Entry</a></td>
+    </table>
   </div>
   <div class="card">
-    Add a drop-down menu using <a href="https://observablehq.com/framework/javascript/inputs"><code>Inputs.select</code></a> and use it to filter the data shown in a chart.
+    <h3>Webring: <a href="https://hotlinewebring.club/">Hotline Webring</a></h3>
+    <table>
+      <td><a href="https://hotlinewebring.club/wasabipesto/previous">Previous Entry</a></td>
+      <td style="text-align: right;"><a href="https://hotlinewebring.club/wasabipesto/next">Next Entry</a></td>
+    </table>
   </div>
   <div class="card">
-    Write a <a href="https://observablehq.com/framework/loaders">data loader</a> that queries a local database or API, generating a data snapshot on build.
-  </div>
-  <div class="card">
-    Import a <a href="https://observablehq.com/framework/javascript/imports">recommended library</a> from npm, such as <a href="https://observablehq.com/framework/lib/leaflet">Leaflet</a>, <a href="https://observablehq.com/framework/lib/dot">GraphViz</a>, <a href="https://observablehq.com/framework/lib/tex">TeX</a>, or <a href="https://observablehq.com/framework/lib/duckdb">DuckDB</a>.
-  </div>
-  <div class="card">
-    Ask for help, or share your work or ideas, on the <a href="https://talk.observablehq.com/">Observable forum</a>.
-  </div>
-  <div class="card">
-    Visit <a href="https://github.com/observablehq/framework">Framework on GitHub</a> and give us a star. Or file an issue if you’ve found a bug!
+    <h3>Webring: <a href="https://webring.bucketfish.me/">Bucket Webring</a></h3>
+    <table>
+      <td><a href="https://webring.bucketfish.me/redirect.html?to=prev&name=wasabipesto">Previous Entry</a></td>
+      <td style="text-align: right;"><a href="https://webring.bucketfish.me/redirect.html?to=next&name=wasabipesto">Next Entry</a></td>
+    </table>
   </div>
 </div>
+
+---
+
+<table>
+  <thead>
+    <th><a href="https://wasabipesto.tumblr.com">tumblr</a></th>
+    <th><a href="https://github.com/wasabipesto">github</a></th>
+    <th><a href="https://api.github.com/users/wasabipesto/keys">ssh</a></th>
+    <th><a href="https://api.github.com/users/wasabipesto/gpg_keys">gpg</a></th>
+    <th><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">copyright</a></th>
+    <th><a href="https://status.wasabipesto.com/">status</a></th>
+  </thead>
+</table>
