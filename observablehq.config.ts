@@ -2,20 +2,17 @@
 export default {
   // The project’s title; used in the sidebar and webpage titles.
   title: "wasabipesto.com",
-
-  // The pages and sections in the sidebar. If you don’t specify this option,
-  // all pages will be listed in alphabetical order. Listing pages explicitly
-  // lets you organize them into sections and have unlisted pages.
-  // pages: [
-  //   {
-  //     name: "Examples",
-  //     pages: [
-  //       {name: "Dashboard", path: "/example-dashboard"},
-  //       {name: "Report", path: "/example-report"}
-  //     ]
-  //   }
-  // ],
-
+  pages: [
+    {
+      name: "About",
+      pages: [
+        {name: "Hardware", path: "/hardware"},
+        {name: "Software", path: "/software"},
+        {name: "Blogroll", path: "/blogroll"},
+        {name: "Cats", path: "/cats"},
+      ]
+    }
+  ],
   // Some additional configuration options and their defaults:
   theme: "coffee", // https://observablehq.com/framework/themes
   head: `<link rel="icon" type="image/png" href="_file/assets/crows.40x40.png">`,
