@@ -48,48 +48,48 @@ I believe in quantifying things when it's possible and helpful. I believe in try
 ## My projects
 
 <div class="projects grid grid-cols-4">
-  <a href="https://calibration.city/" target="_blank">
-    <div class="card">
+  <div class="card">
+    <a href="https://calibration.city/" target="_blank">
       <h3>Calibration City</h3>
       Preciction market calibration and accuracy analysis.
-    </div>
-  </a>
-  <a href="https://nicenumbers.net/" target="_blank">
-    <div class="card">
+    </a>
+  </div>
+  <div class="card">
+    <a href="https://nicenumbers.net/" target="_blank">
       <h3>Nice Numbers</h3>
       The distributed search for square-cube pandigitals.
-    </div>
-  </a>
-  <a href="https://meme.limo/" target="_blank">
-    <div class="card">
+    </a>
+  </div>
+  <div class="card">
+    <a href="https://meme.limo/" target="_blank">
       <h3>Automeme</h3>
       A reasonably-fast, reasonably-simple meme generation tool.
-    </div>
-  </a>
-  <a href="https://github.com/wasabipesto/sandiego" target="_blank">
-    <div class="card">
+    </a>
+  </div>
+  <div class="card">
+    <a href="https://github.com/wasabipesto/sandiego" target="_blank">
       <h3>Sandiego</h3>
       Reclaiming my personal data with nice graphs.
-    </div>
-  </a>
-  <a href="https://github.com/wasabipesto/valinor" target="_blank">
-    <div class="card">
+    </a>
+  </div>
+  <div class="card">
+    <a href="https://github.com/wasabipesto/valinor" target="_blank">
       <h3>Sandiego</h3>
       Declaratively running my services in docker.
-    </div>
-  </a>
-  <a href="https://github.com/wasabipesto/beehive" target="_blank">
-    <div class="card">
+    </a>
+  </div>
+  <div class="card">
+    <a href="https://github.com/wasabipesto/beehive" target="_blank">
       <h3>Beehive</h3>
       Generating this site with Observable Framework.
-    </div>
-  </a>
-  <a href="https://wasabipesto.com/notion" target="_blank">
-    <div class="card">
+    </a>
+  </div>
+  <div class="card">
+    <a href="https://wasabipesto.com/notion" target="_blank">
       <h3>Garden</h3>
       Offloading my brain into Notion.
-    </div>
-  </a>
+    </a>
+  </div>
 </div>
 
 ---

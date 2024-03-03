@@ -55,7 +55,7 @@ This is my general-purpose VPS for hosting random services and whatnot. It's ser
 
 ## Phone: Leandros
 
-The little box glued to my side. Despite its omnipresence, I don't do that much on it. It's mostly for communication, photography, note-taking, reading, and a little social media. I purposefully don't have any games on my phone, and if I feel like I'm stuck in it I try to stay off social media for a day.
+The little box glued to my side. I use it for communication, photography, note-taking, reading, and a little social media. I purposefully don't have any games on my phone.
 
 | Attribute | Value |
 | --- | --- |
@@ -74,7 +74,7 @@ const phone_sizes = FileAttachment("phone_sizes.json").json();
 ```js
 Plot.plot({
   caption: "A plot of my phone's screen sizes over time.",
-  height: 200,
+  height: 150,
   x: {type: "utc", label: "Date Purchased"},
   y: {grid: true, domain: [3,7], label: "Screen Size (in)"},
   marks: [

@@ -22,4 +22,5 @@ export default {
   pager: false, // whether to show previous & next links in the footer
   // root: "docs", // path to the source root for preview
   // output: "dist", // path to the output root for build
+  search: true, // whether to enable search on the project
 };
