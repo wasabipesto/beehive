@@ -10,6 +10,11 @@
         "image": "nicenumbers.png", 
         "description": "The distributed search for square-cube pandigitals."
     },{ 
+        "name": "Beehive", 
+        "link": "https://github.com/wasabipesto/beehive", 
+        "image": "beehive.png", 
+        "description": "Visualizing data on this blog with Observable."
+    },{ 
         "name": "Automeme", 
         "link": "https://meme.limo/", 
         "image": "automeme.png", 
@@ -20,11 +25,6 @@
         "image": "sandiego.png", 
         "description": "Reclaiming my personal data with nice graphs." 
     },{
-        "name": "Beehive", 
-        "link": "https://github.com/wasabipesto/beehive", 
-        "image": "beehive.png", 
-        "description": "Visualizing my data with Observable Framework."
-    },{ 
         "name": "Garden", 
         "link": "https://wasabipesto.com/notion", 
         "image": "garden.png", 

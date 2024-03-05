@@ -21,14 +21,7 @@ h1.hero {
   box-shadow: 0 0 0 0.75px rgba(128, 128, 128, 0.2), 0 6px 12px 0 rgba(0, 0, 0, 0.2);
   aspect-ratio: 2500 / 1900;
 }
-.webrings table {
-  font: 14px var(--sans-serif);
-  margin: 0;
-}
-.webrings td {
-  padding: 0.5rem;
-}
-div.appliance {
+.center {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -58,9 +51,9 @@ const projects = FileAttachment("homepage/projects.json").json();
 ```
 
 ```js
-var items_html = []
+var projects_html = []
 for (const item of projects) {
-    items_html.push(
+    projects_html.push(
       html`
         <div class="card gallery">
           <a href="${item.link}" target="_blank">
@@ -71,51 +64,36 @@ for (const item of projects) {
         </div>`
     )
 }
-display(html`<div class="grid grid-cols-3">${items_html}</div>`)
+display(html`<div class="grid grid-cols-3">${projects_html}</div>`)
 ```
 
 ---
 
-## Webrings
+## Links
 
-<div class="webrings grid grid-cols-4">
-  <div class="card grid-rowspan-2 appliance">
+```js
+const links = FileAttachment("homepage/links.json").json();
+```
+
+```js
+var links_html = []
+for (const item of links) {
+  links_html.push(
+    html`
+      <p>
+        ${item.title}: <a href="${item.link}" target="_blank">${item.link}</a>
+      </p>`
+  )
+}
+```
+
+<div class="grid grid-cols-3">
+  <div class="card center">
     <a href="https://applianceri.ng/next?host=wasabipesto.com" target="_blank">
-      <img src="assets/classe-nBoPjadlesc.png" width="200px">
+      <img src="assets/classe-nBoPjadlesc-500.png" style="max-width: 95%;">
     </a>
   </div>
-  <div class="card">
-    <h3>Webring: <a href="https://fediring.net/">Fediring</a></h3>
-    <table>
-      <td><a href="https://fediring.net/previous?host=wasabipesto.com">Previous Entry</a></td>
-      <td style="text-align: right;"><a href="https://fediring.net/next?host=wasabipesto.com">Next Entry</a></td>
-    </table>
-  </div>
-  <div class="card">
-    <h3>Webring: <a href="https://hotlinewebring.club/">Hotline Webring</a></h3>
-    <table>
-      <td><a href="https://hotlinewebring.club/wasabipesto/previous">Previous Entry</a></td>
-      <td style="text-align: right;"><a href="https://hotlinewebring.club/wasabipesto/next">Next Entry</a></td>
-    </table>
-  </div>
-  <div class="card">
-    <h3>Webring: <a href="https://webring.bucketfish.me/">Bucket Webring</a></h3>
-    <table>
-      <td><a href="https://webring.bucketfish.me/redirect.html?to=prev&name=wasabipesto">Previous Entry</a></td>
-      <td style="text-align: right;"><a href="https://webring.bucketfish.me/redirect.html?to=next&name=wasabipesto">Next Entry</a></td>
-    </table>
+  <div class="card grid-colspan-2">
+    <div style="line-height: 120%; padding: 0 1rem;">${links_html}</div>
   </div>
 </div>
-
----
-
-<table>
-  <thead>
-    <th><a href="https://wasabipesto.tumblr.com">tumblr</a></th>
-    <th><a href="https://github.com/wasabipesto">github</a></th>
-    <th><a href="https://api.github.com/users/wasabipesto/keys">ssh</a></th>
-    <th><a href="https://api.github.com/users/wasabipesto/gpg_keys">gpg</a></th>
-    <th><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">copyright</a></th>
-    <th><a href="https://status.wasabipesto.com/">status</a></th>
-  </thead>
-</table>

@@ -1,0 +1,24 @@
+[
+    {
+        "title": "github",
+        "link": "https://github.com/wasabipesto"
+    },{
+        "title": "tumblr",
+        "link": "https://wasabipesto.tumblr.com"
+    },{
+        "title": "manifold",
+        "link": "https://manifold.markets/wasabipesto"
+    },{
+        "title": "ssh keys",
+        "link": "https://api.github.com/users/wasabipesto/keys"
+    },{
+        "title": "gpg keys",
+        "link": "https://api.github.com/users/wasabipesto/gpg_keys"
+    },{
+        "title": "copyright",
+        "link": "https://creativecommons.org/licenses/by-nc-sa/4.0/"
+    },{
+        "title": "status",
+        "link": "https://status.wasabipesto.com/"
+    }
+]
