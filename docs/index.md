@@ -15,6 +15,12 @@ h1.hero {
 .card {
   margin: 0;
 }
+.gallery img {
+  max-width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 0 0 0.75px rgba(128, 128, 128, 0.2), 0 6px 12px 0 rgba(0, 0, 0, 0.2);
+  aspect-ratio: 2500 / 1900;
+}
 .webrings table {
   font: 14px var(--sans-serif);
   margin: 0;
@@ -47,50 +53,26 @@ I believe in quantifying things when it's possible and helpful. I believe in try
 
 ## My projects
 
-<div class="projects grid grid-cols-4">
-  <div class="card">
-    <a href="https://calibration.city/" target="_blank">
-      <h3>Calibration City</h3>
-      Preciction market calibration and accuracy analysis.
-    </a>
-  </div>
-  <div class="card">
-    <a href="https://nicenumbers.net/" target="_blank">
-      <h3>Nice Numbers</h3>
-      The distributed search for square-cube pandigitals.
-    </a>
-  </div>
-  <div class="card">
-    <a href="https://meme.limo/" target="_blank">
-      <h3>Automeme</h3>
-      A reasonably-fast, reasonably-simple meme generation tool.
-    </a>
-  </div>
-  <div class="card">
-    <a href="https://github.com/wasabipesto/sandiego" target="_blank">
-      <h3>Sandiego</h3>
-      Reclaiming my personal data with nice graphs.
-    </a>
-  </div>
-  <div class="card">
-    <a href="https://github.com/wasabipesto/valinor" target="_blank">
-      <h3>Sandiego</h3>
-      Declaratively running my services in docker.
-    </a>
-  </div>
-  <div class="card">
-    <a href="https://github.com/wasabipesto/beehive" target="_blank">
-      <h3>Beehive</h3>
-      Generating this site with Observable Framework.
-    </a>
-  </div>
-  <div class="card">
-    <a href="https://wasabipesto.com/notion" target="_blank">
-      <h3>Garden</h3>
-      Offloading my brain into Notion.
-    </a>
-  </div>
-</div>
+```js
+const projects = FileAttachment("homepage/projects.json").json();
+```
+
+```js
+var items_html = []
+for (const item of projects) {
+    items_html.push(
+      html`
+        <div class="card gallery">
+          <a href="${item.link}" target="_blank">
+            <h3>${item.name}</h3>
+            <div>${item.description}</div>
+            <p><img src="_file/assets/projects/${item.image}" /></p>
+          </a>
+        </div>`
+    )
+}
+display(html`<div class="grid grid-cols-3">${items_html}</div>`)
+```
 
 ---
 
