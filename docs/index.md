@@ -2,6 +2,20 @@
 toc: true
 ---
 
+```js
+const projects = FileAttachment('homepage/projects.json').json()
+const links = FileAttachment('homepage/links.json').json()
+const images = [
+  // specify these so they get pulled into the build
+  FileAttachment('assets/projects/automeme.png'),
+  FileAttachment('assets/projects/beehive.png'),
+  FileAttachment('assets/projects/calibrationcity.png'),
+  FileAttachment('assets/projects/garden.png'),
+  FileAttachment('assets/projects/nicenumbers.png'),
+  FileAttachment('assets/projects/sandiego.png')
+]
+```
+
 <style>
 h1.hero {
   margin: 2rem 0;
@@ -47,22 +61,18 @@ I believe in quantifying things when it's possible and helpful. I believe in try
 ## My projects
 
 ```js
-const projects = FileAttachment("homepage/projects.json").json();
-```
-
-```js
 var projects_html = []
 for (const item of projects) {
-    projects_html.push(
-      html`
-        <div class="card gallery">
-          <a href="${item.link}" target="_blank">
-            <h3>${item.name}</h3>
-            <div>${item.description}</div>
-            <p><img src="_file/assets/projects/${item.image}" /></p>
-          </a>
-        </div>`
-    )
+  projects_html.push(
+    html.fragment`
+      <div class="card gallery">
+        <a href="${item.link}" target="_blank">
+          <h3>${item.name}</h3>
+          <div>${item.description}</div>
+          <p><img src="_file/assets/projects/${item.image}" /></p>
+        </a>
+      </div>`
+  )
 }
 display(html`<div class="grid grid-cols-3">${projects_html}</div>`)
 ```
@@ -72,14 +82,10 @@ display(html`<div class="grid grid-cols-3">${projects_html}</div>`)
 ## Links
 
 ```js
-const links = FileAttachment("homepage/links.json").json();
-```
-
-```js
 var links_html = []
 for (const item of links) {
   links_html.push(
-    html`
+    html.fragment`
       <p>
         ${item.title}: <a href="${item.link}" target="_blank">${item.link}</a>
       </p>`

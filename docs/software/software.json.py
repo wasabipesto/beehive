@@ -36,6 +36,7 @@ software_items = [
     for item in results
 ]
 
+software_items = sorted(software_items, key=lambda i: i["name"])
 categories = sorted(
     set(item["category"] for item in software_items if item["category"])
 )
