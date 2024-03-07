@@ -1,2 +1,3 @@
+arrow
 python-dotenv
 notion-client

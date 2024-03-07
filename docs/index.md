@@ -37,6 +37,7 @@ h1.hero {
 }
 .center {
   display: flex;
+  text-align: center;
   align-items: center;
   justify-content: center;
 }
@@ -82,24 +83,21 @@ display(html`<div class="grid grid-cols-3">${projects_html}</div>`)
 ## Links
 
 ```js
-var links_html = []
-for (const item of links) {
-  links_html.push(
-    html.fragment`
-      <p>
-        ${item.title}: <a href="${item.link}" target="_blank">${item.link}</a>
-      </p>`
-  )
-}
+const links_html = html`<table style="margin: 1rem">
+  ${links.map(
+    (item) =>
+      html.fragment`<tr><td>${item.title}</td><td><a href="${item.link}" target="_blank">${item.link}</a></td></tr>`
+  )}
+</table>`
 ```
 
 <div class="grid grid-cols-3">
   <div class="card center">
     <a href="https://applianceri.ng/next?host=wasabipesto.com" target="_blank">
-      <img src="assets/classe-nBoPjadlesc-500.png" style="max-width: 95%;">
+      <img src="assets/classe-nBoPjadlesc-500.png" style="max-width: 90%;">
     </a>
   </div>
   <div class="card grid-colspan-2">
-    <div style="line-height: 120%; padding: 0 1rem;">${links_html}</div>
+    <div style="width: 95%;">${links_html}</div>
   </div>
 </div>
