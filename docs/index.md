@@ -86,7 +86,7 @@ display(html`<div class="grid grid-cols-3">${projects_html}</div>`)
 const links_html = html`<table style="margin: 1rem">
   ${links.map(
     (item) =>
-      html.fragment`<tr><td>${item.title}</td><td><a href="${item.link}" target="_blank">${item.link}</a></td></tr>`
+      html.fragment`<tr><td>${item.title}</td><td><a href="${item.link}" target="_blank">${item.text}</a></td></tr>`
   )}
 </table>`
 ```

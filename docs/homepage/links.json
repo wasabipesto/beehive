@@ -1,24 +1,35 @@
 [
     {
         "title": "github",
-        "link": "https://github.com/wasabipesto"
+        "link": "https://github.com/wasabipesto",
+        "text": "github.com/wasabipesto"
     },{
         "title": "tumblr",
-        "link": "https://wasabipesto.tumblr.com"
+        "link": "https://wasabipesto.tumblr.com",
+        "text": "wasabipesto.tumblr.com"
     },{
         "title": "manifold",
-        "link": "https://manifold.markets/wasabipesto"
+        "link": "https://manifold.markets/wasabipesto",
+        "text": "manifold.markets/wasabipesto"
     },{
         "title": "ssh keys",
-        "link": "https://api.github.com/users/wasabipesto/keys"
+        "link": "https://api.github.com/users/wasabipesto/keys",
+        "text": "api.github.com/users/wasabipesto/keys"
     },{
         "title": "gpg keys",
-        "link": "https://api.github.com/users/wasabipesto/gpg_keys"
+        "link": "https://api.github.com/users/wasabipesto/gpg_keys",
+        "text": "api.github.com/users/wasabipesto/gpg_keys"
     },{
         "title": "copyright",
-        "link": "https://creativecommons.org/licenses/by-nc-sa/4.0/"
+        "link": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+        "text": "CC BY-NC-SA 4.0 Deed"
+    },{
+        "title": "email",
+        "link": "mailto://contact@wasabipesto.com",
+        "text": "contact@wasabipesto.com"
     },{
         "title": "status",
-        "link": "https://status.wasabipesto.com/"
+        "link": "https://status.wasabipesto.com/",
+        "text": "status.wasabipesto.com"
     }
 ]
