@@ -11,6 +11,11 @@ export default {
         {name: "Blogroll", path: "/blogroll"},
         {name: "Cats", path: "/cats"},
       ]
+    },{
+      name: "Server",
+      pages: [
+        {name: "Plex", path: "/plex"},
+      ]
     }
   ],
   // Some additional configuration options and their defaults:
