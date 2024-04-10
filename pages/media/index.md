@@ -13,15 +13,21 @@ for (const cat of media) {
   display(html`<h2>${cat.category_name}</h2>`)
   var items_html = []
   for (const item of cat.items) {
-    if (['Album', 'Book', 'Game', 'Other'].includes(item.type) && item.artist) {
-      items_html.push(html.fragment`
-        <div class="card"><h3 style="color: var(--theme-foreground)">${item.title}, ${item.artist}</h3></div>
-      `)
-    } else {
-      items_html.push(html.fragment`
-        <div class="card"><h3 style="color: var(--theme-foreground)">${item.title}</h3></div>
-      `)
+    var full_title = html.fragment`${item.title}`
+    if (item.media_link) {
+      full_title = html.fragment`<a href="${item.media_link}">${item.title}</a>`
     }
+    if (item.artist) {
+      full_title = html.fragment`${full_title}<br /><span style="color: var(--theme-foreground-muted)">${item.artist}</span>`
+    }
+
+    var cover_image = html.fragment``
+    if (item.image_link) {
+      cover_image = html.fragment`<img src="${item.image_link}" width="80" style="margin-right: 1rem;">`
+    }
+    items_html.push(html.fragment`
+      <div class="card"><table style="margin: 0"><td>${cover_image}</td><td width="99%">${full_title}</td></div>
+    `)
   }
   display(html`<div class="grid grid-cols-4">${items_html}</div>`)
 }
