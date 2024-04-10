@@ -4,28 +4,24 @@ export default {
   title: "wasabipesto.com",
   pages: [
     {
-      name: "About",
+      name: "Evergreen",
       pages: [
+        {name: "Blogroll", path: "/blogroll"},
         {name: "Hardware", path: "/hardware"},
         {name: "Software", path: "/software"},
-        {name: "Blogroll", path: "/blogroll"},
-        {name: "Cats", path: "/cats"},
-      ]
-    },{
-      name: "Server",
-      pages: [
+        {name: "Media", path: "/media"},
         {name: "Plex", path: "/plex"},
       ]
     }
   ],
   // Some additional configuration options and their defaults:
   theme: "coffee", // https://observablehq.com/framework/themes
-  head: `<link rel="icon" type="image/png" href="_file/assets/crows.40x40.png">`,
+  head: `<link rel="icon" type="image/png" href="/assets/crows.40x40.png">`,
   header: "", // what to show in the header (HTML)
   footer: "", // what to show in the footer (HTML)
   toc: true, // whether to show the table of contents
   pager: false, // whether to show previous & next links in the footer
-  // root: "docs", // path to the source root for preview
+  root: "pages", // path to the source root for preview
   // output: "dist", // path to the output root for build
   search: true, // whether to enable search on the project
 };

@@ -1,6 +1,8 @@
 # My Software
 
-What software do I use regularly?
+What software do I use regularly? These are the programs and apps I use, though of course my needs are going to be different from yours.
+
+This page is generated from my software notes in [Notion](https://wasabipesto.com/notion). It was last updated on ${new Date(FileAttachment('software.json').lastModified).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}.
 
 ```js
 const software = FileAttachment('software.json').json()
@@ -17,7 +19,7 @@ for (const cat of software) {
       `)
     } else {
       items_html.push(html.fragment`
-        <div class="card"><a href="${item.link}" target="_blank"><h3>${item.emoji} ${item.name}</h3>${item.description}</a></div>
+        <div class="card"><a href="${item.link}"><h3>${item.emoji} ${item.name}</h3>${item.description}</a></div>
       `)
     }
   }

@@ -2,7 +2,7 @@
 
 I use RSS for most of my news and light reading since it brings me stories and posts directly from people I care about. I don't have to worry about getting sucked into endless scrolling but there's always plenty of interesting things to read.
 
-Here is a list of all of the feeds registered in FreshRSS, my feed server.
+This page is generated from all of the feeds registered in FreshRSS, my feed server. It was last updated on ${new Date(FileAttachment('blogroll.json').lastModified).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}.
 
 ```js
 const blogroll = FileAttachment('blogroll.json').json()
@@ -29,14 +29,12 @@ for (const grp of blogroll) {
 
     const homepage_link = html.fragment`<tr><td>Homepage</td><td>${
       item.site_url
-        ? html.fragment`<a href="${item.site_url}" target="_blank">${item.site_url}</a>`
+        ? html.fragment`<a href="${item.site_url}">${item.site_url}</a>`
         : 'Link Unavailable'
     }</td></tr>`
 
     const rss_feed_link = html.fragment`<tr><td>RSS Feed</td><td>${
-      item.url
-        ? html.fragment`<a href="${item.url}" target="_blank">${item.url}</a>`
-        : 'Link Unavailable'
+      item.url ? html.fragment`<a href="${item.url}">${item.url}</a>` : 'Link Unavailable'
     }</td></tr>`
 
     items_html.push(html.fragment`
