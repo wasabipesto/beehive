@@ -29,12 +29,14 @@ for (const grp of blogroll) {
 
     const homepage_link = html.fragment`<tr><td>Homepage</td><td>${
       item.site_url
-        ? html.fragment`<a href="${item.site_url}">${item.site_url}</a>`
+        ? html.fragment`<a href="${item.site_url}" target="_blank">${item.site_url}</a>`
         : 'Link Unavailable'
     }</td></tr>`
 
     const rss_feed_link = html.fragment`<tr><td>RSS Feed</td><td>${
-      item.url ? html.fragment`<a href="${item.url}">${item.url}</a>` : 'Link Unavailable'
+      item.url
+        ? html.fragment`<a href="${item.url}" target="_blank">${item.url}</a>`
+        : 'Link Unavailable'
     }</td></tr>`
 
     items_html.push(html.fragment`

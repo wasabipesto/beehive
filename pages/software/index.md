@@ -19,7 +19,7 @@ for (const cat of software) {
       `)
     } else {
       items_html.push(html.fragment`
-        <div class="card"><a href="${item.link}"><h3 style="color: var(--theme-foreground)">${item.emoji} ${item.name}</h3>${item.description}</a></div>
+        <div class="card"><a href="${item.link}" target="_blank"><h3 style="color: var(--theme-foreground)">${item.emoji} ${item.name}</h3>${item.description}</a></div>
       `)
     }
   }
