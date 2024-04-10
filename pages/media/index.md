@@ -15,11 +15,11 @@ for (const cat of media) {
   for (const item of cat.items) {
     if (['Album', 'Book', 'Game', 'Other'].includes(item.type) && item.artist) {
       items_html.push(html.fragment`
-        <div class="card"><h3>${item.title}, ${item.artist}</h3></div>
+        <div class="card"><h3 style="color: var(--theme-foreground)">${item.title}, ${item.artist}</h3></div>
       `)
     } else {
       items_html.push(html.fragment`
-        <div class="card"><h3>${item.title}</h3></div>
+        <div class="card"><h3 style="color: var(--theme-foreground)">${item.title}</h3></div>
       `)
     }
   }

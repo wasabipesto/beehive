@@ -15,11 +15,11 @@ for (const cat of software) {
   for (const item of cat.items) {
     if (item.link == null) {
       items_html.push(html.fragment`
-        <div class="card"><h3>${item.emoji} ${item.name}</h3>${item.description}</div>
+        <div class="card"><h3 style="color: var(--theme-foreground)">${item.emoji} ${item.name}</h3>${item.description}</div>
       `)
     } else {
       items_html.push(html.fragment`
-        <div class="card"><a href="${item.link}"><h3>${item.emoji} ${item.name}</h3>${item.description}</a></div>
+        <div class="card"><a href="${item.link}"><h3 style="color: var(--theme-foreground)">${item.emoji} ${item.name}</h3>${item.description}</a></div>
       `)
     }
   }

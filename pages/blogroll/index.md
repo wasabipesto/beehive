@@ -13,7 +13,7 @@ for (const grp of blogroll) {
   display(html`<h2>${grp.group.title}</h2>`)
   var items_html = []
   for (const item of grp.feeds) {
-    const header = html.fragment`<h3><img src="data:${item.favicon}" width="12px" style="margin: 0 0.5rem;" />${item.title}</h3>`
+    const header = html.fragment`<h3 style="color: var(--theme-foreground)"><img src="data:${item.favicon}" width="12px" style="margin: 0 0.5rem;" />${item.title}</h3>`
 
     const last_updated = html.fragment`<tr><td width="90px">Last Updated</td><td>${item.last_updated}</td></tr>`
 

@@ -92,19 +92,6 @@ I believe in quantifying things when it's possible and helpful. I believe in try
 
 ## Links
 
-```js
-const links = FileAttachment('homepage/links.json').json()
-```
-
-```js
-const links_html = html`<table style="margin: 1rem">
-  ${links.map(
-    (item) =>
-      html.fragment`<tr><td>${item.title}</td><td><a href="${item.link}">${item.text}</a></td></tr>`
-  )}
-</table>`
-```
-
 <div class="grid grid-cols-3">
   <div class="card center">
     <a href="https://applianceri.ng/next?host=wasabipesto.com">
@@ -114,16 +101,16 @@ const links_html = html`<table style="margin: 1rem">
   <div class="card grid-colspan-2">
   <div style="width: 95%; margin: 1rem;">
 
-| what      | where                                                                                                  |
-| --------- | ------------------------------------------------------------------------------------------------------ |
-| github    | [github.com/wasabipesto](https://github.com/wasabipesto)                                               |
-| tumblr    | [wasabipesto.tumblr.com](https://wasabipesto.tumblr.com)                                               |
-| manifold  | [manifold.markets/wasabipesto](https://manifold.markets/wasabipesto)                                   |
-| ssh keys  | [api.github.com/users/wasabipesto/keys](https://api.github.com/users/wasabipesto/keys)                 |
-| gpg keys  | [https://api.github.com/users/wasabipesto/gpg_keys](https://api.github.com/users/wasabipesto/gpg_keys) |
-| copyright | [CC BY-NC-SA 4.0 Deed](https://creativecommons.org/licenses/by-nc-sa/4.0/)                             |
-| email     | [contact@wasabipesto.com](mailto://contact@wasabipesto.com)                                            |
-| status    | [status.wasabipesto.com](https://status.wasabipesto.com/)                                              |
+| what      | where                                                                                          |
+| --------- | ---------------------------------------------------------------------------------------------- |
+| github    | [github.com/wasabipesto](https://github.com/wasabipesto)                                       |
+| tumblr    | [wasabipesto.tumblr.com](https://wasabipesto.tumblr.com)                                       |
+| manifold  | [manifold.markets/wasabipesto](https://manifold.markets/wasabipesto)                           |
+| ssh keys  | [api.github.com/users/wasabipesto/keys](https://api.github.com/users/wasabipesto/keys)         |
+| gpg keys  | [api.github.com/users/wasabipesto/gpg_keys](https://api.github.com/users/wasabipesto/gpg_keys) |
+| copyright | [CC BY-NC-SA 4.0 Deed](https://creativecommons.org/licenses/by-nc-sa/4.0/)                     |
+| email     | [contact@wasabipesto.com](mailto://contact@wasabipesto.com)                                    |
+| status    | [status.wasabipesto.com](https://status.wasabipesto.com/)                                      |
 
   </div>
   </div>
