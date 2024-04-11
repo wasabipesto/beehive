@@ -38,6 +38,7 @@ items = [
         "effect": item["properties"]["Effect"]["number"],
         "enjoyability": item["properties"]["Enjoyability"]["number"],
         "story": item["properties"]["Story"]["number"],
+        "tone": item["properties"]["Tone"]["number"],
         "average": item["properties"]["Average Rating"]["formula"]["number"],
         "media_link": item["properties"]["Media Link"]["url"],
         "image_link": item["properties"]["Image Link"]["url"],
@@ -46,7 +47,7 @@ items = [
     for item in results
 ]
 
-items = [i for i in items if i["title"] and i["type"] and i["average"] >= 4]
+items = [i for i in items if i["title"] and i["type"] and i["average"]]
 items = sorted(items, key=lambda i: i["title"])
 
 for item in items:
@@ -55,14 +56,18 @@ for item in items:
     else:
         item.update({"category_name": item["type"] + "s"})
 
-categories = sorted(set(i["category_name"] for i in items))
+top_items = [i for i in items if i["average"] >= 4]
+categories = sorted(set(i["category_name"] for i in top_items))
 
-output = [
-    {
-        "category_name": category,
-        "items": [i for i in items if i["category_name"] == category],
-    }
-    for category in categories
-]
+output = {
+    "categorized": [
+        {
+            "category_name": category,
+            "items": [i for i in top_items if i["category_name"] == category],
+        }
+        for category in categories
+    ],
+    "all": items,
+}
 
 print(json.dumps(output, indent=4))

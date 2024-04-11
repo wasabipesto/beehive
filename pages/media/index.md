@@ -9,7 +9,7 @@ const media = FileAttachment('media.json').json()
 ```
 
 ```js
-for (const cat of media) {
+for (const cat of media.categorized) {
   display(html`<h2>${cat.category_name}</h2>`)
   var items_html = []
   for (const item of cat.items) {
@@ -35,3 +35,91 @@ for (const cat of media) {
   display(html`<div class="grid grid-cols-4">${items_html}</div>`)
 }
 ```
+
+## Analysis
+
+How do I come up with these scores to pick my favorites? Like many things, if it's worth doing then it's worth over-doing.
+
+For most pieces of media I rate them on five scales:
+
+- Medium: A rating of how well the work takes advantage of the medium it's in. For books, this is mainly focused on the writing style and conventions. For games, this is often about the gameplay loop. For movies and TV this is about how well they utilized the screen and perspective. How good was it at being the thing it is?
+- Story: A rating of the narrative overall. This encompasses the plot, characters, and pacing. Did the story push me forward? Did I find the characters compelling?
+- Tone: How well a work expresses a certain tone. Was there a specific atmosphere? Did I feel engrossed in the world?
+- Enjoyability: Did I like playing/watching/reading this? Was it fun, did it keep me engaged? Often a low bar.
+- Effect: How much of an effect did this work have on me? Do I often return to the concepts, or want to re-watch it over again? Sometimes I come back after a few months to adjust this as time passes.
+
+```js
+function rating_histogram(category) {
+  return Plot.plot({
+    title: 'Histogram of ' + category + ' ratings',
+    //caption: 'A histogram of scores in the ' + category + ' category.',
+    height: 200,
+    x: { label: 'Rating' },
+    y: { grid: true },
+    color: { type: 'ordinal', scheme: 'Observable10' },
+    marks: [
+      Plot.rectY(
+        media.all,
+        Plot.binX(
+          { y: 'count' },
+          { x: category.toLowerCase(), thresholds: 5, fill: 'category_name', tip: true }
+        )
+      ),
+      Plot.ruleY([0])
+    ]
+  })
+}
+```
+
+<div class="grid grid-cols-2">
+  <div class="card">
+    ${rating_histogram("Medium")}
+  </div>
+  <div class="card">
+    ${rating_histogram("Story")}
+  </div>
+  <div class="card">
+    ${rating_histogram("Tone")}
+  </div>
+  <div class="card">
+    ${rating_histogram("Enjoyability")}
+  </div>
+  <div class="card">
+    ${rating_histogram("Effect")}
+  </div>
+  <div class="card">
+    ${rating_histogram("Average")}
+  </div>
+</div>
+
+```js
+const media_top = media.all.filter((item) => item.average >= 4)
+```
+
+```js
+const rating_over_time = Plot.plot({
+  title: 'Top items',
+  height: 400,
+  width: 1200,
+  x: { type: 'utc', inset: 20, label: 'Date', domain: [new Date('2017-01-01'), new Date()] },
+  y: { insetTop: 4, grid: true, label: 'Rating', domain: [3.9, 5] },
+  marks: [
+    Plot.ruleY([0]),
+    Plot.image(media_top, {
+      x: 'date',
+      y: 'average',
+      src: (i) => '/_file/assets-raw/media/posters/' + i.id + '.jpg',
+      r: 20,
+      preserveAspectRatio: 'xMidYMin slice',
+      title: 'title',
+      tip: true
+    })
+  ]
+})
+```
+
+<div class="grid grid-cols-1">
+  <div class="card">
+    ${rating_over_time}
+  </div>
+</div>
