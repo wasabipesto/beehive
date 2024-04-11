@@ -17,13 +17,16 @@ for (const cat of media) {
     if (item.media_link) {
       full_title = html.fragment`<a href="${item.media_link}" target="_blank">${item.title}</a>`
     }
+    if (item.average > 4.75) {
+      full_title = html.fragment`❤️ ${full_title}`
+    }
     if (item.artist) {
       full_title = html.fragment`${full_title}<br /><span style="color: var(--theme-foreground-muted)">${item.artist}</span>`
     }
 
     var cover_image = html.fragment``
     if (item.image_link) {
-      cover_image = html.fragment`<img src="${item.image_link}" width="80" style="margin: 0 0.5rem;">`
+      cover_image = html.fragment`<img src="/_file/assets-raw/media/posters/${item.id}.jpg" width="80" style="margin: 0 0.5rem;">`
     }
     items_html.push(html.fragment`
       <div class="card"><table style="margin: 0"><td>${cover_image}</td><td width="99%">${full_title}</td></div>

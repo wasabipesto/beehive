@@ -13,6 +13,7 @@ results = collect_paginated_api(
 
 items = [
     {
+        "id": item["id"],
         "type": (
             item["properties"]["Type"]["select"]["name"]
             if item["properties"]["Type"].get("select")

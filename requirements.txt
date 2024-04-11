@@ -2,3 +2,4 @@ numpy
 arrow
 python-dotenv
 notion-client
+pillow
