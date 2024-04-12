@@ -41,11 +41,11 @@ Plot.plot({
 
 ## Movies
 
-Most of the movies I download are around 5GB, though there are plenty of exceptions both larger and smaller. I've been moving towards 1080p files for most new releases, which generally have higher bitrates.
+Most of the movies I download are around 5GB each, though there are plenty of exceptions both larger and smaller. I've been moving towards 1080p files for most new releases, which are higher quality but take up a bit more space. At current storage prices, this comes out to about 7 cents for a typical movie.
 
 ```js
 Plot.plot({
-  caption: 'Histogram of movie file sizes.',
+  caption: 'Histogram of movies by file size.',
   height: 250,
   round: true,
   x: { tickFormat: '.1s' },
@@ -55,6 +55,42 @@ Plot.plot({
     Plot.rectY(
       tautulli.library_movies_items,
       Plot.binX({ y: 'count' }, { x: 'file_size', fill: 'video_resolution', tip: true })
+    ),
+    Plot.ruleY([0])
+  ]
+})
+```
+
+Do I have a bias towards more recently released movies? Definitely. But how many of those have been watched more than once?
+
+```js
+Plot.plot({
+  caption: 'Histogram of movies by year released.',
+  height: 250,
+  round: true,
+  x: { tickFormat: 'd' },
+  y: { grid: true },
+  color: { type: 'ordinal', scheme: 'Observable10' },
+  marks: [
+    Plot.rectY(
+      tautulli.library_movies_items,
+      Plot.binX(
+        { y: 'count' },
+        {
+          domain: [1900, 2100],
+          thresholds: 100,
+          x: 'year',
+          tip: true,
+          fill: (i) =>
+            i.play_count > 9
+              ? '10+ plays'
+              : i.play_count > 4
+              ? '5-9 plays'
+              : i.play_count > 0
+              ? '1-4 plays'
+              : '0 plays'
+        }
+      )
     ),
     Plot.ruleY([0])
   ]

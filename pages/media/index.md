@@ -51,7 +51,7 @@ For most pieces of media I rate them on five scales:
 ```js
 function rating_histogram(category) {
   return Plot.plot({
-    title: 'Histogram of ' + category + ' ratings',
+    title: 'Histogram of ' + category.toLowerCase() + ' ratings',
     //caption: 'A histogram of scores in the ' + category + ' category.',
     height: 200,
     x: { label: 'Rating' },
@@ -62,7 +62,12 @@ function rating_histogram(category) {
         media.all,
         Plot.binX(
           { y: 'count' },
-          { x: category.toLowerCase(), thresholds: 5, fill: 'category_name', tip: true }
+          {
+            x: category.toLowerCase(),
+            thresholds: 5,
+            fill: 'category_name',
+            tip: true
+          }
         )
       ),
       Plot.ruleY([0])
@@ -71,7 +76,7 @@ function rating_histogram(category) {
 }
 ```
 
-<div class="grid grid-cols-2">
+<div class="grid grid-cols-3">
   <div class="card">
     ${rating_histogram("Medium")}
   </div>

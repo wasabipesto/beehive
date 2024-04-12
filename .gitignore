@@ -6,4 +6,4 @@ yarn-error.log
 .env
 publish-*.sh
 refresh-*.sh
-/opt/beehive/pages/assets-raw
+pages/assets-raw
