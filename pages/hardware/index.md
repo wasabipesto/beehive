@@ -69,6 +69,22 @@ function histogram_over_day(series, instance, label, width) {
 
 These are the machines and other hardware I use regularly.
 
+Some of the stats on page are generated from data collected by my prometheus instance over the last 6 months. It was last updated on ${new Date(FileAttachment('prometheus.json').lastModified).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}.
+
+## Phone: Leandros
+
+The little box glued to my side. I use it for communication, photography, note-taking, reading, and a little social media. I purposefully don't have any games on my phone. I prefer smaller phones, anything over about 6" is too large to fit in my hand comfortably.
+
+| Attribute        | Value                |
+| ---------------- | -------------------- |
+| Model            | Google Pixel 8, 2023 |
+| Operating System | Android 14           |
+| Launcher         | Niagara              |
+| CPU              | Google Tensor G3     |
+| Case             | dbrand Grip          |
+
+---
+
 ## Desktop: Demoux
 
 This is my general-purpose machine for development, gaming, and anything else I do while at home.
@@ -97,10 +113,10 @@ This is my general-purpose machine for development, gaming, and anything else I 
     ${resize((width) => histogram_over_day(prometheus.cpu_used_pct, "demoux", "CPU", width))}
   </div>
   <div class="card">
-    ${resize((width) => histogram_percent(prometheus.cpu_used_pct, "demoux", "memory", width))}
+    ${resize((width) => histogram_percent(prometheus.memory_used_pct, "demoux", "memory", width))}
   </div>
   <div class="card grid-colspan-2">
-    ${resize((width) => histogram_over_day(prometheus.cpu_used_pct, "demoux", "memory", width))}
+    ${resize((width) => histogram_over_day(prometheus.memory_used_pct, "demoux", "memory", width))}
   </div>
 </div>
 
@@ -127,10 +143,10 @@ This is my media storage server, with enough CPU to transcode lots of streams on
     ${resize((width) => histogram_over_day(prometheus.cpu_used_pct, "celebrimbor", "CPU", width))}
   </div>
   <div class="card">
-    ${resize((width) => histogram_percent(prometheus.cpu_used_pct, "celebrimbor", "memory", width))}
+    ${resize((width) => histogram_percent(prometheus.memory_used_pct, "celebrimbor", "memory", width))}
   </div>
   <div class="card grid-colspan-2">
-    ${resize((width) => histogram_over_day(prometheus.cpu_used_pct, "celebrimbor", "memory", width))}
+    ${resize((width) => histogram_over_day(prometheus.memory_used_pct, "celebrimbor", "memory", width))}
   </div>
 </div>
 
@@ -156,46 +172,9 @@ This is my general-purpose VPS for hosting random services and whatnot. It's ser
     ${resize((width) => histogram_over_day(prometheus.cpu_used_pct, "pailiah", "CPU", width))}
   </div>
   <div class="card">
-    ${resize((width) => histogram_percent(prometheus.cpu_used_pct, "pailiah", "memory", width))}
+    ${resize((width) => histogram_percent(prometheus.memory_used_pct, "pailiah", "memory", width))}
   </div>
   <div class="card grid-colspan-2">
-    ${resize((width) => histogram_over_day(prometheus.cpu_used_pct, "pailiah", "memory", width))}
+    ${resize((width) => histogram_over_day(prometheus.memory_used_pct, "pailiah", "memory", width))}
   </div>
 </div>
-
----
-
-## Phone: Leandros
-
-The little box glued to my side. I use it for communication, photography, note-taking, reading, and a little social media. I purposefully don't have any games on my phone.
-
-| Attribute        | Value                |
-| ---------------- | -------------------- |
-| Model            | Google Pixel 8, 2023 |
-| Operating System | Android 14           |
-| Launcher         | Niagara              |
-| CPU              | Google Tensor G3     |
-| Case             | dbrand Grip          |
-
-I prefer smaller phones, anything over about 6" is too large to fit in my hand comfortably.
-
-```js
-const phone_sizes = FileAttachment('phone_sizes.json').json()
-```
-
-```js
-Plot.plot({
-  caption: "A plot of my phone's screen sizes over time.",
-  height: 150,
-  x: { type: 'utc', label: 'Date Purchased' },
-  y: { grid: true, domain: [3, 7], label: 'Screen Size (in)' },
-  marks: [
-    Plot.dot(phone_sizes, {
-      x: 'date',
-      y: 'screen_size_in',
-      channels: { Name: 'name' },
-      tip: true
-    })
-  ]
-})
-```
