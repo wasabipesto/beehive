@@ -4,6 +4,67 @@ td {
 }
 </style>
 
+```js
+const prometheus = FileAttachment('prometheus.json').json()
+```
+
+```js
+function histogram_percent(series, instance, label, width) {
+  const series_filtered = series.filter((obj) => obj.instance === instance)
+  return Plot.plot({
+    caption: 'Histogram of ' + instance + ' ' + label + ' usage',
+    height: 200,
+    width: width,
+    round: true,
+    x: { percent: true, domain: [0, 100], label: 'Percent of ' + label + ' used' },
+    y: { grid: true },
+    color: { type: 'ordinal', scheme: 'Observable10' },
+    marks: [
+      Plot.rectY(
+        series_filtered,
+        Plot.binX({ y: 'count' }, { x: 'value', domain: [0, 1], thresholds: 50, tip: true })
+      ),
+      Plot.ruleY([0])
+    ]
+  })
+}
+```
+
+```js
+function histogram_over_day(series, instance, label, width) {
+  const series_filtered = series
+    .filter((obj) => obj.instance === instance)
+    .filter((obj) => obj.value > 0)
+    .filter((obj) => obj.value < 1)
+  return Plot.plot({
+    caption: 'Histogram of ' + instance + ' ' + label + ' usage over the day',
+    height: 200,
+    width: width,
+    //round: true,
+    x: { label: 'Hour of day' },
+    y: { percent: true, domain: [0, 100], label: 'Percent of ' + label + ' used' },
+    color: { scheme: 'Magma' },
+    marks: [
+      Plot.rect(
+        series_filtered,
+        Plot.bin(
+          { fill: 'count' },
+          {
+            x: (d) =>
+              new Date(d.time * 1000).getUTCHours() - 5 > 0
+                ? new Date(d.time * 1000).getUTCHours() - 5
+                : new Date(d.time * 1000).getUTCHours() + 19,
+            y: (d) => (d.value < 1 ? d.value : null),
+            thresholds: 15,
+            tip: true
+          }
+        )
+      )
+    ]
+  })
+}
+```
+
 # My Hardware
 
 These are the machines and other hardware I use regularly.
@@ -28,6 +89,23 @@ This is my general-purpose machine for development, gaming, and anything else I 
 |                     | 24” ViewSonic (salvaged)          |
 |                     | 24” Acer (salvaged)               |
 
+<div class="grid grid-cols-3">
+  <div class="card">
+    ${resize((width) => histogram_percent(prometheus.cpu_used_pct, "demoux", "CPU", width))}
+  </div>
+  <div class="card grid-colspan-2">
+    ${resize((width) => histogram_over_day(prometheus.cpu_used_pct, "demoux", "CPU", width))}
+  </div>
+  <div class="card">
+    ${resize((width) => histogram_percent(prometheus.cpu_used_pct, "demoux", "memory", width))}
+  </div>
+  <div class="card grid-colspan-2">
+    ${resize((width) => histogram_over_day(prometheus.cpu_used_pct, "demoux", "memory", width))}
+  </div>
+</div>
+
+---
+
 ## Server: Celebrimbor
 
 This is my media storage server, with enough CPU to transcode lots of streams on Plex.
@@ -41,6 +119,23 @@ This is my media storage server, with enough CPU to transcode lots of streams on
 | Storage          | 6x WD Elements 12TB (shucked) Soft RAID5 |
 | UPS              | CyberPower 1500VA                        |
 
+<div class="grid grid-cols-3">
+  <div class="card">
+    ${resize((width) => histogram_percent(prometheus.cpu_used_pct, "celebrimbor", "CPU", width))}
+  </div>
+  <div class="card grid-colspan-2">
+    ${resize((width) => histogram_over_day(prometheus.cpu_used_pct, "celebrimbor", "CPU", width))}
+  </div>
+  <div class="card">
+    ${resize((width) => histogram_percent(prometheus.cpu_used_pct, "celebrimbor", "memory", width))}
+  </div>
+  <div class="card grid-colspan-2">
+    ${resize((width) => histogram_over_day(prometheus.cpu_used_pct, "celebrimbor", "memory", width))}
+  </div>
+</div>
+
+---
+
 ## Server: Pailiah
 
 This is my general-purpose VPS for hosting random services and whatnot. It's serving you this webpage unless you hit Cloudflare's cache.
@@ -52,6 +147,23 @@ This is my general-purpose VPS for hosting random services and whatnot. It's ser
 | CPU              | Intel Xeon E3-1245v2       |
 | RAM              | 32 GB 1333 MHz             |
 | Storage          | 3×2 TB HDD SATA Soft RAID1 |
+
+<div class="grid grid-cols-3">
+  <div class="card">
+    ${resize((width) => histogram_percent(prometheus.cpu_used_pct, "pailiah", "CPU", width))}
+  </div>
+  <div class="card grid-colspan-2">
+    ${resize((width) => histogram_over_day(prometheus.cpu_used_pct, "pailiah", "CPU", width))}
+  </div>
+  <div class="card">
+    ${resize((width) => histogram_percent(prometheus.cpu_used_pct, "pailiah", "memory", width))}
+  </div>
+  <div class="card grid-colspan-2">
+    ${resize((width) => histogram_over_day(prometheus.cpu_used_pct, "pailiah", "memory", width))}
+  </div>
+</div>
+
+---
 
 ## Phone: Leandros
 

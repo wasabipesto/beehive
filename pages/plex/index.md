@@ -8,7 +8,7 @@ Part of the purpose of my home server is to download, process, and serve media t
 
 ## Libraries
 
-My two main libraries are Movies and TV. On the server there are ${tautulli.library_movies.count} movies, which have been watched a total of ${tautulli.library_movies.plays} times. In the TV library there are ${tautulli.library_tv.count} shows with a total of ${tautulli.library_tv.parent_count} seasons and ${tautulli.library_tv.child_count} episodes, watched a total of ${tautulli.library_tv.plays} times.
+My two main libraries are Movies and TV. On the server there are ${tautulli.library_movies.count.toLocaleString("en-US")} movies, which have been watched a total of ${tautulli.library_movies.plays.toLocaleString("en-US")} times. In the TV library there are ${tautulli.library_tv.count.toLocaleString("en-US")} shows with a total of ${tautulli.library_tv.parent_count.toLocaleString("en-US")} seasons and ${tautulli.library_tv.child_count.toLocaleString("en-US")} episodes, watched a total of ${tautulli.library_tv.plays.toLocaleString("en-US")} times.
 
 In the last month the most popular movie has been ${tautulli.popular_movies.rows[0].title}, watched ${tautulli.popular_movies.rows[0].total_plays} times by ${tautulli.popular_movies.rows[0].users_watched} people. The most popular TV show has been ${tautulli.popular_tv.rows[0].title}, streamed by ${tautulli.popular_tv.rows[0].users_watched} people.
 
