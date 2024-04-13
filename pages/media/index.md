@@ -32,7 +32,7 @@ for (const cat of media.categorized) {
       <div class="card"><table style="margin: 0"><td>${cover_image}</td><td width="99%">${full_title}</td></div>
     `)
   }
-  display(html`<div class="grid grid-cols-4">${items_html}</div>`)
+  display(html`<div class="grid grid-cols-4" style="grid-auto-rows: auto;">${items_html}</div>`)
 }
 ```
 
@@ -98,19 +98,19 @@ function rating_histogram(category) {
 </div>
 
 ```js
-const media_top = media.all.filter((item) => item.average >= 4)
-```
-
-```js
+const chart_start = new Date('2017-01-01')
+const media_filtered = media.all
+  .filter((item) => item.average >= 4)
+  .filter((item) => new Date(item.date) >= chart_start)
 const rating_over_time = Plot.plot({
   title: 'Top items',
   height: 400,
   width: 1200,
-  x: { type: 'utc', inset: 20, label: 'Date', domain: [new Date('2017-01-01'), new Date()] },
+  x: { type: 'utc', inset: 20, label: 'Date', domain: [chart_start, new Date()] },
   y: { insetTop: 4, grid: true, label: 'Rating', domain: [3.9, 5] },
   marks: [
     Plot.ruleY([0]),
-    Plot.image(media_top, {
+    Plot.image(media_filtered, {
       x: 'date',
       y: 'average',
       src: (i) => '/_file/assets-raw/media/posters/' + i.id + '.jpg',
