@@ -48,42 +48,42 @@ I believe in quantifying things when it's possible and helpful. I believe in try
   <a href="https://calibration.city/">
     <h3>Calibration City</h3>
     <div>Preciction market calibration and accuracy analysis.</div>
-    <p><img src="/assets/projects/calibrationcity.png" /></p>
+    <p><img src="homepage/projects/calibrationcity.png" /></p>
   </a>
   </div>
   <div class="card gallery">
   <a href="https://nicenumbers.net/">
     <h3>Nice Numbers</h3>
     <div>The distributed search for square-cube pandigitals.</div>
-    <p><img src="/assets/projects/nicenumbers.png" /></p>
+    <p><img src="homepage/projects/nicenumbers.png" /></p>
   </a>
   </div>
   <div class="card gallery">
   <a href="https://github.com/wasabipesto/beehive">
     <h3>Beehive</h3>
     <div>Visualizing data on this blog with Observable.</div>
-    <p><img src="/assets/projects/beehive.png" /></p>
+    <p><img src="homepage/projects/beehive.png" /></p>
   </a>
   </div>
   <div class="card gallery">
   <a href="https://meme.limo/">
     <h3>Automeme</h3>
     <div>A reasonably-fast, reasonably-simple meme generation tool.</div>
-    <p><img src="/assets/projects/automeme.png" /></p>
+    <p><img src="homepage/projects/automeme.png" /></p>
   </a>
   </div>
   <div class="card gallery">
   <a href="https://github.com/wasabipesto/sandiego">
     <h3>Sandiego</h3>
     <div>Reclaiming my personal data with nice graphs.</div>
-    <p><img src="/assets/projects/sandiego.png" /></p>
+    <p><img src="homepage/projects/sandiego.png" /></p>
   </a>
   </div>
   <div class="card gallery">
   <a href="https://wasabipesto.com/notion">
     <h3>Garden</h3>
     <div>Offloading my brain into Notion.</div>
-    <p><img src="/assets/projects/garden.png" /></p>
+    <p><img src="homepage/projects/garden.png" /></p>
   </a>
   </div>
 </div>
@@ -95,7 +95,7 @@ I believe in quantifying things when it's possible and helpful. I believe in try
 <div class="grid grid-cols-3">
   <div class="card center">
     <a href="https://applianceri.ng/next?host=wasabipesto.com">
-      <img src="assets/classe-nBoPjadlesc-500.png" style="max-width: 90%;">
+      <img src="homepage/classe-nBoPjadlesc.500x334.png" style="max-width: 90%;">
     </a>
   </div>
   <div class="card grid-colspan-2">

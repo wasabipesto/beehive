@@ -43,14 +43,15 @@ def get_data(query):
 
 
 output = {
-    "memory_used_bytes": get_data(
-        "(node_memory_MemTotal_bytes - node_memory_MemAvailable_bytes)",
-    ),
+    # "memory_used_bytes": get_data("(node_memory_MemTotal_bytes - node_memory_MemAvailable_bytes)"),
     "memory_used_pct": get_data(
         "(node_memory_MemTotal_bytes - node_memory_MemAvailable_bytes) / node_memory_MemAvailable_bytes",
     ),
     "cpu_used_pct": get_data(
         'avg without (mode,cpu) (1 - rate(node_cpu_seconds_total{mode="idle"}[1m]))',
+    ),
+    "cloudflared_responses": get_data(
+        "rate(cloudflared_tunnel_response_by_code[1m])",
     ),
 }
 

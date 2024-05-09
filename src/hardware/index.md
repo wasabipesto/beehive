@@ -9,20 +9,26 @@ const prometheus = FileAttachment('prometheus.json').json()
 ```
 
 ```js
-function histogram_percent(series, instance, label, width) {
+function histogram_norm(series, instance, label, width, percent) {
+  let domain_y
+  let domain_bin
+  if (percent) {
+    domain_y = [0, 100]
+    domain_bin = [0, 1]
+  }
   const series_filtered = series.filter((obj) => obj.instance === instance)
   return Plot.plot({
-    caption: 'Histogram of ' + instance + ' ' + label + ' usage',
+    caption: 'Histogram of ' + instance + ' ' + label,
     height: 200,
     width: width,
     round: true,
-    x: { percent: true, domain: [0, 100], label: 'Percent of ' + label + ' used' },
+    x: { percent: percent, domain: domain_y, label: label },
     y: { grid: true },
     color: { type: 'ordinal', scheme: 'Observable10' },
     marks: [
       Plot.rectY(
         series_filtered,
-        Plot.binX({ y: 'count' }, { x: 'value', domain: [0, 1], thresholds: 50, tip: true })
+        Plot.binX({ y: 'count' }, { x: 'value', domain: domain_bin, thresholds: 50, tip: true })
       ),
       Plot.ruleY([0])
     ]
@@ -31,18 +37,24 @@ function histogram_percent(series, instance, label, width) {
 ```
 
 ```js
-function histogram_over_day(series, instance, label, width) {
+function histogram_over_day(series, instance, label, width, percent) {
+  let domain_y
+  let domain_bin
+  if (percent) {
+    domain_y = [0, 100]
+    domain_bin = [0, 1]
+  }
   const series_filtered = series
     .filter((obj) => obj.instance === instance)
     .filter((obj) => obj.value > 0)
     .filter((obj) => obj.value < 1)
   return Plot.plot({
-    caption: 'Histogram of ' + instance + ' ' + label + ' usage over the day',
+    caption: 'Histogram of ' + instance + ' ' + label + ' throughout a day',
     height: 200,
     width: width,
     //round: true,
     x: { label: 'Hour of day' },
-    y: { percent: true, domain: [0, 100], label: 'Percent of ' + label + ' used' },
+    y: { percent: percent, domain: domain_y, label: label },
     color: { scheme: 'Magma' },
     marks: [
       Plot.rect(
@@ -75,13 +87,14 @@ Some of the stats on page are generated from data collected by my prometheus ins
 
 The little box glued to my side. I use it for communication, photography, note-taking, reading, and a little social media. I purposefully don't have any games on my phone. I prefer smaller phones, anything over about 6" is too large to fit in my hand comfortably.
 
-| Attribute        | Value                |
-| ---------------- | -------------------- |
-| Model            | Google Pixel 8, 2023 |
-| Operating System | Android 14           |
-| Launcher         | Niagara              |
-| CPU              | Google Tensor G3     |
-| Case             | dbrand Grip          |
+| Attribute        | Value                   |
+| ---------------- | ----------------------- |
+| Model            | Google Pixel 8, 2023    |
+| Operating System | Android 14              |
+| Launcher         | Niagara                 |
+| CPU              | Google Tensor G3        |
+| Case             | dbrand Grip             |
+| Headphones       | Soundcore Liberty 3 Pro |
 
 ---
 
@@ -107,16 +120,16 @@ This is my general-purpose machine for development, gaming, and anything else I 
 
 <div class="grid grid-cols-3">
   <div class="card">
-    ${resize((width) => histogram_percent(prometheus.cpu_used_pct, "demoux", "CPU", width))}
+    ${resize((width) => histogram_norm(prometheus.cpu_used_pct, "demoux", "percent CPU usage", width, true))}
   </div>
   <div class="card grid-colspan-2">
-    ${resize((width) => histogram_over_day(prometheus.cpu_used_pct, "demoux", "CPU", width))}
+    ${resize((width) => histogram_over_day(prometheus.cpu_used_pct, "demoux", "percent CPU usage", width, true))}
   </div>
   <div class="card">
-    ${resize((width) => histogram_percent(prometheus.memory_used_pct, "demoux", "memory", width))}
+    ${resize((width) => histogram_norm(prometheus.memory_used_pct, "demoux", "percent memory usage", width, true))}
   </div>
   <div class="card grid-colspan-2">
-    ${resize((width) => histogram_over_day(prometheus.memory_used_pct, "demoux", "memory", width))}
+    ${resize((width) => histogram_over_day(prometheus.memory_used_pct, "demoux", "percent memory usage", width, true))}
   </div>
 </div>
 
@@ -137,16 +150,22 @@ This is my media storage server, with enough CPU to transcode lots of streams on
 
 <div class="grid grid-cols-3">
   <div class="card">
-    ${resize((width) => histogram_percent(prometheus.cpu_used_pct, "celebrimbor", "CPU", width))}
+    ${resize((width) => histogram_norm(prometheus.cpu_used_pct, "celebrimbor", "percent CPU usage", width, true))}
   </div>
   <div class="card grid-colspan-2">
-    ${resize((width) => histogram_over_day(prometheus.cpu_used_pct, "celebrimbor", "CPU", width))}
+    ${resize((width) => histogram_over_day(prometheus.cpu_used_pct, "celebrimbor", "percent CPU usage", width, true))}
   </div>
   <div class="card">
-    ${resize((width) => histogram_percent(prometheus.memory_used_pct, "celebrimbor", "memory", width))}
+    ${resize((width) => histogram_norm(prometheus.memory_used_pct, "celebrimbor", "percent memory usage", width, true))}
   </div>
   <div class="card grid-colspan-2">
-    ${resize((width) => histogram_over_day(prometheus.memory_used_pct, "celebrimbor", "memory", width))}
+    ${resize((width) => histogram_over_day(prometheus.memory_used_pct, "celebrimbor", "percent memory usage", width, true))}
+  </div>
+  <div class="card">
+    ${resize((width) => histogram_norm(prometheus.cloudflared_responses, "celebrimbor", "requests per second", width, false))}
+  </div>
+  <div class="card grid-colspan-2">
+    ${resize((width) => histogram_over_day(prometheus.cloudflared_responses, "celebrimbor", "requests per second", width, false))}
   </div>
 </div>
 
@@ -166,15 +185,21 @@ This is my general-purpose VPS for hosting random services and whatnot. It's ser
 
 <div class="grid grid-cols-3">
   <div class="card">
-    ${resize((width) => histogram_percent(prometheus.cpu_used_pct, "pailiah", "CPU", width))}
+    ${resize((width) => histogram_norm(prometheus.cpu_used_pct, "pailiah", "percent CPU usage", width, true))}
   </div>
   <div class="card grid-colspan-2">
-    ${resize((width) => histogram_over_day(prometheus.cpu_used_pct, "pailiah", "CPU", width))}
+    ${resize((width) => histogram_over_day(prometheus.cpu_used_pct, "pailiah", "percent CPU usage", width, true))}
   </div>
   <div class="card">
-    ${resize((width) => histogram_percent(prometheus.memory_used_pct, "pailiah", "memory", width))}
+    ${resize((width) => histogram_norm(prometheus.memory_used_pct, "pailiah", "percent memory usage", width, true))}
   </div>
   <div class="card grid-colspan-2">
-    ${resize((width) => histogram_over_day(prometheus.memory_used_pct, "pailiah", "memory", width))}
+    ${resize((width) => histogram_over_day(prometheus.memory_used_pct, "pailiah", "percent memory usage", width, true))}
+  </div>
+  <div class="card">
+    ${resize((width) => histogram_norm(prometheus.cloudflared_responses, "pailiah", "requests per second", width, false))}
+  </div>
+  <div class="card grid-colspan-2">
+    ${resize((width) => histogram_over_day(prometheus.cloudflared_responses, "pailiah", "requests per second", width, false))}
   </div>
 </div>

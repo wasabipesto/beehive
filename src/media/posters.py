@@ -11,7 +11,7 @@ from notion_client.helpers import collect_paginated_api
 load_dotenv()
 notion = Client(auth=os.environ["NOTION_API_KEY"])
 
-output_dir = "/opt/beehive/pages/assets-raw/media/posters"
+output_dir = "/opt/beehive/src/assets/media/posters"
 timeout = 30
 
 results = collect_paginated_api(

@@ -1,9 +1,7 @@
 .DS_Store
+.env
 dist/
-pages/.observablehq/cache/
+src/.observablehq/cache/
+src/assets/
 node_modules/
 yarn-error.log
-.env
-publish-*.sh
-refresh-*.sh
-pages/assets-raw
