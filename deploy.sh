@@ -10,7 +10,7 @@ if [ "$1" = "--invalidate-all" ]; then
 fi
 
 if [ "$1" = "--invalidate" ]; then
-    find src/.observablehq/cache -type f -name '$2.json' -exec mv '{}' '{}.bak' \; || exit
+    find src/.observablehq/cache -type f -name "$2.json" -exec mv '{}' '{}.bak' \; || exit
     echo Invalidated data loader $2.
 fi
 
