@@ -41,7 +41,9 @@ Plot.plot({
 
 ## Movies
 
-Most of the movies I download are around 5GB each, though there are plenty of exceptions both larger and smaller. I've been moving towards 1080p files for most new releases, which are higher quality but take up a bit more space. At current storage prices, this comes out to about 7 cents for a typical movie.
+Most of the movies I download are around 5GB each, though there are plenty of exceptions both larger and smaller. Some of my new downloads come in 1080p, which are higher quality but take up a bit more space. At current storage prices, this comes out to about 7 cents for a typical movie.
+
+For quite a while I had lower-quality screens or watched TV from a distance, and so I never really noticed a difference between 720p and 1080p. Over time I've started noticing these differences more and more, and now when I download something I think is visually impressive I'll grab it in 1080p. Eventually I would like to upgrade my entire collection and standardize on 1080p, but that will take a significant storage upgrade to accomplish.
 
 ```js
 Plot.plot({
@@ -61,7 +63,9 @@ Plot.plot({
 })
 ```
 
-Do I have a bias towards more recently released movies? Definitely. But how many of those have been watched more than once?
+Around 80% of the movies I download are brand-new, hot out of the theater. I usually set up automatic requests for any new movie I think is interesting or my users would want to watch. The remaining 20% are movies that have been out for a while or old classics that I (or my users) would like to see. This distribution leads to a significant number of the titles in my collection being more recent (and possibly lower quality, depending on who you ask).
+
+Occasionally I will prune titles that have never been watched, or were specific requests that can be safely deleted. The below chart shows movies in my collection by release year, with breakouts for highly-watched and never-watched movies. 2019 was a great year for the sheer quantity of movies, and a huge number of them were very popular with my users!
 
 ```js
 Plot.plot({
@@ -81,14 +85,7 @@ Plot.plot({
           thresholds: 100,
           x: 'year',
           tip: true,
-          fill: (i) =>
-            i.play_count > 9
-              ? '10+ plays'
-              : i.play_count > 4
-              ? '5-9 plays'
-              : i.play_count > 0
-              ? '1-4 plays'
-              : '0 plays'
+          fill: (i) => (i.play_count > 9 ? '10+ plays' : i.play_count > 0 ? '1-9 plays' : '0 plays')
         }
       )
     ),

@@ -48,6 +48,8 @@ For most pieces of media I rate them on five scales:
 - Enjoyability: Did I like playing/watching/reading this? Was it fun, did it keep me engaged? Often a low bar.
 - Effect: How much of an effect did this work have on me? Do I often return to the concepts, or want to re-watch it over again? Sometimes I come back after a few months to adjust this as time passes.
 
+Below I've broken out my rating on each scale (plus averages) for each type of media.
+
 ```js
 function rating_histogram(type, category) {
   var series = media.all
@@ -71,6 +73,7 @@ function rating_histogram(type, category) {
 ```
 
 <div class="card">
+<h2>Rating breakdown per media type, per rating scale</h2>
 <table style="max-width: 100%; margin: 0; text-align: center">
   <thead>
     <tr>
@@ -124,13 +127,19 @@ function rating_histogram(type, category) {
 </table>
 </div>
 
+Some trends I've noticed in this data:
+
+- I tend to rate books quite highly on enjoyability, and to a lesser extent both medium and tone. I think this is for two reasons: I find books that I like very enjoyable to read, and I simply don't finish books I don't enjoy.
+- Games and movies often get low scores in the story department. Since these are often shorter-form than books and TV shows, it makes sense that their plots could often be less-developed. TV shows scored a bit behind books, which often set the gold standard for me.
+- Movies are often forgettable! There are many that got very low scores in the effect category because they simply didn't make a lasting impression on me. Several of these were titles I remember quite enjoying, I just don't remember why.
+
 ```js
 const chart_start = new Date('2017-01-01')
 const media_filtered = media.all
   .filter((item) => item.average >= 4)
   .filter((item) => new Date(item.date) >= chart_start)
 const rating_over_time = Plot.plot({
-  title: 'Top items',
+  title: 'Timeline of top-rated items',
   height: 400,
   width: 1200,
   x: { type: 'utc', inset: 20, label: 'Date', domain: [chart_start, new Date()] },
@@ -155,3 +164,5 @@ const rating_over_time = Plot.plot({
     ${rating_over_time}
   </div>
 </div>
+
+This timeline is a bit of a wash, but I think it's neat enough to show anyways. The problem is that many of these dates are not accurate, or they don't accurately depict when I first encountered the media. It's especially bad for TV shows: Do you note when you finished the first season, or the last time you watched an episode? What about re-watching? For most of these I just put the time it was most significant in my life and eyeballed some of the dates from before I kept this media log.
