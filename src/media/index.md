@@ -49,26 +49,20 @@ For most pieces of media I rate them on five scales:
 - Effect: How much of an effect did this work have on me? Do I often return to the concepts, or want to re-watch it over again? Sometimes I come back after a few months to adjust this as time passes.
 
 ```js
-function rating_histogram(category) {
+function rating_histogram(type, category) {
+  var series = media.all
+  if (type) {
+    series = series.filter((obj) => obj.type === type)
+  }
   return Plot.plot({
-    title: 'Histogram of ' + category.toLowerCase() + ' ratings',
-    //caption: 'A histogram of scores in the ' + category + ' category.',
-    height: 200,
-    x: { label: 'Rating' },
-    y: { grid: true },
-    color: { type: 'ordinal', scheme: 'Observable10' },
+    width: 200,
+    height: 100,
+    x: { label: null, domain: [0, 5] },
+    y: { label: null, ticks: [] },
     marks: [
       Plot.rectY(
-        media.all,
-        Plot.binX(
-          { y: 'count' },
-          {
-            x: category.toLowerCase(),
-            thresholds: 5,
-            fill: 'category_name',
-            tip: true
-          }
-        )
+        series,
+        Plot.binX({ y: 'count' }, { x: category, thresholds: [0, 1, 2, 3, 4, 5] })
       ),
       Plot.ruleY([0])
     ]
@@ -76,25 +70,58 @@ function rating_histogram(category) {
 }
 ```
 
-<div class="grid grid-cols-3">
-  <div class="card">
-    ${rating_histogram("Medium")}
-  </div>
-  <div class="card">
-    ${rating_histogram("Story")}
-  </div>
-  <div class="card">
-    ${rating_histogram("Tone")}
-  </div>
-  <div class="card">
-    ${rating_histogram("Enjoyability")}
-  </div>
-  <div class="card">
-    ${rating_histogram("Effect")}
-  </div>
-  <div class="card">
-    ${rating_histogram("Average")}
-  </div>
+<div class="card">
+<table style="max-width: 100%; margin: 0; text-align: center">
+  <thead>
+    <tr>
+      <td></td>
+      <td>Medium</td>
+      <td>Story</td>
+      <td>Tone</td>
+      <td>Enjoyability</td>
+      <td>Effect</td>
+      <td>Average</td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="vertical-align: middle">Books</td>
+      <td>${rating_histogram("Book", "medium")}</td>
+      <td>${rating_histogram("Book", "story")}</td>
+      <td>${rating_histogram("Book", "tone")}</td>
+      <td>${rating_histogram("Book", "enjoyability")}</td>
+      <td>${rating_histogram("Book", "effect")}</td>
+      <td>${rating_histogram("Book", "average")}</td>
+    </tr>
+    <tr>
+      <td style="vertical-align: middle">Games</td>
+      <td>${rating_histogram("Game", "medium")}</td>
+      <td>${rating_histogram("Game", "story")}</td>
+      <td>${rating_histogram("Game", "tone")}</td>
+      <td>${rating_histogram("Game", "enjoyability")}</td>
+      <td>${rating_histogram("Game", "effect")}</td>
+      <td>${rating_histogram("Game", "average")}</td>
+    </tr>
+    <tr>
+      <td style="vertical-align: middle">Movies</td>
+      <td>${rating_histogram("Movie", "medium")}</td>
+      <td>${rating_histogram("Movie", "story")}</td>
+      <td>${rating_histogram("Movie", "tone")}</td>
+      <td>${rating_histogram("Movie", "enjoyability")}</td>
+      <td>${rating_histogram("Movie", "effect")}</td>
+      <td>${rating_histogram("Movie", "average")}</td>
+    </tr>
+    <tr>
+      <td style="vertical-align: middle">TV Series</td>
+      <td>${rating_histogram("TV Series", "medium")}</td>
+      <td>${rating_histogram("TV Series", "story")}</td>
+      <td>${rating_histogram("TV Series", "tone")}</td>
+      <td>${rating_histogram("TV Series", "enjoyability")}</td>
+      <td>${rating_histogram("TV Series", "effect")}</td>
+      <td>${rating_histogram("TV Series", "average")}</td>
+    </tr>
+  </tbody>
+</table>
 </div>
 
 ```js
