@@ -12,7 +12,7 @@ api_base = os.environ["PROMETHEUS_API_BASE"]
 
 def get_data(query):
     end = time.time()
-    start = end - 6 * 30 * 24 * 60 * 60  # start is 6 months ago
+    start = end - 1 * 30 * 24 * 60 * 60  # start is 1 month ago
     step = 60 * 60  # interval is 1 hour
     params = {
         "query": query,

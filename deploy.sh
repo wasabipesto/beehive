@@ -29,9 +29,15 @@ cp -r src/assets/* dist/_file/assets/
 rm -r ${DEPLOY_PATH}/${DEV_SITE}/*
 cp -r dist/* ${DEPLOY_PATH}/${DEV_SITE}/
 echo Deployed to https://${DEV_SITE}
-read -rsp $'Press any key to proceed to prod...\n' -n1 key
 
-# copy to beta site
+echo -n "Type \"prod\" to proceed to prod: "
+read input
+if [[ "$input" != "prod" ]]; then
+    echo "Deployment terminated."
+    exit
+fi
+
+# copy to prod site
 rm -r ${DEPLOY_PATH}/${PROD_SITE}/*
 cp -r dist/* ${DEPLOY_PATH}/${PROD_SITE}/
 echo Deployed to https://${PROD_SITE}
