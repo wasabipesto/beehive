@@ -59,3 +59,5 @@ for i in items:
             print(f"Saved {image_link} to {file_path}")
         except:
             print(f"Failed to download {image_link}")
+
+print("All files up to date.")

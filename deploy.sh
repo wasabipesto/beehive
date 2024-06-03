@@ -18,7 +18,10 @@ fi
 rm -rf dist
 yarn observable build || exit
 
-# copy static assets
+echo Building RSS feed...
+python3 src/feed/generate_feed.py src/assets/feed
+
+echo Copying static assets...
 mkdir dist/_file/assets
 cp -r src/assets/* dist/_file/assets/
 

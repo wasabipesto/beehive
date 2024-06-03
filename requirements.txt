@@ -3,3 +3,6 @@ arrow
 python-dotenv
 notion-client
 pillow
+python-frontmatter
+markdown2
+feedgen

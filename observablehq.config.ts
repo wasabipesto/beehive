@@ -10,13 +10,17 @@ export default {
         {name: "Hardware", path: "/hardware"},
         {name: "Software", path: "/software"},
         {name: "Media", path: "/media"},
+      ]
+    },{
+      name: "Server",
+      pages: [
         {name: "Plex", path: "/plex"},
       ]
     }
   ],
   // Some additional configuration options and their defaults:
   theme: "coffee", // https://observablehq.com/framework/themes
-  head: `<link rel="icon" type="image/png" href="/homepage/crows.40x40.png">`,
+  head: `<link rel="icon" type="image/png" href="/homepage/crows.40x40.png"><link rel="alternate" type="application/rss+xml" title="RSS" href="/_file/assets/feed/rss.xml" />`,
   header: "", // what to show in the header (HTML)
   footer: "", // what to show in the footer (HTML)
   toc: true, // whether to show the table of contents
