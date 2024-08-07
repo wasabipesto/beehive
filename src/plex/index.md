@@ -74,7 +74,7 @@ Plot.plot({
   round: true,
   x: { tickFormat: 'd' },
   y: { grid: true },
-  color: { type: 'ordinal', scheme: 'Observable10' },
+  color: { type: 'ordinal', scheme: 'Observable10', legend: true },
   marks: [
     Plot.rectY(
       tautulli.library_movies_items,
