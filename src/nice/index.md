@@ -1,3 +1,11 @@
+```js
+const bases = FileAttachment('bases.json').json()
+```
+
+```js
+const chunks = FileAttachment('chunks.json').json()
+```
+
 <style>
 .inline {
   max-width: 640px
@@ -244,6 +252,8 @@ const user_2_sqube = squbify(user_2_num, user_2_base)
 
 Wait, you couldn’t find any? Are you sure you looked everywhere?
 
+Let's plot the number of unique digits for a whole bunch of numbers in a whole bunch of bases:
+
 ```js
 const bunch_of_squbes_more_bases = []
 for (let base = 4; base <= 26; base++) {
@@ -268,7 +278,7 @@ Plot.plot({
   x: { label: 'Number' },
   y: { label: 'Base' },
   color: {
-    label: 'Digits in sqube',
+    label: 'Unique digits',
     scheme: 'Magma'
   },
   marks: [
@@ -285,6 +295,8 @@ Plot.plot({
 ```
 
 </div>
+
+You're right, even with all of these options there doesn't seem to be any other nice numbers. Plus my wrists hurt from converting all of those numbers to the other bases.
 
 ## Getting smart
 
@@ -388,6 +400,8 @@ So now when we look at a number, first we'll check if it's in any of those magic
 
 <div class="card inline" style="padding: 0 2rem; max-width: 640px;">
 
+<!-- TODO: Use base data from API. -->
+
 | Base | Start | End    |
 | ---- | ----- | ------ |
 | 10   | 47    | 100    |
@@ -408,9 +422,32 @@ These continue on infinitely, but our search doesn't.
 
 <!-- TODO: Add a card to allow someone to plug in a number, detect the range, and plot it. -->
 
+## Distributed computing
+
+You can build a pretty sweet gaming PC for a few thousand bucks. My desktop computer can chew through these numbers pretty fast, calculating bases and squbes and unique numbers faster than it can print them out on the screen. But we're talking about searching trillions of numbers here, so we'll need more than my desktop.
+
+There's a reason that "supercomputers" aren't just built like one huge gaming PC: they're designed to break up big tasks into hundreds of smaller ones and run them across dozens of machines. If you're a researcher, you can queue up jobs on your friendly local cluster that will eventually run on a random node and get your results back within 3-5 business days. If you're a rnadom guy looking for nice numbers, you can hack together an API server to break up the infinite search field into chunks and connect all of the spare computers you have around the house to it and get results immediately.
+
+The plan is:
+
+1. The server breaks up each base into "fields" of at most a billion numbers each.
+2. The client requests a field and waits for a response.
+3. The server picks the next available field and reserves it for the client.
+4. The client searches the range and sends back any results.
+5. The server checks the results and saves them for analysis.
+6. ???
+7. Profit!
+
+Instead of one PC running the search script, now we have a dozen computers running at full blast without stepping on each other's toes. Surely we'll find something in no time at all!
+
 ## How long is this thing, anyways?
 
-How far are we going to have to search before we find another nice number? In order to figure that out we need two pieces of information: how large each base range is, and frequent nice numbers are in that range. We know the first bit, so let's focus on the second.
+How far are we going to have to search before we find another nice number? In order to figure that out we need two pieces of information:
+
+1. How large is our search range?
+2. How frequent are nice numbers are in that range?
+
+We know the first bit, so let's focus on the second.
 
 <div class="card inline">
 
@@ -517,9 +554,11 @@ Plot.plot({
 
 </div>
 
-Exponential scaling to the rescue! These ranges are unbelievably massive, and they more than balance out the incredibly small chance that any one number is nice. According to this, there's a very high chance of a nice number past base 120, and maybe even infinitely many out past base 140!
+Exponential scaling to the rescue! These ranges are _unbelievably_ massive, and they more than balance out the incredibly small chance that any one number is nice. According to this, there's a very high chance of a nice number past base 120, and maybe even infinitely many out past base 140!
 
 ## The downside
+
+Now we know how far to search before we think we'll find a nice number, and we've got a whole swarm of computers searching to get there.
 
 Let's see how long it'll take to get to those endless fields of nice numbers...
 
@@ -533,7 +572,9 @@ Let's see how long it'll take to get to those endless fields of nice numbers...
 | to 110 | 9.41e+44    | 50%                     | 2.58e30 years     |
 | to 120 | 9.18e+49    | 100%                    | 2.52e35 years     |
 
-So maybe exponential scaling isn't all that great.
+(Maybe exponential scaling isn't all that great.)
+
+Unbowed, unbent, unbroken, we carry on. This problem is tuly a giant, but if we keep hacking away then there's a (technically) non-zero chance we'll find something! And won't it be funny if the next nice number was something like 69^420?
 
 <!--
 
@@ -545,16 +586,135 @@ We can do better!
 
 -->
 
-<!--
-
 # What we have so far
 
+So far we've exhaustively searched through base 48, and we have detailed analytics into base 42. We've found no nice numbers, though we did find one number that was surprisingly close (4,134,931,983,708). We've found no specific patterns in digit distribution or niceness, but that doesn't mean we've come away empty-handed.
+
+One metric we gather of each base range is the "niceness", or the ratio of uniques to the base (if the niceness of any number is 1, it's a perfectly nice number). This could be useful to see if there's a pattern of specific bases being "nicer" than others. The niceness of each base range seems to be narrowing down on 0.632, which is the value of ${tex`1-1/e`} (and what one would expect if the digit distributions are indeed psuedorandom).
+
+The charts below are reproduced with a bit more color and updated more often at [https://nicenumbers.net](https://nicenumbers.net).
+
+Here we have a plot of all the "almost nice" numbers, mostly numbers that are off by one or two. You can see an arc of each, which increases as the bases get higher.
+
+<div class="card inline">
+
 ```js
-const base_data_from_api = FileAttachment('base_data.json').json()
+const numbers = bases.reduce((acc, base) => acc.concat(base.numbers), [])
+const max_range_end = chunks
+  .filter((item) => item.niceness_mean !== null)
+  .reduce((max, item) => (item.range_end > max ? item.range_end : max), -Infinity)
 ```
 
-So far we've exhaustively searched through base 48, and we have detailed analytics through base 44. We've found no nice numbers, though we did find one number that was surprisingly close (4,134,931,983,708). We've found no specific patterns in digit distribution or niceness, but that doesn't mean we've come away empty-handed.
+```js
+Plot.plot({
+  inset: 10,
+  height: 300,
+  x: { label: 'Number', type: 'log' },
+  y: { label: 'Niceness' },
+  color: { legend: false, reverse: true },
+  marks: [
+    Plot.dot(numbers, {
+      x: 'number',
+      y: 'niceness',
+      channels: { Base: 'base', Uniques: 'num_uniques' },
+      fill: 'currentColor',
+      tip: {
+        format: {
+          fill: false
+        }
+      }
+    }),
+    Plot.tip(['69 is the only known nice number.'], {
+      x: 69,
+      y: 1,
+      dy: 3,
+      anchor: 'top-left'
+    }),
+    Plot.tip(['4,134,931,983,708 is the largest known off-by-one!'], {
+      x: 4134931983708,
+      y: 0.975,
+      dy: -3,
+      anchor: 'bottom-right'
+    }),
+    Plot.tip(['This arc is the "off-by-two" crowd.'], {
+      x: 324147,
+      y: 0.90909,
+      dx: -3,
+      anchor: 'right'
+    }),
+    Plot.ruleY([1])
+  ]
+})
+```
 
-One metric we gather of each base range is the "niceness", or the ratio of uniques to the base (if the niceness of any number is 1, it's a perfectly nice number). This could be useful to see if there's a pattern of specific bases being "nicer" than others.
+</div>
 
--->
+And here we have a plot of the average niceness of each field. The bounding box horizontally contains the search range, which is compressed on the right due to the log plot. The vertical bounds are centered on the niceness mean and extend one standard deviation up and down.
+
+<div class="card inline">
+
+```js
+Plot.plot({
+  insetLeft: 10,
+  height: 300,
+  x: {
+    label: 'Chunk',
+    type: 'log',
+    domain: [45, max_range_end]
+  },
+  y: {
+    label: 'Niceness',
+    domain: [0.35, 0.9]
+  },
+  color: { legend: false },
+  marks: [
+    Plot.rect(chunks, {
+      x1: (i) => i.range_start,
+      x2: (i) => i.range_end,
+      y1: (i) => i.niceness_mean - i.niceness_stdev,
+      y2: (i) => i.niceness_mean + i.niceness_stdev,
+      //stroke: 'black',
+      //strokeWidth: (i) => (i.base_id == 12 ? 1 : 0),
+      fill: 'currentColor',
+      //opacity: 0.5,
+      channels: {
+        Base: 'base_id',
+        'Niceness Mean': 'niceness_mean',
+        'Niceness StDev': 'niceness_stdev'
+      },
+      tip: {
+        format: {
+          base_id: false,
+          fill: false,
+          y: false,
+          strokeWidth: false
+        }
+      }
+    }),
+    Plot.tip(["Base 10's average niceness is skewed high due to 69."], {
+      x: 69,
+      y: 0.775,
+      anchor: 'bottom-left'
+    }),
+    Plot.tip(["Base 12's niceness is surprisingly low."], {
+      x: 236,
+      y: 0.48,
+      anchor: 'top-left'
+    }),
+    Plot.tip(['The first few chunks in each range start low before returning to normal.'], {
+      x: 9.5e10,
+      y: 0.563,
+      anchor: 'top'
+    }),
+    Plot.tip(
+      [
+        'The ranges seem to be approaching a niceness of 0.632, which is what we would expect for a random distribution.'
+      ],
+      { x: 4.5e12, y: 0.685, anchor: 'bottom-right' }
+    ),
+    Plot.ruleY([0.632], { stroke: 'black', opacity: 0.3 })
+  ]
+})
+```
+
+</div>

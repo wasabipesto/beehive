@@ -4,7 +4,7 @@ export default {
   title: "wasabipesto.com",
   pages: [
     {
-      name: "About",
+      name: "Personal",
       pages: [
         {name: "Blogroll", path: "/blogroll"},
         {name: "Hardware", path: "/hardware"},
@@ -12,9 +12,10 @@ export default {
         {name: "Media", path: "/media"},
       ]
     },{
-      name: "Server",
+      name: "Other",
       pages: [
         {name: "Plex", path: "/plex"},
+        {name: "Nice Numbers", path: "/nice"},
       ]
     }
   ],
