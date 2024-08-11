@@ -1,8 +1,9 @@
-numpy
 arrow
-python-dotenv
-notion-client
-pillow
-python-frontmatter
-markdown2
 feedgen
+markdown2
+notion-client
+numpy
+pillow
+python-dotenv
+python-frontmatter
+requests
