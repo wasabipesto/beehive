@@ -26,7 +26,7 @@ for (const cat of media.categorized) {
 
     var cover_image = html.fragment``
     if (item.image_link) {
-      cover_image = html.fragment`<img src="/_file/assets/media/posters/${item.id}.jpg" width="80" style="margin: 0 0.5rem;">`
+      cover_image = html.fragment`<img src="/assets/media/posters/${item.id}.jpg" width="80" style="margin: 0 0.5rem;">`
     }
     items_html.push(html.fragment`
       <div class="card"><table style="margin: 0"><td>${cover_image}</td><td width="99%">${full_title}</td></div>
@@ -149,7 +149,7 @@ const rating_over_time = Plot.plot({
     Plot.image(media_filtered, {
       x: 'date',
       y: 'average',
-      src: (i) => '/_file/assets/media/posters/' + i.id + '.jpg',
+      src: (i) => '/assets/media/posters/' + i.id + '.jpg',
       r: 20,
       preserveAspectRatio: 'xMidYMin slice',
       title: 'title',

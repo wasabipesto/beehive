@@ -105,7 +105,7 @@ I believe in quantifying things when it's possible and helpful. I believe in try
 | --------- | ---------------------------------------------------------------------------------------------- |
 | github    | [github.com/wasabipesto](https://github.com/wasabipesto)                                       |
 | tumblr    | [wasabipesto.tumblr.com](https://wasabipesto.tumblr.com)                                       |
-| site rss  | [feed/rss.xml](/_file/assets/feed/rss.xml)                                                     |
+| site rss  | [feed/rss.xml](/assets/feed/rss.xml)                                                           |
 | manifold  | [manifold.markets/wasabipesto](https://manifold.markets/wasabipesto)                           |
 | ssh keys  | [api.github.com/users/wasabipesto/keys](https://api.github.com/users/wasabipesto/keys)         |
 | gpg keys  | [api.github.com/users/wasabipesto/gpg_keys](https://api.github.com/users/wasabipesto/gpg_keys) |

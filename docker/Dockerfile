@@ -7,6 +7,17 @@ ENV PYTHONUNBUFFERED=1
 ENV VENV_PATH="/opt/venv"
 WORKDIR /opt/beehive
 
+# Define a configurable USER and GROUP variable
+ENV USER=1000
+ENV GROUP=1001
+ENV HOME=/home/beehive
+
+# Create the user and set ownership
+RUN groupadd --gid ${GROUP} beehive && \
+    useradd --uid ${USER} --gid ${GROUP} -s /bin/bash -m beehive && \
+    mkdir -p /home/beehive/.ssh && \
+    echo "beehive ALL=(ALL:ALL) NOPASSWD: ALL" >> /etc/sudoers
+
 # Update and install dependencies
 RUN apt update && apt install -y \
     curl \
@@ -46,4 +57,5 @@ COPY requirements.txt .
 RUN pip install --upgrade pip && pip install -r requirements.txt
 
 # Drop into shell
+USER ${USER}:${GROUP}
 CMD ["bash"]

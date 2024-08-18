@@ -22,8 +22,10 @@ echo Building RSS feed...
 python3 src/feed/generate_feed.py src/assets/feed
 
 echo Copying static assets...
-mkdir dist/_file/assets
-cp -r src/assets/* dist/_file/assets/
+mkdir dist/assets
+cp -r src/assets/* dist/assets/
+
+exit # TODO: update deployment process
 
 # copy to beta site
 rm -r ${DEPLOY_PATH}/${DEV_SITE}/*
