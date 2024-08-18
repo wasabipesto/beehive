@@ -79,11 +79,11 @@ Fine, if you've really looked around and can't figure out what to do next, here'
 
 <div style="height: 50vh;"></div>
 
-# I’m stuck on a particular problem, give me a hint
+## I’m stuck on a particular problem, give me a hint
 
 Did you go do something else for a while? You might find the information you need in an unlikely place. Or maybe you might just have to come back at a different time.
 
-## Sun Station
+### Sun Station
 
 <details>
   <summary>How do I get there?</summary>
@@ -94,7 +94,7 @@ Did you go do something else for a while? You might find the information you nee
 
 <br />
 
-## Hourglass Twins
+### Hourglass Twins
 
 <details>
   <summary>There’s more to explore at Chert’s Camp?</summary>
@@ -130,7 +130,7 @@ Did you go do something else for a while? You might find the information you nee
 
 <br />
 
-## Timber Hearth
+### Timber Hearth
 
 <details>
   <summary>How do I get past the exploding frogs?</summary>
@@ -141,7 +141,7 @@ Did you go do something else for a while? You might find the information you nee
 
 <br />
 
-## Brittle Hollow
+### Brittle Hollow
 
 <details>
   <summary>How do I get into the Black Hole Forge?</summary>
@@ -173,7 +173,7 @@ Did you go do something else for a while? You might find the information you nee
 
 <br />
 
-## Giant’s Deep
+### Giant’s Deep
 
 <details>
   <summary>How do I get to the core?</summary>
@@ -184,7 +184,7 @@ Did you go do something else for a while? You might find the information you nee
 
 <br />
 
-## Dark Bramble
+### Dark Bramble
 
 <details>
   <summary>AAAAAAHHHHHHHHHHHHHHHHHH</summary>
@@ -213,7 +213,7 @@ Did you go do something else for a while? You might find the information you nee
 
 <br />
 
-## The Interloper
+### The Interloper
 
 <details>
   <summary>How do I get inside?</summary>
@@ -224,7 +224,7 @@ Did you go do something else for a while? You might find the information you nee
 
 <br />
 
-## Quantum Moon
+### Quantum Moon
 
 <details>
   <summary>How do I land without it disappearing?</summary>
@@ -242,7 +242,7 @@ Did you go do something else for a while? You might find the information you nee
 
 <br />
 
-## The Stranger
+### The Stranger
 
 <details>
   <summary>How do I get there?</summary>
