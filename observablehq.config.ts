@@ -16,7 +16,9 @@ export default {
       name: 'Other',
       pages: [
         { name: 'Plex', path: '/plex/' },
-        { name: 'Nice Numbers', path: '/nice/' }
+        { name: 'Genesis 3:1', path: '/genesis/' },
+        { name: 'Nice Numbers', path: '/nice/' },
+        { name: 'Outer Wilds', path: '/outer-wilds/' }
       ]
     }
   ],
