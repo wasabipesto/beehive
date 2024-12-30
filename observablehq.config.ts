@@ -24,6 +24,12 @@ export default {
       ]
     },
     {
+      name: 'Wrapped',
+      pages: [
+        { name: 'State of the Apps 2024', path: '/sota-2024/' },
+      ]
+    },
+    {
       name: 'Other',
       pages: [
         { name: 'Plex', path: '/plex/' },
