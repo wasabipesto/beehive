@@ -25,10 +25,7 @@ Plot.plot({
   subtitle: 'Since November 2021',
   y: { grid: true, label: 'emails' },
   marks: [
-    Plot.rectY(
-      sent,
-      Plot.binX({ y: 'count' }, { x: { interval: 'month', value: 'Date' }, fill: '#a6cee3' })
-    ),
+    Plot.rectY(sent, Plot.binX({ y: 'count' }, { x: { interval: 'month', value: 'Date' } })),
     Plot.ruleY([0])
   ]
 })
@@ -42,10 +39,7 @@ Plot.plot({
   subtitle: 'Since May 2024',
   y: { grid: true, label: 'emails' },
   marks: [
-    Plot.rectY(
-      received,
-      Plot.binX({ y: 'count' }, { x: { interval: 'week', value: 'Date' }, fill: '#a6cee3' })
-    ),
+    Plot.rectY(received, Plot.binX({ y: 'count' }, { x: { interval: 'week', value: 'Date' } })),
     Plot.ruleY([0])
   ]
 })

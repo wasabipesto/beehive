@@ -39,6 +39,7 @@ export default {
         { name: 'Outer Wilds', path: '/outer-wilds/' },
         { name: 'AI Crawling', path: '/ai-crawling/' },
         { name: 'Work Emails', path: '/work-emails/' },
+        { name: 'Work Mileage', path: '/work-mileage/' },
       ]
     }
   ],
