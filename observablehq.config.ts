@@ -30,6 +30,7 @@ export default {
         { name: 'Genesis 3:1', path: '/genesis/' },
         { name: 'Nice Numbers', path: '/nice/' },
         { name: 'Outer Wilds', path: '/outer-wilds/' },
+        { name: 'AI Crawling', path: '/ai-crawling/' },
       ]
     }
   ],
