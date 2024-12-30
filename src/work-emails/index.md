@@ -81,3 +81,5 @@ Plot.plot({
   marks: [Plot.rectY(recipients, { x: 'Rank', y: 'Count', fill: 'Company' }), Plot.ruleY([0])]
 })
 ```
+
+At around 150 emails per week, comprising around 30% of my work, we can determine that my total job is a worth a little over 500 email-equivalents per week. At my current salary that's around $3.27 per email-equivalent. On another day I may tally up all of my excel spreadsheets to create a conversion factor between the two, and establish the true breakdown of my work value.
