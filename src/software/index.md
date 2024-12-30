@@ -23,6 +23,6 @@ for (const cat of software) {
       `)
     }
   }
-  display(html`<div class="grid grid-cols-4">${items_html}</div>`)
+  display(html`<div class="grid grid-cols-3">${items_html}</div>`)
 }
 ```

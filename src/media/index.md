@@ -26,13 +26,13 @@ for (const cat of media.categorized) {
 
     var cover_image = html.fragment``
     if (item.image_link) {
-      cover_image = html.fragment`<img src="/assets/media/posters/${item.id}.jpg" width="80" style="margin: 0 0.5rem;">`
+      cover_image = html.fragment`<img src="/assets/media/posters/${item.id}.jpg">`
     }
     items_html.push(html.fragment`
-      <div class="card"><table style="margin: 0"><td>${cover_image}</td><td width="99%">${full_title}</td></div>
+      <div class="card"><table style="margin: 0"><td width="90">${cover_image}</td><td>${full_title}</td></div>
     `)
   }
-  display(html`<div class="grid grid-cols-4" style="grid-auto-rows: auto;">${items_html}</div>`)
+  display(html`<div class="grid grid-cols-3" style="grid-auto-rows: auto;">${items_html}</div>`)
 }
 ```
 

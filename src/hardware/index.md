@@ -23,7 +23,7 @@ function histogram_norm(series, instance, label, width, percent, max) {
   const series_filtered = series.filter((obj) => obj.instance === instance)
   return Plot.plot({
     //caption: 'Histogram of ' + instance + ' ' + label,
-    height: 200,
+    height: 150,
     width: width,
     round: true,
     x: { percent: percent, domain: domain_y, label: label },

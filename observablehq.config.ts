@@ -2,6 +2,7 @@
 export default {
   // The project’s title; used in the sidebar and webpage titles.
   title: 'wasabipesto.com',
+  home: 'Home',
   pages: [
     {
       name: 'Personal',

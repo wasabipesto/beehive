@@ -52,6 +52,6 @@ for (const grp of blogroll) {
       </div>
     `)
   }
-  display(html`<div class="grid grid-cols-3" style="grid-auto-rows: auto;">${items_html}</div>`)
+  display(html`<div class="grid grid-cols-2" style="grid-auto-rows: auto;">${items_html}</div>`)
 }
 ```
