@@ -25,7 +25,7 @@ export default {
   ],
   // Some additional configuration options and their defaults:
   theme: 'coffee', // https://observablehq.com/framework/themes
-  head: `<link rel="icon" type="image/png" href="/homepage/crows.40x40.png"><link rel="alternate" type="application/rss+xml" title="RSS" href="/_file/assets/feed/rss.xml" />`,
+  head: `<link rel="icon" type="image/png" href="/homepage/crows.40x40.png">`,
   header: '', // what to show in the header (HTML)
   footer: '', // what to show in the footer (HTML)
   toc: true, // whether to show the table of contents

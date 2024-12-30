@@ -25,7 +25,7 @@ echo Copying static assets...
 mkdir dist/assets
 cp -r src/assets/* dist/assets/
 
-exit # TODO: update deployment process
+# exit # TODO: update deployment process
 
 # copy to beta site
 rm -r ${DEPLOY_PATH}/${DEV_SITE}/*
