@@ -7,7 +7,7 @@ export default {
   // Defines the sidebar contents.
   pages: [
     {
-      name: 'Personal',
+      name: 'Evergreen',
       pages: [
         { name: 'Blogroll', path: '/blogroll/' },
         { name: 'Hardware', path: '/hardware/' },
@@ -38,6 +38,7 @@ export default {
         { name: 'Nice Numbers', path: '/nice/' },
         { name: 'Outer Wilds', path: '/outer-wilds/' },
         { name: 'AI Crawling', path: '/ai-crawling/' },
+        { name: 'Work Emails', path: '/work-emails/' },
       ]
     }
   ],
