@@ -19,6 +19,7 @@ export default {
       name: 'HVAC',
       pages: [
         { name: 'The Old Schoolhouse', path: '/schoolhouse/' },
+        { name: 'Life as a Controls Subcontractor', path: '/controls-life/' },
         { name: 'Thermistors', path: '/thermistors/' }
       ]
     },
