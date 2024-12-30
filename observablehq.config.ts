@@ -18,6 +18,7 @@ export default {
     {
       name: 'HVAC',
       pages: [
+        { name: 'The Old Schoolhouse', path: '/schoolhouse/' },
         { name: 'Thermistors', path: '/thermistors/' }
       ]
     },
