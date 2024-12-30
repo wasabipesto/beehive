@@ -27,6 +27,7 @@ export default {
       name: 'Wrapped',
       pages: [
         { name: 'State of the Apps 2024', path: '/sota-2024/' },
+        { name: 'Reading/Playing/Watching 2024', path: '/media-2024/' },
       ]
     },
     {
