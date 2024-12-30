@@ -43,7 +43,7 @@ I believe in quantifying things when it's possible and helpful. I believe in try
 
 ## My projects
 
-<div class="grid grid-cols-3">
+<div class="grid grid-cols-2">
   <div class="card gallery">
   <a href="https://calibration.city/">
     <h3>Calibration City</h3>

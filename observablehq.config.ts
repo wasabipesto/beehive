@@ -1,8 +1,10 @@
 // See https://observablehq.com/framework/config for documentation.
 export default {
-  // The project’s title; used in the sidebar and webpage titles.
+  // The project’s title; used in the webpage titles.
   title: 'wasabipesto.com',
+  // Used in the sidebar header.
   home: 'Home',
+  // Defines the sidebar contents.
   pages: [
     {
       name: 'Personal',
@@ -14,13 +16,18 @@ export default {
       ]
     },
     {
+      name: 'HVAC',
+      pages: [
+        { name: 'Thermistors', path: '/thermistors/' }
+      ]
+    },
+    {
       name: 'Other',
       pages: [
         { name: 'Plex', path: '/plex/' },
         { name: 'Genesis 3:1', path: '/genesis/' },
         { name: 'Nice Numbers', path: '/nice/' },
         { name: 'Outer Wilds', path: '/outer-wilds/' },
-        { name: 'Thermistors', path: '/thermistors/' }
       ]
     }
   ],
