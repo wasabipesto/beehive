@@ -130,7 +130,7 @@ Inputs.table(top_clients, {
 Let's go ahead and throw those on a map.
 
 ```js
-const world = FileAttachment('countries-110m.json').json()
+const world = FileAttachment('../maps/countries-110m.json').json()
 ```
 
 ```js

@@ -47,6 +47,7 @@ export default {
       name: 'Other',
       pages: [
         { name: 'AI Crawling', path: '/ai-crawling/' },
+        { name: 'City Superposition', path: '/city-superposition/' },
         { name: 'Genesis 3:1', path: '/genesis/' },
         { name: 'Outer Wilds', path: '/outer-wilds/' },
         { name: 'Work Emails', path: '/work-emails/' },
