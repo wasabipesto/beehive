@@ -16,11 +16,24 @@ export default {
       ]
     },
     {
+      name: 'Projects',
+      pages: [
+        { name: 'Nice Numbers', path: '/nice/' },
+      ]
+    },
+    {
       name: 'HVAC',
       pages: [
         { name: 'The Old Schoolhouse', path: '/schoolhouse/' },
         { name: 'Life as a Controls Subcontractor', path: '/controls-life/' },
         { name: 'Thermistors', path: '/thermistors/' }
+      ]
+    },
+    {
+      name: 'Server',
+      pages: [
+        { name: 'Plex', path: '/plex/' },
+        { name: 'SSH Tarpit', path: '/ssh-tarpit/' },
       ]
     },
     {
@@ -33,11 +46,9 @@ export default {
     {
       name: 'Other',
       pages: [
-        { name: 'Plex', path: '/plex/' },
-        { name: 'Genesis 3:1', path: '/genesis/' },
-        { name: 'Nice Numbers', path: '/nice/' },
-        { name: 'Outer Wilds', path: '/outer-wilds/' },
         { name: 'AI Crawling', path: '/ai-crawling/' },
+        { name: 'Genesis 3:1', path: '/genesis/' },
+        { name: 'Outer Wilds', path: '/outer-wilds/' },
         { name: 'Work Emails', path: '/work-emails/' },
         { name: 'Work Mileage', path: '/work-mileage/' },
       ]

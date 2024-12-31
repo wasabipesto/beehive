@@ -10,8 +10,11 @@ if [ "$1" = "--invalidate-all" ]; then
 fi
 
 if [ "$1" = "--invalidate" ]; then
-    find src/.observablehq/cache -type f -name "$2.json" -exec mv '{}' '{}.bak' \; || exit
-    echo Invalidated data loader $2.
+    find src/.observablehq/cache -type f \( -name "*.json" -o -name "*.csv" \) -path "*$2*" -exec sh -c '
+        for file; do
+            mv "$file" "$file.bak" && echo "Moved: $file"
+        done
+    ' sh '{}' + || exit
 fi
 
 # build it

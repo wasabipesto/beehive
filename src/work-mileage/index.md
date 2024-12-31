@@ -7,8 +7,6 @@ const workdaily = FileAttachment('work-daily.csv').csv({ typed: true })
 const allmonthly = FileAttachment('all-monthly.csv').csv({ typed: true })
 ```
 
-# Work
-
 At my old job I drove a lot - I was consistently between 1,000 and 2,000 miles per month, with one bad month over 2,500 miles.
 
 ```js
