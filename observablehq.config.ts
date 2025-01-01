@@ -48,6 +48,7 @@ export default {
       pages: [
         { name: 'AI Crawling', path: '/ai-crawling/' },
         { name: 'City Superposition', path: '/city-superposition/' },
+        { name: 'Discord Gender', path: '/discord-gender/' },
         { name: 'Genesis 3:1', path: '/genesis/' },
         { name: 'Outer Wilds', path: '/outer-wilds/' },
         { name: 'Work Emails', path: '/work-emails/' },

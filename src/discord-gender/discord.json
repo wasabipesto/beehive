@@ -1,0 +1,4104 @@
+[
+  {
+    "date": "2022-08-31",
+    "property": "prob_13_17",
+    "stat": "Age",
+    "label": "13-17",
+    "value": 0.0008782940567471087
+  },
+  {
+    "date": "2022-08-31",
+    "property": "prob_18_24",
+    "stat": "Age",
+    "label": "18-24",
+    "value": 0.12740552425384521
+  },
+  {
+    "date": "2022-08-31",
+    "property": "prob_25_34",
+    "stat": "Age",
+    "label": "25-34",
+    "value": 0.5107231736183167
+  },
+  {
+    "date": "2022-08-31",
+    "property": "prob_35_over",
+    "stat": "Age",
+    "label": "35+",
+    "value": 0.36099299788475037
+  },
+  {
+    "date": "2022-09-22",
+    "property": "prob_13_17",
+    "stat": "Age",
+    "label": "13-17",
+    "value": 0.0012386334128677845
+  },
+  {
+    "date": "2022-09-22",
+    "property": "prob_18_24",
+    "stat": "Age",
+    "label": "18-24",
+    "value": 0.16270112991333008
+  },
+  {
+    "date": "2022-09-22",
+    "property": "prob_25_34",
+    "stat": "Age",
+    "label": "25-34",
+    "value": 0.6269487738609314
+  },
+  {
+    "date": "2022-09-22",
+    "property": "prob_35_over",
+    "stat": "Age",
+    "label": "35+",
+    "value": 0.20911145210266113
+  },
+  {
+    "date": "2022-09-28",
+    "property": "prob_13_17",
+    "stat": "Age",
+    "label": "13-17",
+    "value": 0.0009091996471397579
+  },
+  {
+    "date": "2022-09-28",
+    "property": "prob_18_24",
+    "stat": "Age",
+    "label": "18-24",
+    "value": 0.12742416560649872
+  },
+  {
+    "date": "2022-09-28",
+    "property": "prob_25_34",
+    "stat": "Age",
+    "label": "25-34",
+    "value": 0.6386836171150208
+  },
+  {
+    "date": "2022-09-28",
+    "property": "prob_35_over",
+    "stat": "Age",
+    "label": "35+",
+    "value": 0.2329830378293991
+  },
+  {
+    "date": "2022-10-05",
+    "property": "prob_13_17",
+    "stat": "Age",
+    "label": "13-17",
+    "value": 0.0007807260844856501
+  },
+  {
+    "date": "2022-10-05",
+    "property": "prob_18_24",
+    "stat": "Age",
+    "label": "18-24",
+    "value": 0.20237433910369873
+  },
+  {
+    "date": "2022-10-05",
+    "property": "prob_25_34",
+    "stat": "Age",
+    "label": "25-34",
+    "value": 0.5724811553955078
+  },
+  {
+    "date": "2022-10-05",
+    "property": "prob_35_over",
+    "stat": "Age",
+    "label": "35+",
+    "value": 0.22436374425888062
+  },
+  {
+    "date": "2022-10-12",
+    "property": "prob_13_17",
+    "stat": "Age",
+    "label": "13-17",
+    "value": 0.000428937841206789
+  },
+  {
+    "date": "2022-10-12",
+    "property": "prob_18_24",
+    "stat": "Age",
+    "label": "18-24",
+    "value": 0.19328123331069946
+  },
+  {
+    "date": "2022-10-12",
+    "property": "prob_25_34",
+    "stat": "Age",
+    "label": "25-34",
+    "value": 0.5935105085372925
+  },
+  {
+    "date": "2022-10-12",
+    "property": "prob_35_over",
+    "stat": "Age",
+    "label": "35+",
+    "value": 0.21277935802936554
+  },
+  {
+    "date": "2022-10-19",
+    "property": "prob_13_17",
+    "stat": "Age",
+    "label": "13-17",
+    "value": 0.0015117779839783907
+  },
+  {
+    "date": "2022-10-19",
+    "property": "prob_18_24",
+    "stat": "Age",
+    "label": "18-24",
+    "value": 0.12824101746082306
+  },
+  {
+    "date": "2022-10-19",
+    "property": "prob_25_34",
+    "stat": "Age",
+    "label": "25-34",
+    "value": 0.6572471857070923
+  },
+  {
+    "date": "2022-10-19",
+    "property": "prob_35_over",
+    "stat": "Age",
+    "label": "35+",
+    "value": 0.2130000740289688
+  },
+  {
+    "date": "2022-10-29",
+    "property": "prob_13_17",
+    "stat": "Age",
+    "label": "13-17",
+    "value": 0.0005257779848761857
+  },
+  {
+    "date": "2022-10-29",
+    "property": "prob_18_24",
+    "stat": "Age",
+    "label": "18-24",
+    "value": 0.06488406658172607
+  },
+  {
+    "date": "2022-10-29",
+    "property": "prob_25_34",
+    "stat": "Age",
+    "label": "25-34",
+    "value": 0.791329562664032
+  },
+  {
+    "date": "2022-10-29",
+    "property": "prob_35_over",
+    "stat": "Age",
+    "label": "35+",
+    "value": 0.14326053857803345
+  },
+  {
+    "date": "2022-11-02",
+    "property": "prob_13_17",
+    "stat": "Age",
+    "label": "13-17",
+    "value": 0.0007297001429833472
+  },
+  {
+    "date": "2022-11-02",
+    "property": "prob_18_24",
+    "stat": "Age",
+    "label": "18-24",
+    "value": 0.06922443211078644
+  },
+  {
+    "date": "2022-11-02",
+    "property": "prob_25_34",
+    "stat": "Age",
+    "label": "25-34",
+    "value": 0.7902407050132751
+  },
+  {
+    "date": "2022-11-02",
+    "property": "prob_35_over",
+    "stat": "Age",
+    "label": "35+",
+    "value": 0.13980521261692047
+  },
+  {
+    "date": "2022-11-16",
+    "property": "prob_13_17",
+    "stat": "Age",
+    "label": "13-17",
+    "value": 0.0007224971777759492
+  },
+  {
+    "date": "2022-11-16",
+    "property": "prob_18_24",
+    "stat": "Age",
+    "label": "18-24",
+    "value": 0.15405702590942383
+  },
+  {
+    "date": "2022-11-16",
+    "property": "prob_25_34",
+    "stat": "Age",
+    "label": "25-34",
+    "value": 0.37829652428627014
+  },
+  {
+    "date": "2022-11-16",
+    "property": "prob_35_over",
+    "stat": "Age",
+    "label": "35+",
+    "value": 0.46692395210266113
+  },
+  {
+    "date": "2022-11-23",
+    "property": "prob_male",
+    "stat": "Gender",
+    "label": "Male",
+    "value": 0.8197718262672424
+  },
+  {
+    "date": "2022-11-23",
+    "property": "prob_female",
+    "stat": "Gender",
+    "label": "Female",
+    "value": 0.13830670714378357
+  },
+  {
+    "date": "2022-11-23",
+    "property": "prob_non_binary_gender_expansive",
+    "stat": "Gender",
+    "label": "Non-Binary",
+    "value": 0.041921429336071014
+  },
+  {
+    "date": "2022-11-23",
+    "property": "prob_13_17",
+    "stat": "Age",
+    "label": "13-17",
+    "value": 0.001483952277339995
+  },
+  {
+    "date": "2022-11-23",
+    "property": "prob_18_24",
+    "stat": "Age",
+    "label": "18-24",
+    "value": 0.24837470054626465
+  },
+  {
+    "date": "2022-11-23",
+    "property": "prob_25_34",
+    "stat": "Age",
+    "label": "25-34",
+    "value": 0.5367624759674072
+  },
+  {
+    "date": "2022-11-23",
+    "property": "prob_35_over",
+    "stat": "Age",
+    "label": "35+",
+    "value": 0.21337884664535522
+  },
+  {
+    "date": "2022-11-30",
+    "property": "prob_male",
+    "stat": "Gender",
+    "label": "Male",
+    "value": 0.837788999080658
+  },
+  {
+    "date": "2022-11-30",
+    "property": "prob_female",
+    "stat": "Gender",
+    "label": "Female",
+    "value": 0.10409830510616302
+  },
+  {
+    "date": "2022-11-30",
+    "property": "prob_non_binary_gender_expansive",
+    "stat": "Gender",
+    "label": "Non-Binary",
+    "value": 0.058112725615501404
+  },
+  {
+    "date": "2022-11-30",
+    "property": "prob_13_17",
+    "stat": "Age",
+    "label": "13-17",
+    "value": 0.001957852626219392
+  },
+  {
+    "date": "2022-11-30",
+    "property": "prob_18_24",
+    "stat": "Age",
+    "label": "18-24",
+    "value": 0.18290714919567108
+  },
+  {
+    "date": "2022-11-30",
+    "property": "prob_25_34",
+    "stat": "Age",
+    "label": "25-34",
+    "value": 0.6595130562782288
+  },
+  {
+    "date": "2022-11-30",
+    "property": "prob_35_over",
+    "stat": "Age",
+    "label": "35+",
+    "value": 0.1556219458580017
+  },
+  {
+    "date": "2022-12-07",
+    "property": "prob_male",
+    "stat": "Gender",
+    "label": "Male",
+    "value": 0.8514602184295654
+  },
+  {
+    "date": "2022-12-07",
+    "property": "prob_female",
+    "stat": "Gender",
+    "label": "Female",
+    "value": 0.09505670517683029
+  },
+  {
+    "date": "2022-12-07",
+    "property": "prob_non_binary_gender_expansive",
+    "stat": "Gender",
+    "label": "Non-Binary",
+    "value": 0.05348306521773338
+  },
+  {
+    "date": "2022-12-13",
+    "property": "prob_13_17",
+    "stat": "Age",
+    "label": "13-17",
+    "value": 0.00020827293337788433
+  },
+  {
+    "date": "2022-12-13",
+    "property": "prob_18_24",
+    "stat": "Age",
+    "label": "18-24",
+    "value": 0.04547230154275894
+  },
+  {
+    "date": "2022-12-13",
+    "property": "prob_25_34",
+    "stat": "Age",
+    "label": "25-34",
+    "value": 0.6648809313774109
+  },
+  {
+    "date": "2022-12-13",
+    "property": "prob_35_over",
+    "stat": "Age",
+    "label": "35+",
+    "value": 0.2894384562969208
+  },
+  {
+    "date": "2022-12-14",
+    "property": "prob_male",
+    "stat": "Gender",
+    "label": "Male",
+    "value": 0.6635658144950867
+  },
+  {
+    "date": "2022-12-14",
+    "property": "prob_female",
+    "stat": "Gender",
+    "label": "Female",
+    "value": 0.27819913625717163
+  },
+  {
+    "date": "2022-12-14",
+    "property": "prob_non_binary_gender_expansive",
+    "stat": "Gender",
+    "label": "Non-Binary",
+    "value": 0.05823501572012901
+  },
+  {
+    "date": "2022-12-14",
+    "property": "prob_13_17",
+    "stat": "Age",
+    "label": "13-17",
+    "value": 0.0002574591781012714
+  },
+  {
+    "date": "2022-12-14",
+    "property": "prob_18_24",
+    "stat": "Age",
+    "label": "18-24",
+    "value": 0.02793409861624241
+  },
+  {
+    "date": "2022-12-14",
+    "property": "prob_25_34",
+    "stat": "Age",
+    "label": "25-34",
+    "value": 0.6238837242126465
+  },
+  {
+    "date": "2022-12-14",
+    "property": "prob_35_over",
+    "stat": "Age",
+    "label": "35+",
+    "value": 0.34792476892471313
+  },
+  {
+    "date": "2022-12-21",
+    "property": "prob_male",
+    "stat": "Gender",
+    "label": "Male",
+    "value": 0.6917043328285217
+  },
+  {
+    "date": "2022-12-21",
+    "property": "prob_female",
+    "stat": "Gender",
+    "label": "Female",
+    "value": 0.17534734308719635
+  },
+  {
+    "date": "2022-12-21",
+    "property": "prob_non_binary_gender_expansive",
+    "stat": "Gender",
+    "label": "Non-Binary",
+    "value": 0.1329483836889267
+  },
+  {
+    "date": "2022-12-21",
+    "property": "prob_13_17",
+    "stat": "Age",
+    "label": "13-17",
+    "value": 0.0005820912192575634
+  },
+  {
+    "date": "2022-12-21",
+    "property": "prob_18_24",
+    "stat": "Age",
+    "label": "18-24",
+    "value": 0.03123309649527073
+  },
+  {
+    "date": "2022-12-21",
+    "property": "prob_25_34",
+    "stat": "Age",
+    "label": "25-34",
+    "value": 0.3465424180030823
+  },
+  {
+    "date": "2022-12-21",
+    "property": "prob_35_over",
+    "stat": "Age",
+    "label": "35+",
+    "value": 0.6216424107551575
+  },
+  {
+    "date": "2022-12-28",
+    "property": "prob_male",
+    "stat": "Gender",
+    "label": "Male",
+    "value": 0.5563475489616394
+  },
+  {
+    "date": "2022-12-28",
+    "property": "prob_female",
+    "stat": "Gender",
+    "label": "Female",
+    "value": 0.333798348903656
+  },
+  {
+    "date": "2022-12-28",
+    "property": "prob_non_binary_gender_expansive",
+    "stat": "Gender",
+    "label": "Non-Binary",
+    "value": 0.10985412448644638
+  },
+  {
+    "date": "2022-12-28",
+    "property": "prob_13_17",
+    "stat": "Age",
+    "label": "13-17",
+    "value": 0.0004956771736033261
+  },
+  {
+    "date": "2022-12-28",
+    "property": "prob_18_24",
+    "stat": "Age",
+    "label": "18-24",
+    "value": 0.05329979583621025
+  },
+  {
+    "date": "2022-12-28",
+    "property": "prob_25_34",
+    "stat": "Age",
+    "label": "25-34",
+    "value": 0.4087630808353424
+  },
+  {
+    "date": "2022-12-28",
+    "property": "prob_35_over",
+    "stat": "Age",
+    "label": "35+",
+    "value": 0.5374414920806885
+  },
+  {
+    "date": "2023-01-04",
+    "property": "prob_male",
+    "stat": "Gender",
+    "label": "Male",
+    "value": 0.6375160813331604
+  },
+  {
+    "date": "2023-01-04",
+    "property": "prob_female",
+    "stat": "Gender",
+    "label": "Female",
+    "value": 0.29659509658813477
+  },
+  {
+    "date": "2023-01-04",
+    "property": "prob_non_binary_gender_expansive",
+    "stat": "Gender",
+    "label": "Non-Binary",
+    "value": 0.06588883697986603
+  },
+  {
+    "date": "2023-01-04",
+    "property": "prob_13_17",
+    "stat": "Age",
+    "label": "13-17",
+    "value": 0.001102085574530065
+  },
+  {
+    "date": "2023-01-04",
+    "property": "prob_18_24",
+    "stat": "Age",
+    "label": "18-24",
+    "value": 0.045250944793224335
+  },
+  {
+    "date": "2023-01-04",
+    "property": "prob_25_34",
+    "stat": "Age",
+    "label": "25-34",
+    "value": 0.5377576351165771
+  },
+  {
+    "date": "2023-01-04",
+    "property": "prob_35_over",
+    "stat": "Age",
+    "label": "35+",
+    "value": 0.41588932275772095
+  },
+  {
+    "date": "2023-01-11",
+    "property": "prob_male",
+    "stat": "Gender",
+    "label": "Male",
+    "value": 0.6056089997291565
+  },
+  {
+    "date": "2023-01-11",
+    "property": "prob_female",
+    "stat": "Gender",
+    "label": "Female",
+    "value": 0.2835905849933624
+  },
+  {
+    "date": "2023-01-11",
+    "property": "prob_non_binary_gender_expansive",
+    "stat": "Gender",
+    "label": "Non-Binary",
+    "value": 0.11080043762922287
+  },
+  {
+    "date": "2023-01-11",
+    "property": "prob_13_17",
+    "stat": "Age",
+    "label": "13-17",
+    "value": 0.0018883526790887117
+  },
+  {
+    "date": "2023-01-11",
+    "property": "prob_18_24",
+    "stat": "Age",
+    "label": "18-24",
+    "value": 0.3136044442653656
+  },
+  {
+    "date": "2023-01-11",
+    "property": "prob_25_34",
+    "stat": "Age",
+    "label": "25-34",
+    "value": 0.44707348942756653
+  },
+  {
+    "date": "2023-01-11",
+    "property": "prob_35_over",
+    "stat": "Age",
+    "label": "35+",
+    "value": 0.23743368685245514
+  },
+  {
+    "date": "2023-01-18",
+    "property": "prob_male",
+    "stat": "Gender",
+    "label": "Male",
+    "value": 0.8766049742698669
+  },
+  {
+    "date": "2023-01-18",
+    "property": "prob_female",
+    "stat": "Gender",
+    "label": "Female",
+    "value": 0.07607622444629669
+  },
+  {
+    "date": "2023-01-18",
+    "property": "prob_non_binary_gender_expansive",
+    "stat": "Gender",
+    "label": "Non-Binary",
+    "value": 0.04731881618499756
+  },
+  {
+    "date": "2023-01-18",
+    "property": "prob_13_17",
+    "stat": "Age",
+    "label": "13-17",
+    "value": 0.0008241095929406583
+  },
+  {
+    "date": "2023-01-18",
+    "property": "prob_18_24",
+    "stat": "Age",
+    "label": "18-24",
+    "value": 0.1895993947982788
+  },
+  {
+    "date": "2023-01-18",
+    "property": "prob_25_34",
+    "stat": "Age",
+    "label": "25-34",
+    "value": 0.6334919929504395
+  },
+  {
+    "date": "2023-01-18",
+    "property": "prob_35_over",
+    "stat": "Age",
+    "label": "35+",
+    "value": 0.1760844737291336
+  },
+  {
+    "date": "2023-01-25",
+    "property": "prob_male",
+    "stat": "Gender",
+    "label": "Male",
+    "value": 0.8091521263122559
+  },
+  {
+    "date": "2023-01-25",
+    "property": "prob_female",
+    "stat": "Gender",
+    "label": "Female",
+    "value": 0.14615271985530853
+  },
+  {
+    "date": "2023-01-25",
+    "property": "prob_non_binary_gender_expansive",
+    "stat": "Gender",
+    "label": "Non-Binary",
+    "value": 0.04469514638185501
+  },
+  {
+    "date": "2023-01-25",
+    "property": "prob_13_17",
+    "stat": "Age",
+    "label": "13-17",
+    "value": 0.0026655904948711395
+  },
+  {
+    "date": "2023-01-25",
+    "property": "prob_18_24",
+    "stat": "Age",
+    "label": "18-24",
+    "value": 0.2506512999534607
+  },
+  {
+    "date": "2023-01-25",
+    "property": "prob_25_34",
+    "stat": "Age",
+    "label": "25-34",
+    "value": 0.5988757610321045
+  },
+  {
+    "date": "2023-01-25",
+    "property": "prob_35_over",
+    "stat": "Age",
+    "label": "35+",
+    "value": 0.147807314991951
+  },
+  {
+    "date": "2023-02-01",
+    "property": "prob_male",
+    "stat": "Gender",
+    "label": "Male",
+    "value": 0.8208122253417969
+  },
+  {
+    "date": "2023-02-01",
+    "property": "prob_female",
+    "stat": "Gender",
+    "label": "Female",
+    "value": 0.09191636741161346
+  },
+  {
+    "date": "2023-02-01",
+    "property": "prob_non_binary_gender_expansive",
+    "stat": "Gender",
+    "label": "Non-Binary",
+    "value": 0.08727144449949265
+  },
+  {
+    "date": "2023-02-01",
+    "property": "prob_13_17",
+    "stat": "Age",
+    "label": "13-17",
+    "value": 0.0016524492530152202
+  },
+  {
+    "date": "2023-02-01",
+    "property": "prob_18_24",
+    "stat": "Age",
+    "label": "18-24",
+    "value": 0.2618686854839325
+  },
+  {
+    "date": "2023-02-01",
+    "property": "prob_25_34",
+    "stat": "Age",
+    "label": "25-34",
+    "value": 0.6306207776069641
+  },
+  {
+    "date": "2023-02-01",
+    "property": "prob_35_over",
+    "stat": "Age",
+    "label": "35+",
+    "value": 0.10585815459489822
+  },
+  {
+    "date": "2023-02-08",
+    "property": "prob_male",
+    "stat": "Gender",
+    "label": "Male",
+    "value": 0.800846517086029
+  },
+  {
+    "date": "2023-02-08",
+    "property": "prob_female",
+    "stat": "Gender",
+    "label": "Female",
+    "value": 0.14780192077159882
+  },
+  {
+    "date": "2023-02-08",
+    "property": "prob_non_binary_gender_expansive",
+    "stat": "Gender",
+    "label": "Non-Binary",
+    "value": 0.05135156586766243
+  },
+  {
+    "date": "2023-02-08",
+    "property": "prob_13_17",
+    "stat": "Age",
+    "label": "13-17",
+    "value": 0.0005121001740917563
+  },
+  {
+    "date": "2023-02-08",
+    "property": "prob_18_24",
+    "stat": "Age",
+    "label": "18-24",
+    "value": 0.03221961110830307
+  },
+  {
+    "date": "2023-02-08",
+    "property": "prob_25_34",
+    "stat": "Age",
+    "label": "25-34",
+    "value": 0.4626743197441101
+  },
+  {
+    "date": "2023-02-08",
+    "property": "prob_35_over",
+    "stat": "Age",
+    "label": "35+",
+    "value": 0.5045939683914185
+  },
+  {
+    "date": "2023-02-15",
+    "property": "prob_male",
+    "stat": "Gender",
+    "label": "Male",
+    "value": 0.8036012053489685
+  },
+  {
+    "date": "2023-02-15",
+    "property": "prob_female",
+    "stat": "Gender",
+    "label": "Female",
+    "value": 0.108907550573349
+  },
+  {
+    "date": "2023-02-15",
+    "property": "prob_non_binary_gender_expansive",
+    "stat": "Gender",
+    "label": "Non-Binary",
+    "value": 0.0874912440776825
+  },
+  {
+    "date": "2023-02-15",
+    "property": "prob_13_17",
+    "stat": "Age",
+    "label": "13-17",
+    "value": 0.0014022043906152248
+  },
+  {
+    "date": "2023-02-15",
+    "property": "prob_18_24",
+    "stat": "Age",
+    "label": "18-24",
+    "value": 0.08086103945970535
+  },
+  {
+    "date": "2023-02-15",
+    "property": "prob_25_34",
+    "stat": "Age",
+    "label": "25-34",
+    "value": 0.7894037961959839
+  },
+  {
+    "date": "2023-02-15",
+    "property": "prob_35_over",
+    "stat": "Age",
+    "label": "35+",
+    "value": 0.12833300232887268
+  },
+  {
+    "date": "2023-02-22",
+    "property": "prob_male",
+    "stat": "Gender",
+    "label": "Male",
+    "value": 0.8975535035133362
+  },
+  {
+    "date": "2023-02-22",
+    "property": "prob_female",
+    "stat": "Gender",
+    "label": "Female",
+    "value": 0.07451589405536652
+  },
+  {
+    "date": "2023-02-22",
+    "property": "prob_non_binary_gender_expansive",
+    "stat": "Gender",
+    "label": "Non-Binary",
+    "value": 0.027930526062846184
+  },
+  {
+    "date": "2023-02-22",
+    "property": "prob_13_17",
+    "stat": "Age",
+    "label": "13-17",
+    "value": 0.0012057877611368895
+  },
+  {
+    "date": "2023-02-22",
+    "property": "prob_18_24",
+    "stat": "Age",
+    "label": "18-24",
+    "value": 0.1935642510652542
+  },
+  {
+    "date": "2023-02-22",
+    "property": "prob_25_34",
+    "stat": "Age",
+    "label": "25-34",
+    "value": 0.7274501919746399
+  },
+  {
+    "date": "2023-02-22",
+    "property": "prob_35_over",
+    "stat": "Age",
+    "label": "35+",
+    "value": 0.07777979224920273
+  },
+  {
+    "date": "2023-03-01",
+    "property": "prob_male",
+    "stat": "Gender",
+    "label": "Male",
+    "value": 0.8886863589286804
+  },
+  {
+    "date": "2023-03-01",
+    "property": "prob_female",
+    "stat": "Gender",
+    "label": "Female",
+    "value": 0.07228036969900131
+  },
+  {
+    "date": "2023-03-01",
+    "property": "prob_non_binary_gender_expansive",
+    "stat": "Gender",
+    "label": "Non-Binary",
+    "value": 0.03903330862522125
+  },
+  {
+    "date": "2023-03-01",
+    "property": "prob_13_17",
+    "stat": "Age",
+    "label": "13-17",
+    "value": 0.002933268202468753
+  },
+  {
+    "date": "2023-03-01",
+    "property": "prob_18_24",
+    "stat": "Age",
+    "label": "18-24",
+    "value": 0.21054792404174805
+  },
+  {
+    "date": "2023-03-01",
+    "property": "prob_25_34",
+    "stat": "Age",
+    "label": "25-34",
+    "value": 0.6081015467643738
+  },
+  {
+    "date": "2023-03-01",
+    "property": "prob_35_over",
+    "stat": "Age",
+    "label": "35+",
+    "value": 0.17841726541519165
+  },
+  {
+    "date": "2023-03-08",
+    "property": "prob_male",
+    "stat": "Gender",
+    "label": "Male",
+    "value": 0.8563825488090515
+  },
+  {
+    "date": "2023-03-08",
+    "property": "prob_female",
+    "stat": "Gender",
+    "label": "Female",
+    "value": 0.09681414812803268
+  },
+  {
+    "date": "2023-03-08",
+    "property": "prob_non_binary_gender_expansive",
+    "stat": "Gender",
+    "label": "Non-Binary",
+    "value": 0.04680328443646431
+  },
+  {
+    "date": "2023-03-08",
+    "property": "prob_13_17",
+    "stat": "Age",
+    "label": "13-17",
+    "value": 0.0035814910661429167
+  },
+  {
+    "date": "2023-03-08",
+    "property": "prob_18_24",
+    "stat": "Age",
+    "label": "18-24",
+    "value": 0.1820501834154129
+  },
+  {
+    "date": "2023-03-08",
+    "property": "prob_25_34",
+    "stat": "Age",
+    "label": "25-34",
+    "value": 0.6431810855865479
+  },
+  {
+    "date": "2023-03-08",
+    "property": "prob_35_over",
+    "stat": "Age",
+    "label": "35+",
+    "value": 0.17118729650974274
+  },
+  {
+    "date": "2023-03-15",
+    "property": "prob_male",
+    "stat": "Gender",
+    "label": "Male",
+    "value": 0.9452729225158691
+  },
+  {
+    "date": "2023-03-15",
+    "property": "prob_female",
+    "stat": "Gender",
+    "label": "Female",
+    "value": 0.030397074297070503
+  },
+  {
+    "date": "2023-03-15",
+    "property": "prob_non_binary_gender_expansive",
+    "stat": "Gender",
+    "label": "Non-Binary",
+    "value": 0.02433004602789879
+  },
+  {
+    "date": "2023-03-15",
+    "property": "prob_13_17",
+    "stat": "Age",
+    "label": "13-17",
+    "value": 0.006709448993206024
+  },
+  {
+    "date": "2023-03-15",
+    "property": "prob_18_24",
+    "stat": "Age",
+    "label": "18-24",
+    "value": 0.23552314937114716
+  },
+  {
+    "date": "2023-03-15",
+    "property": "prob_25_34",
+    "stat": "Age",
+    "label": "25-34",
+    "value": 0.5033068656921387
+  },
+  {
+    "date": "2023-03-15",
+    "property": "prob_35_over",
+    "stat": "Age",
+    "label": "35+",
+    "value": 0.25446057319641113
+  },
+  {
+    "date": "2023-03-22",
+    "property": "prob_male",
+    "stat": "Gender",
+    "label": "Male",
+    "value": 0.8738327026367188
+  },
+  {
+    "date": "2023-03-22",
+    "property": "prob_female",
+    "stat": "Gender",
+    "label": "Female",
+    "value": 0.10742730647325516
+  },
+  {
+    "date": "2023-03-22",
+    "property": "prob_non_binary_gender_expansive",
+    "stat": "Gender",
+    "label": "Non-Binary",
+    "value": 0.01873992383480072
+  },
+  {
+    "date": "2023-03-22",
+    "property": "prob_13_17",
+    "stat": "Age",
+    "label": "13-17",
+    "value": 0.003562537021934986
+  },
+  {
+    "date": "2023-03-22",
+    "property": "prob_18_24",
+    "stat": "Age",
+    "label": "18-24",
+    "value": 0.25380739569664
+  },
+  {
+    "date": "2023-03-22",
+    "property": "prob_25_34",
+    "stat": "Age",
+    "label": "25-34",
+    "value": 0.6389851570129395
+  },
+  {
+    "date": "2023-03-22",
+    "property": "prob_35_over",
+    "stat": "Age",
+    "label": "35+",
+    "value": 0.1036449447274208
+  },
+  {
+    "date": "2023-03-29",
+    "property": "prob_male",
+    "stat": "Gender",
+    "label": "Male",
+    "value": 0.9165506362915039
+  },
+  {
+    "date": "2023-03-29",
+    "property": "prob_female",
+    "stat": "Gender",
+    "label": "Female",
+    "value": 0.06147507205605507
+  },
+  {
+    "date": "2023-03-29",
+    "property": "prob_non_binary_gender_expansive",
+    "stat": "Gender",
+    "label": "Non-Binary",
+    "value": 0.021974265575408936
+  },
+  {
+    "date": "2023-03-29",
+    "property": "prob_13_17",
+    "stat": "Age",
+    "label": "13-17",
+    "value": 0.00424822885543108
+  },
+  {
+    "date": "2023-03-29",
+    "property": "prob_18_24",
+    "stat": "Age",
+    "label": "18-24",
+    "value": 0.25774481892585754
+  },
+  {
+    "date": "2023-03-29",
+    "property": "prob_25_34",
+    "stat": "Age",
+    "label": "25-34",
+    "value": 0.5564039349555969
+  },
+  {
+    "date": "2023-03-29",
+    "property": "prob_35_over",
+    "stat": "Age",
+    "label": "35+",
+    "value": 0.18160302937030792
+  },
+  {
+    "date": "2023-04-05",
+    "property": "prob_male",
+    "stat": "Gender",
+    "label": "Male",
+    "value": 0.8960145115852356
+  },
+  {
+    "date": "2023-04-05",
+    "property": "prob_female",
+    "stat": "Gender",
+    "label": "Female",
+    "value": 0.08003794401884079
+  },
+  {
+    "date": "2023-04-05",
+    "property": "prob_non_binary_gender_expansive",
+    "stat": "Gender",
+    "label": "Non-Binary",
+    "value": 0.02394755743443966
+  },
+  {
+    "date": "2023-04-05",
+    "property": "prob_13_17",
+    "stat": "Age",
+    "label": "13-17",
+    "value": 0.0030391293112188578
+  },
+  {
+    "date": "2023-04-05",
+    "property": "prob_18_24",
+    "stat": "Age",
+    "label": "18-24",
+    "value": 0.38555195927619934
+  },
+  {
+    "date": "2023-04-05",
+    "property": "prob_25_34",
+    "stat": "Age",
+    "label": "25-34",
+    "value": 0.5451273918151855
+  },
+  {
+    "date": "2023-04-05",
+    "property": "prob_35_over",
+    "stat": "Age",
+    "label": "35+",
+    "value": 0.06628156453371048
+  },
+  {
+    "date": "2023-04-12",
+    "property": "prob_male",
+    "stat": "Gender",
+    "label": "Male",
+    "value": 0.9189202785491943
+  },
+  {
+    "date": "2023-04-12",
+    "property": "prob_female",
+    "stat": "Gender",
+    "label": "Female",
+    "value": 0.03989733010530472
+  },
+  {
+    "date": "2023-04-12",
+    "property": "prob_non_binary_gender_expansive",
+    "stat": "Gender",
+    "label": "Non-Binary",
+    "value": 0.041182417422533035
+  },
+  {
+    "date": "2023-04-12",
+    "property": "prob_13_17",
+    "stat": "Age",
+    "label": "13-17",
+    "value": 0.002559082116931677
+  },
+  {
+    "date": "2023-04-12",
+    "property": "prob_18_24",
+    "stat": "Age",
+    "label": "18-24",
+    "value": 0.3926514983177185
+  },
+  {
+    "date": "2023-04-12",
+    "property": "prob_25_34",
+    "stat": "Age",
+    "label": "25-34",
+    "value": 0.46252721548080444
+  },
+  {
+    "date": "2023-04-12",
+    "property": "prob_35_over",
+    "stat": "Age",
+    "label": "35+",
+    "value": 0.14226223528385162
+  },
+  {
+    "date": "2023-04-19",
+    "property": "prob_male",
+    "stat": "Gender",
+    "label": "Male",
+    "value": 0.8397745490074158
+  },
+  {
+    "date": "2023-04-19",
+    "property": "prob_female",
+    "stat": "Gender",
+    "label": "Female",
+    "value": 0.098080575466156
+  },
+  {
+    "date": "2023-04-19",
+    "property": "prob_non_binary_gender_expansive",
+    "stat": "Gender",
+    "label": "Non-Binary",
+    "value": 0.06214486435055733
+  },
+  {
+    "date": "2023-04-19",
+    "property": "prob_13_17",
+    "stat": "Age",
+    "label": "13-17",
+    "value": 0.001833430607803166
+  },
+  {
+    "date": "2023-04-19",
+    "property": "prob_18_24",
+    "stat": "Age",
+    "label": "18-24",
+    "value": 0.27327316999435425
+  },
+  {
+    "date": "2023-04-19",
+    "property": "prob_25_34",
+    "stat": "Age",
+    "label": "25-34",
+    "value": 0.6102670431137085
+  },
+  {
+    "date": "2023-04-19",
+    "property": "prob_35_over",
+    "stat": "Age",
+    "label": "35+",
+    "value": 0.11462637037038803
+  },
+  {
+    "date": "2023-04-26",
+    "property": "prob_male",
+    "stat": "Gender",
+    "label": "Male",
+    "value": 0.8234607577323914
+  },
+  {
+    "date": "2023-04-26",
+    "property": "prob_female",
+    "stat": "Gender",
+    "label": "Female",
+    "value": 0.12271509319543839
+  },
+  {
+    "date": "2023-04-26",
+    "property": "prob_non_binary_gender_expansive",
+    "stat": "Gender",
+    "label": "Non-Binary",
+    "value": 0.05382414534687996
+  },
+  {
+    "date": "2023-04-26",
+    "property": "prob_13_17",
+    "stat": "Age",
+    "label": "13-17",
+    "value": 0.0009992999257519841
+  },
+  {
+    "date": "2023-04-26",
+    "property": "prob_18_24",
+    "stat": "Age",
+    "label": "18-24",
+    "value": 0.07691644132137299
+  },
+  {
+    "date": "2023-04-26",
+    "property": "prob_25_34",
+    "stat": "Age",
+    "label": "25-34",
+    "value": 0.5361983180046082
+  },
+  {
+    "date": "2023-04-26",
+    "property": "prob_35_over",
+    "stat": "Age",
+    "label": "35+",
+    "value": 0.38588592410087585
+  },
+  {
+    "date": "2023-05-03",
+    "property": "prob_male",
+    "stat": "Gender",
+    "label": "Male",
+    "value": 0.8283999562263489
+  },
+  {
+    "date": "2023-05-03",
+    "property": "prob_female",
+    "stat": "Gender",
+    "label": "Female",
+    "value": 0.11008638888597488
+  },
+  {
+    "date": "2023-05-03",
+    "property": "prob_non_binary_gender_expansive",
+    "stat": "Gender",
+    "label": "Non-Binary",
+    "value": 0.06151372939348221
+  },
+  {
+    "date": "2023-05-03",
+    "property": "prob_13_17",
+    "stat": "Age",
+    "label": "13-17",
+    "value": 0.0012216283939778805
+  },
+  {
+    "date": "2023-05-03",
+    "property": "prob_18_24",
+    "stat": "Age",
+    "label": "18-24",
+    "value": 0.2383081018924713
+  },
+  {
+    "date": "2023-05-03",
+    "property": "prob_25_34",
+    "stat": "Age",
+    "label": "25-34",
+    "value": 0.5569525361061096
+  },
+  {
+    "date": "2023-05-03",
+    "property": "prob_35_over",
+    "stat": "Age",
+    "label": "35+",
+    "value": 0.20351772010326385
+  },
+  {
+    "date": "2023-05-10",
+    "property": "prob_male",
+    "stat": "Gender",
+    "label": "Male",
+    "value": 0.7832212448120117
+  },
+  {
+    "date": "2023-05-10",
+    "property": "prob_female",
+    "stat": "Gender",
+    "label": "Female",
+    "value": 0.1423294097185135
+  },
+  {
+    "date": "2023-05-10",
+    "property": "prob_non_binary_gender_expansive",
+    "stat": "Gender",
+    "label": "Non-Binary",
+    "value": 0.07444930821657181
+  },
+  {
+    "date": "2023-05-10",
+    "property": "prob_13_17",
+    "stat": "Age",
+    "label": "13-17",
+    "value": 0.0015086112543940544
+  },
+  {
+    "date": "2023-05-10",
+    "property": "prob_18_24",
+    "stat": "Age",
+    "label": "18-24",
+    "value": 0.33000054955482483
+  },
+  {
+    "date": "2023-05-10",
+    "property": "prob_25_34",
+    "stat": "Age",
+    "label": "25-34",
+    "value": 0.5991254448890686
+  },
+  {
+    "date": "2023-05-10",
+    "property": "prob_35_over",
+    "stat": "Age",
+    "label": "35+",
+    "value": 0.06936535239219666
+  },
+  {
+    "date": "2023-05-17",
+    "property": "prob_male",
+    "stat": "Gender",
+    "label": "Male",
+    "value": 0.7075099349021912
+  },
+  {
+    "date": "2023-05-17",
+    "property": "prob_female",
+    "stat": "Gender",
+    "label": "Female",
+    "value": 0.19665002822875977
+  },
+  {
+    "date": "2023-05-17",
+    "property": "prob_non_binary_gender_expansive",
+    "stat": "Gender",
+    "label": "Non-Binary",
+    "value": 0.09584001451730728
+  },
+  {
+    "date": "2023-05-17",
+    "property": "prob_13_17",
+    "stat": "Age",
+    "label": "13-17",
+    "value": 0.002495087217539549
+  },
+  {
+    "date": "2023-05-17",
+    "property": "prob_18_24",
+    "stat": "Age",
+    "label": "18-24",
+    "value": 0.20927417278289795
+  },
+  {
+    "date": "2023-05-17",
+    "property": "prob_25_34",
+    "stat": "Age",
+    "label": "25-34",
+    "value": 0.48310860991477966
+  },
+  {
+    "date": "2023-05-17",
+    "property": "prob_35_over",
+    "stat": "Age",
+    "label": "35+",
+    "value": 0.30512210726737976
+  },
+  {
+    "date": "2023-05-24",
+    "property": "prob_male",
+    "stat": "Gender",
+    "label": "Male",
+    "value": 0.8675278425216675
+  },
+  {
+    "date": "2023-05-24",
+    "property": "prob_female",
+    "stat": "Gender",
+    "label": "Female",
+    "value": 0.0811135545372963
+  },
+  {
+    "date": "2023-05-24",
+    "property": "prob_non_binary_gender_expansive",
+    "stat": "Gender",
+    "label": "Non-Binary",
+    "value": 0.051358602941036224
+  },
+  {
+    "date": "2023-05-24",
+    "property": "prob_13_17",
+    "stat": "Age",
+    "label": "13-17",
+    "value": 0.004017831292003393
+  },
+  {
+    "date": "2023-05-24",
+    "property": "prob_18_24",
+    "stat": "Age",
+    "label": "18-24",
+    "value": 0.3311232924461365
+  },
+  {
+    "date": "2023-05-24",
+    "property": "prob_25_34",
+    "stat": "Age",
+    "label": "25-34",
+    "value": 0.5443829894065857
+  },
+  {
+    "date": "2023-05-24",
+    "property": "prob_35_over",
+    "stat": "Age",
+    "label": "35+",
+    "value": 0.1204758733510971
+  },
+  {
+    "date": "2023-05-31",
+    "property": "prob_male",
+    "stat": "Gender",
+    "label": "Male",
+    "value": 0.6033682227134705
+  },
+  {
+    "date": "2023-05-31",
+    "property": "prob_female",
+    "stat": "Gender",
+    "label": "Female",
+    "value": 0.24442283809185028
+  },
+  {
+    "date": "2023-05-31",
+    "property": "prob_non_binary_gender_expansive",
+    "stat": "Gender",
+    "label": "Non-Binary",
+    "value": 0.15220895409584045
+  },
+  {
+    "date": "2023-05-31",
+    "property": "prob_13_17",
+    "stat": "Age",
+    "label": "13-17",
+    "value": 0.0016811392270028591
+  },
+  {
+    "date": "2023-05-31",
+    "property": "prob_18_24",
+    "stat": "Age",
+    "label": "18-24",
+    "value": 0.23170359432697296
+  },
+  {
+    "date": "2023-05-31",
+    "property": "prob_25_34",
+    "stat": "Age",
+    "label": "25-34",
+    "value": 0.6293412446975708
+  },
+  {
+    "date": "2023-05-31",
+    "property": "prob_35_over",
+    "stat": "Age",
+    "label": "35+",
+    "value": 0.13727407157421112
+  },
+  {
+    "date": "2023-06-07",
+    "property": "prob_male",
+    "stat": "Gender",
+    "label": "Male",
+    "value": 0.9267333745956421
+  },
+  {
+    "date": "2023-06-07",
+    "property": "prob_female",
+    "stat": "Gender",
+    "label": "Female",
+    "value": 0.050405070185661316
+  },
+  {
+    "date": "2023-06-07",
+    "property": "prob_non_binary_gender_expansive",
+    "stat": "Gender",
+    "label": "Non-Binary",
+    "value": 0.022861581295728683
+  },
+  {
+    "date": "2023-06-07",
+    "property": "prob_13_17",
+    "stat": "Age",
+    "label": "13-17",
+    "value": 0.003184616332873702
+  },
+  {
+    "date": "2023-06-07",
+    "property": "prob_18_24",
+    "stat": "Age",
+    "label": "18-24",
+    "value": 0.2342066913843155
+  },
+  {
+    "date": "2023-06-07",
+    "property": "prob_25_34",
+    "stat": "Age",
+    "label": "25-34",
+    "value": 0.566868245601654
+  },
+  {
+    "date": "2023-06-07",
+    "property": "prob_35_over",
+    "stat": "Age",
+    "label": "35+",
+    "value": 0.19574041664600372
+  },
+  {
+    "date": "2023-06-14",
+    "property": "prob_male",
+    "stat": "Gender",
+    "label": "Male",
+    "value": 0.8457598090171814
+  },
+  {
+    "date": "2023-06-14",
+    "property": "prob_female",
+    "stat": "Gender",
+    "label": "Female",
+    "value": 0.08437371253967285
+  },
+  {
+    "date": "2023-06-14",
+    "property": "prob_non_binary_gender_expansive",
+    "stat": "Gender",
+    "label": "Non-Binary",
+    "value": 0.06986644864082336
+  },
+  {
+    "date": "2023-06-14",
+    "property": "prob_13_17",
+    "stat": "Age",
+    "label": "13-17",
+    "value": 0.0019988708663731813
+  },
+  {
+    "date": "2023-06-14",
+    "property": "prob_18_24",
+    "stat": "Age",
+    "label": "18-24",
+    "value": 0.2930118143558502
+  },
+  {
+    "date": "2023-06-14",
+    "property": "prob_25_34",
+    "stat": "Age",
+    "label": "25-34",
+    "value": 0.4738096296787262
+  },
+  {
+    "date": "2023-06-14",
+    "property": "prob_35_over",
+    "stat": "Age",
+    "label": "35+",
+    "value": 0.2311796396970749
+  },
+  {
+    "date": "2023-06-21",
+    "property": "prob_male",
+    "stat": "Gender",
+    "label": "Male",
+    "value": 0.679980456829071
+  },
+  {
+    "date": "2023-06-21",
+    "property": "prob_female",
+    "stat": "Gender",
+    "label": "Female",
+    "value": 0.17721478641033173
+  },
+  {
+    "date": "2023-06-21",
+    "property": "prob_non_binary_gender_expansive",
+    "stat": "Gender",
+    "label": "Non-Binary",
+    "value": 0.14280478656291962
+  },
+  {
+    "date": "2023-06-21",
+    "property": "prob_13_17",
+    "stat": "Age",
+    "label": "13-17",
+    "value": 0.0023506286088377237
+  },
+  {
+    "date": "2023-06-21",
+    "property": "prob_18_24",
+    "stat": "Age",
+    "label": "18-24",
+    "value": 0.1929532140493393
+  },
+  {
+    "date": "2023-06-21",
+    "property": "prob_25_34",
+    "stat": "Age",
+    "label": "25-34",
+    "value": 0.6609612107276917
+  },
+  {
+    "date": "2023-06-21",
+    "property": "prob_35_over",
+    "stat": "Age",
+    "label": "35+",
+    "value": 0.14373496174812317
+  },
+  {
+    "date": "2023-06-28",
+    "property": "prob_male",
+    "stat": "Gender",
+    "label": "Male",
+    "value": 0.8714112043380737
+  },
+  {
+    "date": "2023-06-28",
+    "property": "prob_female",
+    "stat": "Gender",
+    "label": "Female",
+    "value": 0.06932872533798218
+  },
+  {
+    "date": "2023-06-28",
+    "property": "prob_non_binary_gender_expansive",
+    "stat": "Gender",
+    "label": "Non-Binary",
+    "value": 0.059260085225105286
+  },
+  {
+    "date": "2023-06-28",
+    "property": "prob_13_17",
+    "stat": "Age",
+    "label": "13-17",
+    "value": 0.0011858853977173567
+  },
+  {
+    "date": "2023-06-28",
+    "property": "prob_18_24",
+    "stat": "Age",
+    "label": "18-24",
+    "value": 0.07823771238327026
+  },
+  {
+    "date": "2023-06-28",
+    "property": "prob_25_34",
+    "stat": "Age",
+    "label": "25-34",
+    "value": 0.6406502723693848
+  },
+  {
+    "date": "2023-06-28",
+    "property": "prob_35_over",
+    "stat": "Age",
+    "label": "35+",
+    "value": 0.2799261510372162
+  },
+  {
+    "date": "2023-07-05",
+    "property": "prob_male",
+    "stat": "Gender",
+    "label": "Male",
+    "value": 0.9021880030632019
+  },
+  {
+    "date": "2023-07-05",
+    "property": "prob_female",
+    "stat": "Gender",
+    "label": "Female",
+    "value": 0.05051678046584129
+  },
+  {
+    "date": "2023-07-05",
+    "property": "prob_non_binary_gender_expansive",
+    "stat": "Gender",
+    "label": "Non-Binary",
+    "value": 0.04729526862502098
+  },
+  {
+    "date": "2023-07-05",
+    "property": "prob_13_17",
+    "stat": "Age",
+    "label": "13-17",
+    "value": 0.0010668332688510418
+  },
+  {
+    "date": "2023-07-05",
+    "property": "prob_18_24",
+    "stat": "Age",
+    "label": "18-24",
+    "value": 0.09783659875392914
+  },
+  {
+    "date": "2023-07-05",
+    "property": "prob_25_34",
+    "stat": "Age",
+    "label": "25-34",
+    "value": 0.6106601357460022
+  },
+  {
+    "date": "2023-07-05",
+    "property": "prob_35_over",
+    "stat": "Age",
+    "label": "35+",
+    "value": 0.29043644666671753
+  },
+  {
+    "date": "2023-07-12",
+    "property": "prob_male",
+    "stat": "Gender",
+    "label": "Male",
+    "value": 0.8301380276679993
+  },
+  {
+    "date": "2023-07-12",
+    "property": "prob_female",
+    "stat": "Gender",
+    "label": "Female",
+    "value": 0.06377702206373215
+  },
+  {
+    "date": "2023-07-12",
+    "property": "prob_non_binary_gender_expansive",
+    "stat": "Gender",
+    "label": "Non-Binary",
+    "value": 0.10608498007059097
+  },
+  {
+    "date": "2023-07-12",
+    "property": "prob_13_17",
+    "stat": "Age",
+    "label": "13-17",
+    "value": 0.001964158844202757
+  },
+  {
+    "date": "2023-07-12",
+    "property": "prob_18_24",
+    "stat": "Age",
+    "label": "18-24",
+    "value": 0.2169375866651535
+  },
+  {
+    "date": "2023-07-12",
+    "property": "prob_25_34",
+    "stat": "Age",
+    "label": "25-34",
+    "value": 0.6276928782463074
+  },
+  {
+    "date": "2023-07-12",
+    "property": "prob_35_over",
+    "stat": "Age",
+    "label": "35+",
+    "value": 0.15340536832809448
+  },
+  {
+    "date": "2023-07-19",
+    "property": "prob_male",
+    "stat": "Gender",
+    "label": "Male",
+    "value": 0.8892911672592163
+  },
+  {
+    "date": "2023-07-19",
+    "property": "prob_female",
+    "stat": "Gender",
+    "label": "Female",
+    "value": 0.06870853900909424
+  },
+  {
+    "date": "2023-07-19",
+    "property": "prob_non_binary_gender_expansive",
+    "stat": "Gender",
+    "label": "Non-Binary",
+    "value": 0.04200032725930214
+  },
+  {
+    "date": "2023-07-19",
+    "property": "prob_13_17",
+    "stat": "Age",
+    "label": "13-17",
+    "value": 0.0021006250753998756
+  },
+  {
+    "date": "2023-07-19",
+    "property": "prob_18_24",
+    "stat": "Age",
+    "label": "18-24",
+    "value": 0.15143689513206482
+  },
+  {
+    "date": "2023-07-19",
+    "property": "prob_25_34",
+    "stat": "Age",
+    "label": "25-34",
+    "value": 0.4669188857078552
+  },
+  {
+    "date": "2023-07-19",
+    "property": "prob_35_over",
+    "stat": "Age",
+    "label": "35+",
+    "value": 0.3795435428619385
+  },
+  {
+    "date": "2023-07-26",
+    "property": "prob_male",
+    "stat": "Gender",
+    "label": "Male",
+    "value": 0.7101513147354126
+  },
+  {
+    "date": "2023-07-26",
+    "property": "prob_female",
+    "stat": "Gender",
+    "label": "Female",
+    "value": 0.08227818459272385
+  },
+  {
+    "date": "2023-07-26",
+    "property": "prob_non_binary_gender_expansive",
+    "stat": "Gender",
+    "label": "Non-Binary",
+    "value": 0.20757052302360535
+  },
+  {
+    "date": "2023-07-26",
+    "property": "prob_13_17",
+    "stat": "Age",
+    "label": "13-17",
+    "value": 0.0013406517682597041
+  },
+  {
+    "date": "2023-07-26",
+    "property": "prob_18_24",
+    "stat": "Age",
+    "label": "18-24",
+    "value": 0.23138344287872314
+  },
+  {
+    "date": "2023-07-26",
+    "property": "prob_25_34",
+    "stat": "Age",
+    "label": "25-34",
+    "value": 0.6572628617286682
+  },
+  {
+    "date": "2023-07-26",
+    "property": "prob_35_over",
+    "stat": "Age",
+    "label": "35+",
+    "value": 0.11001301556825638
+  },
+  {
+    "date": "2023-08-02",
+    "property": "prob_male",
+    "stat": "Gender",
+    "label": "Male",
+    "value": 0.8140726685523987
+  },
+  {
+    "date": "2023-08-02",
+    "property": "prob_female",
+    "stat": "Gender",
+    "label": "Female",
+    "value": 0.06576363742351532
+  },
+  {
+    "date": "2023-08-02",
+    "property": "prob_non_binary_gender_expansive",
+    "stat": "Gender",
+    "label": "Non-Binary",
+    "value": 0.1201636791229248
+  },
+  {
+    "date": "2023-08-02",
+    "property": "prob_13_17",
+    "stat": "Age",
+    "label": "13-17",
+    "value": 0.0013298529665917158
+  },
+  {
+    "date": "2023-08-02",
+    "property": "prob_18_24",
+    "stat": "Age",
+    "label": "18-24",
+    "value": 0.25986307859420776
+  },
+  {
+    "date": "2023-08-02",
+    "property": "prob_25_34",
+    "stat": "Age",
+    "label": "25-34",
+    "value": 0.559931755065918
+  },
+  {
+    "date": "2023-08-02",
+    "property": "prob_35_over",
+    "stat": "Age",
+    "label": "35+",
+    "value": 0.17887531220912933
+  },
+  {
+    "date": "2023-08-09",
+    "property": "prob_male",
+    "stat": "Gender",
+    "label": "Male",
+    "value": 0.8378851413726807
+  },
+  {
+    "date": "2023-08-09",
+    "property": "prob_female",
+    "stat": "Gender",
+    "label": "Female",
+    "value": 0.07848290354013443
+  },
+  {
+    "date": "2023-08-09",
+    "property": "prob_non_binary_gender_expansive",
+    "stat": "Gender",
+    "label": "Non-Binary",
+    "value": 0.08363190293312073
+  },
+  {
+    "date": "2023-08-09",
+    "property": "prob_13_17",
+    "stat": "Age",
+    "label": "13-17",
+    "value": 0.0014306613011285663
+  },
+  {
+    "date": "2023-08-09",
+    "property": "prob_18_24",
+    "stat": "Age",
+    "label": "18-24",
+    "value": 0.2733786702156067
+  },
+  {
+    "date": "2023-08-09",
+    "property": "prob_25_34",
+    "stat": "Age",
+    "label": "25-34",
+    "value": 0.5959668755531311
+  },
+  {
+    "date": "2023-08-09",
+    "property": "prob_35_over",
+    "stat": "Age",
+    "label": "35+",
+    "value": 0.1292237788438797
+  },
+  {
+    "date": "2023-08-16",
+    "property": "prob_13_17",
+    "stat": "Age",
+    "label": "13-17",
+    "value": 0.0009154590079560876
+  },
+  {
+    "date": "2023-08-16",
+    "property": "prob_18_24",
+    "stat": "Age",
+    "label": "18-24",
+    "value": 0.32657623291015625
+  },
+  {
+    "date": "2023-08-16",
+    "property": "prob_25_34",
+    "stat": "Age",
+    "label": "25-34",
+    "value": 0.5500748753547668
+  },
+  {
+    "date": "2023-08-16",
+    "property": "prob_35_over",
+    "stat": "Age",
+    "label": "35+",
+    "value": 0.12243342399597168
+  },
+  {
+    "date": "2023-08-23",
+    "property": "prob_male",
+    "stat": "Gender",
+    "label": "Male",
+    "value": 0.8612692952156067
+  },
+  {
+    "date": "2023-08-23",
+    "property": "prob_female",
+    "stat": "Gender",
+    "label": "Female",
+    "value": 0.057066768407821655
+  },
+  {
+    "date": "2023-08-23",
+    "property": "prob_non_binary_gender_expansive",
+    "stat": "Gender",
+    "label": "Non-Binary",
+    "value": 0.08166396617889404
+  },
+  {
+    "date": "2023-08-30",
+    "property": "prob_male",
+    "stat": "Gender",
+    "label": "Male",
+    "value": 0.7775983214378357
+  },
+  {
+    "date": "2023-08-30",
+    "property": "prob_female",
+    "stat": "Gender",
+    "label": "Female",
+    "value": 0.0725022703409195
+  },
+  {
+    "date": "2023-08-30",
+    "property": "prob_non_binary_gender_expansive",
+    "stat": "Gender",
+    "label": "Non-Binary",
+    "value": 0.14989937841892242
+  },
+  {
+    "date": "2023-08-30",
+    "property": "prob_13_17",
+    "stat": "Age",
+    "label": "13-17",
+    "value": 0.0011016161879524589
+  },
+  {
+    "date": "2023-08-30",
+    "property": "prob_18_24",
+    "stat": "Age",
+    "label": "18-24",
+    "value": 0.19256532192230225
+  },
+  {
+    "date": "2023-08-30",
+    "property": "prob_25_34",
+    "stat": "Age",
+    "label": "25-34",
+    "value": 0.6920379996299744
+  },
+  {
+    "date": "2023-08-30",
+    "property": "prob_35_over",
+    "stat": "Age",
+    "label": "35+",
+    "value": 0.11429508775472641
+  },
+  {
+    "date": "2023-09-06",
+    "property": "prob_male",
+    "stat": "Gender",
+    "label": "Male",
+    "value": 0.8617201447486877
+  },
+  {
+    "date": "2023-09-06",
+    "property": "prob_female",
+    "stat": "Gender",
+    "label": "Female",
+    "value": 0.03880857676267624
+  },
+  {
+    "date": "2023-09-06",
+    "property": "prob_non_binary_gender_expansive",
+    "stat": "Gender",
+    "label": "Non-Binary",
+    "value": 0.09947124868631363
+  },
+  {
+    "date": "2023-09-06",
+    "property": "prob_13_17",
+    "stat": "Age",
+    "label": "13-17",
+    "value": 0.0012347442097961903
+  },
+  {
+    "date": "2023-09-06",
+    "property": "prob_18_24",
+    "stat": "Age",
+    "label": "18-24",
+    "value": 0.23083166778087616
+  },
+  {
+    "date": "2023-09-06",
+    "property": "prob_25_34",
+    "stat": "Age",
+    "label": "25-34",
+    "value": 0.6551986336708069
+  },
+  {
+    "date": "2023-09-06",
+    "property": "prob_35_over",
+    "stat": "Age",
+    "label": "35+",
+    "value": 0.11273496598005295
+  },
+  {
+    "date": "2023-09-13",
+    "property": "prob_male",
+    "stat": "Gender",
+    "label": "Male",
+    "value": 0.8386831879615784
+  },
+  {
+    "date": "2023-09-13",
+    "property": "prob_female",
+    "stat": "Gender",
+    "label": "Female",
+    "value": 0.05556996166706085
+  },
+  {
+    "date": "2023-09-13",
+    "property": "prob_non_binary_gender_expansive",
+    "stat": "Gender",
+    "label": "Non-Binary",
+    "value": 0.10574691742658615
+  },
+  {
+    "date": "2023-09-13",
+    "property": "prob_13_17",
+    "stat": "Age",
+    "label": "13-17",
+    "value": 0.0007083889213390648
+  },
+  {
+    "date": "2023-09-13",
+    "property": "prob_18_24",
+    "stat": "Age",
+    "label": "18-24",
+    "value": 0.1516931802034378
+  },
+  {
+    "date": "2023-09-13",
+    "property": "prob_25_34",
+    "stat": "Age",
+    "label": "25-34",
+    "value": 0.6395102739334106
+  },
+  {
+    "date": "2023-09-13",
+    "property": "prob_35_over",
+    "stat": "Age",
+    "label": "35+",
+    "value": 0.20808818936347961
+  },
+  {
+    "date": "2023-09-20",
+    "property": "prob_male",
+    "stat": "Gender",
+    "label": "Male",
+    "value": 0.9420228600502014
+  },
+  {
+    "date": "2023-09-20",
+    "property": "prob_female",
+    "stat": "Gender",
+    "label": "Female",
+    "value": 0.03297341242432594
+  },
+  {
+    "date": "2023-09-20",
+    "property": "prob_non_binary_gender_expansive",
+    "stat": "Gender",
+    "label": "Non-Binary",
+    "value": 0.02500373125076294
+  },
+  {
+    "date": "2023-09-20",
+    "property": "prob_13_17",
+    "stat": "Age",
+    "label": "13-17",
+    "value": 0.0017263646004721522
+  },
+  {
+    "date": "2023-09-20",
+    "property": "prob_18_24",
+    "stat": "Age",
+    "label": "18-24",
+    "value": 0.17641034722328186
+  },
+  {
+    "date": "2023-09-20",
+    "property": "prob_25_34",
+    "stat": "Age",
+    "label": "25-34",
+    "value": 0.5609833002090454
+  },
+  {
+    "date": "2023-09-20",
+    "property": "prob_35_over",
+    "stat": "Age",
+    "label": "35+",
+    "value": 0.2608800232410431
+  },
+  {
+    "date": "2023-09-27",
+    "property": "prob_male",
+    "stat": "Gender",
+    "label": "Male",
+    "value": 0.8123568296432495
+  },
+  {
+    "date": "2023-09-27",
+    "property": "prob_female",
+    "stat": "Gender",
+    "label": "Female",
+    "value": 0.08440126478672028
+  },
+  {
+    "date": "2023-09-27",
+    "property": "prob_non_binary_gender_expansive",
+    "stat": "Gender",
+    "label": "Non-Binary",
+    "value": 0.10324186831712723
+  },
+  {
+    "date": "2023-09-27",
+    "property": "prob_13_17",
+    "stat": "Age",
+    "label": "13-17",
+    "value": 0.0016688284231349826
+  },
+  {
+    "date": "2023-09-27",
+    "property": "prob_18_24",
+    "stat": "Age",
+    "label": "18-24",
+    "value": 0.15867426991462708
+  },
+  {
+    "date": "2023-09-27",
+    "property": "prob_25_34",
+    "stat": "Age",
+    "label": "25-34",
+    "value": 0.5815151333808899
+  },
+  {
+    "date": "2023-09-27",
+    "property": "prob_35_over",
+    "stat": "Age",
+    "label": "35+",
+    "value": 0.25814178586006165
+  },
+  {
+    "date": "2023-10-04",
+    "property": "prob_male",
+    "stat": "Gender",
+    "label": "Male",
+    "value": 0.910189151763916
+  },
+  {
+    "date": "2023-10-04",
+    "property": "prob_female",
+    "stat": "Gender",
+    "label": "Female",
+    "value": 0.05223335325717926
+  },
+  {
+    "date": "2023-10-04",
+    "property": "prob_non_binary_gender_expansive",
+    "stat": "Gender",
+    "label": "Non-Binary",
+    "value": 0.03757748752832413
+  },
+  {
+    "date": "2023-10-04",
+    "property": "prob_13_17",
+    "stat": "Age",
+    "label": "13-17",
+    "value": 0.0015345367137342691
+  },
+  {
+    "date": "2023-10-04",
+    "property": "prob_18_24",
+    "stat": "Age",
+    "label": "18-24",
+    "value": 0.1238928958773613
+  },
+  {
+    "date": "2023-10-04",
+    "property": "prob_25_34",
+    "stat": "Age",
+    "label": "25-34",
+    "value": 0.35311535000801086
+  },
+  {
+    "date": "2023-10-04",
+    "property": "prob_35_over",
+    "stat": "Age",
+    "label": "35+",
+    "value": 0.5214572548866272
+  },
+  {
+    "date": "2023-10-11",
+    "property": "prob_male",
+    "stat": "Gender",
+    "label": "Male",
+    "value": 0.7232679128646851
+  },
+  {
+    "date": "2023-10-11",
+    "property": "prob_female",
+    "stat": "Gender",
+    "label": "Female",
+    "value": 0.09497002512216568
+  },
+  {
+    "date": "2023-10-11",
+    "property": "prob_non_binary_gender_expansive",
+    "stat": "Gender",
+    "label": "Non-Binary",
+    "value": 0.18176205456256866
+  },
+  {
+    "date": "2023-10-11",
+    "property": "prob_13_17",
+    "stat": "Age",
+    "label": "13-17",
+    "value": 0.0008596898405812681
+  },
+  {
+    "date": "2023-10-11",
+    "property": "prob_18_24",
+    "stat": "Age",
+    "label": "18-24",
+    "value": 0.06252877414226532
+  },
+  {
+    "date": "2023-10-11",
+    "property": "prob_25_34",
+    "stat": "Age",
+    "label": "25-34",
+    "value": 0.5478519201278687
+  },
+  {
+    "date": "2023-10-11",
+    "property": "prob_35_over",
+    "stat": "Age",
+    "label": "35+",
+    "value": 0.3887596130371094
+  },
+  {
+    "date": "2023-10-18",
+    "property": "prob_male",
+    "stat": "Gender",
+    "label": "Male",
+    "value": 0.8343566656112671
+  },
+  {
+    "date": "2023-10-18",
+    "property": "prob_female",
+    "stat": "Gender",
+    "label": "Female",
+    "value": 0.07696812599897385
+  },
+  {
+    "date": "2023-10-18",
+    "property": "prob_non_binary_gender_expansive",
+    "stat": "Gender",
+    "label": "Non-Binary",
+    "value": 0.08867519348859787
+  },
+  {
+    "date": "2023-10-18",
+    "property": "prob_13_17",
+    "stat": "Age",
+    "label": "13-17",
+    "value": 0.0018385403091087937
+  },
+  {
+    "date": "2023-10-18",
+    "property": "prob_18_24",
+    "stat": "Age",
+    "label": "18-24",
+    "value": 0.13463035225868225
+  },
+  {
+    "date": "2023-10-18",
+    "property": "prob_25_34",
+    "stat": "Age",
+    "label": "25-34",
+    "value": 0.4758906960487366
+  },
+  {
+    "date": "2023-10-18",
+    "property": "prob_35_over",
+    "stat": "Age",
+    "label": "35+",
+    "value": 0.3876403570175171
+  },
+  {
+    "date": "2023-10-25",
+    "property": "prob_male",
+    "stat": "Gender",
+    "label": "Male",
+    "value": 0.7738333344459534
+  },
+  {
+    "date": "2023-10-25",
+    "property": "prob_female",
+    "stat": "Gender",
+    "label": "Female",
+    "value": 0.11047879606485367
+  },
+  {
+    "date": "2023-10-25",
+    "property": "prob_non_binary_gender_expansive",
+    "stat": "Gender",
+    "label": "Non-Binary",
+    "value": 0.11568787693977356
+  },
+  {
+    "date": "2023-10-25",
+    "property": "prob_13_17",
+    "stat": "Age",
+    "label": "13-17",
+    "value": 0.0011302082566544414
+  },
+  {
+    "date": "2023-10-25",
+    "property": "prob_18_24",
+    "stat": "Age",
+    "label": "18-24",
+    "value": 0.21599140763282776
+  },
+  {
+    "date": "2023-10-25",
+    "property": "prob_25_34",
+    "stat": "Age",
+    "label": "25-34",
+    "value": 0.6421068906784058
+  },
+  {
+    "date": "2023-10-25",
+    "property": "prob_35_over",
+    "stat": "Age",
+    "label": "35+",
+    "value": 0.14077143371105194
+  },
+  {
+    "date": "2023-11-01",
+    "property": "prob_13_17",
+    "stat": "Age",
+    "label": "13-17",
+    "value": 0.000523144903127104
+  },
+  {
+    "date": "2023-11-01",
+    "property": "prob_18_24",
+    "stat": "Age",
+    "label": "18-24",
+    "value": 0.24130910634994507
+  },
+  {
+    "date": "2023-11-01",
+    "property": "prob_25_34",
+    "stat": "Age",
+    "label": "25-34",
+    "value": 0.5910571217536926
+  },
+  {
+    "date": "2023-11-01",
+    "property": "prob_35_over",
+    "stat": "Age",
+    "label": "35+",
+    "value": 0.1671106368303299
+  },
+  {
+    "date": "2023-11-08",
+    "property": "prob_male",
+    "stat": "Gender",
+    "label": "Male",
+    "value": 0.7925236225128174
+  },
+  {
+    "date": "2023-11-08",
+    "property": "prob_female",
+    "stat": "Gender",
+    "label": "Female",
+    "value": 0.11686860024929047
+  },
+  {
+    "date": "2023-11-08",
+    "property": "prob_non_binary_gender_expansive",
+    "stat": "Gender",
+    "label": "Non-Binary",
+    "value": 0.09060776978731155
+  },
+  {
+    "date": "2023-11-08",
+    "property": "prob_13_17",
+    "stat": "Age",
+    "label": "13-17",
+    "value": 0.0017802510410547256
+  },
+  {
+    "date": "2023-11-08",
+    "property": "prob_18_24",
+    "stat": "Age",
+    "label": "18-24",
+    "value": 0.07642147690057755
+  },
+  {
+    "date": "2023-11-08",
+    "property": "prob_25_34",
+    "stat": "Age",
+    "label": "25-34",
+    "value": 0.5425941944122314
+  },
+  {
+    "date": "2023-11-08",
+    "property": "prob_35_over",
+    "stat": "Age",
+    "label": "35+",
+    "value": 0.3792040944099426
+  },
+  {
+    "date": "2023-11-15",
+    "property": "prob_male",
+    "stat": "Gender",
+    "label": "Male",
+    "value": 0.8806992769241333
+  },
+  {
+    "date": "2023-11-15",
+    "property": "prob_female",
+    "stat": "Gender",
+    "label": "Female",
+    "value": 0.038928039371967316
+  },
+  {
+    "date": "2023-11-15",
+    "property": "prob_non_binary_gender_expansive",
+    "stat": "Gender",
+    "label": "Non-Binary",
+    "value": 0.08037269115447998
+  },
+  {
+    "date": "2023-11-15",
+    "property": "prob_13_17",
+    "stat": "Age",
+    "label": "13-17",
+    "value": 0.003368954872712493
+  },
+  {
+    "date": "2023-11-15",
+    "property": "prob_18_24",
+    "stat": "Age",
+    "label": "18-24",
+    "value": 0.15701426565647125
+  },
+  {
+    "date": "2023-11-15",
+    "property": "prob_25_34",
+    "stat": "Age",
+    "label": "25-34",
+    "value": 0.47583654522895813
+  },
+  {
+    "date": "2023-11-15",
+    "property": "prob_35_over",
+    "stat": "Age",
+    "label": "35+",
+    "value": 0.36378026008605957
+  },
+  {
+    "date": "2023-11-22",
+    "property": "prob_male",
+    "stat": "Gender",
+    "label": "Male",
+    "value": 0.728073000907898
+  },
+  {
+    "date": "2023-11-22",
+    "property": "prob_female",
+    "stat": "Gender",
+    "label": "Female",
+    "value": 0.08718843013048172
+  },
+  {
+    "date": "2023-11-22",
+    "property": "prob_non_binary_gender_expansive",
+    "stat": "Gender",
+    "label": "Non-Binary",
+    "value": 0.18473856151103973
+  },
+  {
+    "date": "2023-11-22",
+    "property": "prob_13_17",
+    "stat": "Age",
+    "label": "13-17",
+    "value": 0.0021150142420083284
+  },
+  {
+    "date": "2023-11-22",
+    "property": "prob_18_24",
+    "stat": "Age",
+    "label": "18-24",
+    "value": 0.10513843595981598
+  },
+  {
+    "date": "2023-11-22",
+    "property": "prob_25_34",
+    "stat": "Age",
+    "label": "25-34",
+    "value": 0.7137299180030823
+  },
+  {
+    "date": "2023-11-22",
+    "property": "prob_35_over",
+    "stat": "Age",
+    "label": "35+",
+    "value": 0.17901669442653656
+  },
+  {
+    "date": "2023-11-29",
+    "property": "prob_male",
+    "stat": "Gender",
+    "label": "Male",
+    "value": 0.9010302424430847
+  },
+  {
+    "date": "2023-11-29",
+    "property": "prob_female",
+    "stat": "Gender",
+    "label": "Female",
+    "value": 0.047058191150426865
+  },
+  {
+    "date": "2023-11-29",
+    "property": "prob_non_binary_gender_expansive",
+    "stat": "Gender",
+    "label": "Non-Binary",
+    "value": 0.05191151797771454
+  },
+  {
+    "date": "2023-11-29",
+    "property": "prob_13_17",
+    "stat": "Age",
+    "label": "13-17",
+    "value": 0.0014871562598273158
+  },
+  {
+    "date": "2023-11-29",
+    "property": "prob_18_24",
+    "stat": "Age",
+    "label": "18-24",
+    "value": 0.11640442162752151
+  },
+  {
+    "date": "2023-11-29",
+    "property": "prob_25_34",
+    "stat": "Age",
+    "label": "25-34",
+    "value": 0.7304537892341614
+  },
+  {
+    "date": "2023-11-29",
+    "property": "prob_35_over",
+    "stat": "Age",
+    "label": "35+",
+    "value": 0.1516546607017517
+  },
+  {
+    "date": "2023-12-06",
+    "property": "prob_male",
+    "stat": "Gender",
+    "label": "Male",
+    "value": 0.8744645118713379
+  },
+  {
+    "date": "2023-12-06",
+    "property": "prob_female",
+    "stat": "Gender",
+    "label": "Female",
+    "value": 0.06447351723909378
+  },
+  {
+    "date": "2023-12-06",
+    "property": "prob_non_binary_gender_expansive",
+    "stat": "Gender",
+    "label": "Non-Binary",
+    "value": 0.06106191873550415
+  },
+  {
+    "date": "2023-12-06",
+    "property": "prob_13_17",
+    "stat": "Age",
+    "label": "13-17",
+    "value": 0.004472479224205017
+  },
+  {
+    "date": "2023-12-06",
+    "property": "prob_18_24",
+    "stat": "Age",
+    "label": "18-24",
+    "value": 0.17695745825767517
+  },
+  {
+    "date": "2023-12-06",
+    "property": "prob_25_34",
+    "stat": "Age",
+    "label": "25-34",
+    "value": 0.4789547026157379
+  },
+  {
+    "date": "2023-12-06",
+    "property": "prob_35_over",
+    "stat": "Age",
+    "label": "35+",
+    "value": 0.3396153151988983
+  },
+  {
+    "date": "2023-12-13",
+    "property": "prob_male",
+    "stat": "Gender",
+    "label": "Male",
+    "value": 0.9026984572410583
+  },
+  {
+    "date": "2023-12-13",
+    "property": "prob_female",
+    "stat": "Gender",
+    "label": "Female",
+    "value": 0.0726863369345665
+  },
+  {
+    "date": "2023-12-13",
+    "property": "prob_non_binary_gender_expansive",
+    "stat": "Gender",
+    "label": "Non-Binary",
+    "value": 0.024615231901407242
+  },
+  {
+    "date": "2023-12-13",
+    "property": "prob_13_17",
+    "stat": "Age",
+    "label": "13-17",
+    "value": 0.0017134456429630518
+  },
+  {
+    "date": "2023-12-13",
+    "property": "prob_18_24",
+    "stat": "Age",
+    "label": "18-24",
+    "value": 0.14638860523700714
+  },
+  {
+    "date": "2023-12-13",
+    "property": "prob_25_34",
+    "stat": "Age",
+    "label": "25-34",
+    "value": 0.6752874851226807
+  },
+  {
+    "date": "2023-12-13",
+    "property": "prob_35_over",
+    "stat": "Age",
+    "label": "35+",
+    "value": 0.17661045491695404
+  },
+  {
+    "date": "2023-12-20",
+    "property": "prob_male",
+    "stat": "Gender",
+    "label": "Male",
+    "value": 0.9202715158462524
+  },
+  {
+    "date": "2023-12-20",
+    "property": "prob_female",
+    "stat": "Gender",
+    "label": "Female",
+    "value": 0.05102372169494629
+  },
+  {
+    "date": "2023-12-20",
+    "property": "prob_non_binary_gender_expansive",
+    "stat": "Gender",
+    "label": "Non-Binary",
+    "value": 0.028704792261123657
+  },
+  {
+    "date": "2023-12-20",
+    "property": "prob_13_17",
+    "stat": "Age",
+    "label": "13-17",
+    "value": 0.001850732951425016
+  },
+  {
+    "date": "2023-12-20",
+    "property": "prob_18_24",
+    "stat": "Age",
+    "label": "18-24",
+    "value": 0.12466845661401749
+  },
+  {
+    "date": "2023-12-20",
+    "property": "prob_25_34",
+    "stat": "Age",
+    "label": "25-34",
+    "value": 0.684413492679596
+  },
+  {
+    "date": "2023-12-20",
+    "property": "prob_35_over",
+    "stat": "Age",
+    "label": "35+",
+    "value": 0.1890673041343689
+  },
+  {
+    "date": "2023-12-27",
+    "property": "prob_male",
+    "stat": "Gender",
+    "label": "Male",
+    "value": 0.9250233769416809
+  },
+  {
+    "date": "2023-12-27",
+    "property": "prob_female",
+    "stat": "Gender",
+    "label": "Female",
+    "value": 0.06079738959670067
+  },
+  {
+    "date": "2023-12-27",
+    "property": "prob_non_binary_gender_expansive",
+    "stat": "Gender",
+    "label": "Non-Binary",
+    "value": 0.01417919434607029
+  },
+  {
+    "date": "2023-12-27",
+    "property": "prob_13_17",
+    "stat": "Age",
+    "label": "13-17",
+    "value": 0.0016019479371607304
+  },
+  {
+    "date": "2023-12-27",
+    "property": "prob_18_24",
+    "stat": "Age",
+    "label": "18-24",
+    "value": 0.1211208701133728
+  },
+  {
+    "date": "2023-12-27",
+    "property": "prob_25_34",
+    "stat": "Age",
+    "label": "25-34",
+    "value": 0.6081721186637878
+  },
+  {
+    "date": "2023-12-27",
+    "property": "prob_35_over",
+    "stat": "Age",
+    "label": "35+",
+    "value": 0.26910504698753357
+  },
+  {
+    "date": "2024-01-03",
+    "property": "prob_male",
+    "stat": "Gender",
+    "label": "Male",
+    "value": 0.9002423882484436
+  },
+  {
+    "date": "2024-01-03",
+    "property": "prob_female",
+    "stat": "Gender",
+    "label": "Female",
+    "value": 0.06672502309083939
+  },
+  {
+    "date": "2024-01-03",
+    "property": "prob_non_binary_gender_expansive",
+    "stat": "Gender",
+    "label": "Non-Binary",
+    "value": 0.033032629638910294
+  },
+  {
+    "date": "2024-01-03",
+    "property": "prob_13_17",
+    "stat": "Age",
+    "label": "13-17",
+    "value": 0.0014962799614295363
+  },
+  {
+    "date": "2024-01-03",
+    "property": "prob_18_24",
+    "stat": "Age",
+    "label": "18-24",
+    "value": 0.14282578229904175
+  },
+  {
+    "date": "2024-01-03",
+    "property": "prob_25_34",
+    "stat": "Age",
+    "label": "25-34",
+    "value": 0.5922003984451294
+  },
+  {
+    "date": "2024-01-03",
+    "property": "prob_35_over",
+    "stat": "Age",
+    "label": "35+",
+    "value": 0.2634775638580322
+  },
+  {
+    "date": "2024-01-10",
+    "property": "prob_male",
+    "stat": "Gender",
+    "label": "Male",
+    "value": 0.9060577750205994
+  },
+  {
+    "date": "2024-01-10",
+    "property": "prob_female",
+    "stat": "Gender",
+    "label": "Female",
+    "value": 0.05342560634016991
+  },
+  {
+    "date": "2024-01-10",
+    "property": "prob_non_binary_gender_expansive",
+    "stat": "Gender",
+    "label": "Non-Binary",
+    "value": 0.04051661491394043
+  },
+  {
+    "date": "2024-01-10",
+    "property": "prob_13_17",
+    "stat": "Age",
+    "label": "13-17",
+    "value": 0.002315447898581624
+  },
+  {
+    "date": "2024-01-10",
+    "property": "prob_18_24",
+    "stat": "Age",
+    "label": "18-24",
+    "value": 0.2166222780942917
+  },
+  {
+    "date": "2024-01-10",
+    "property": "prob_25_34",
+    "stat": "Age",
+    "label": "25-34",
+    "value": 0.5886651277542114
+  },
+  {
+    "date": "2024-01-10",
+    "property": "prob_35_over",
+    "stat": "Age",
+    "label": "35+",
+    "value": 0.19239716231822968
+  },
+  {
+    "date": "2024-01-17",
+    "property": "prob_male",
+    "stat": "Gender",
+    "label": "Male",
+    "value": 0.920581042766571
+  },
+  {
+    "date": "2024-01-17",
+    "property": "prob_female",
+    "stat": "Gender",
+    "label": "Female",
+    "value": 0.048418425023555756
+  },
+  {
+    "date": "2024-01-17",
+    "property": "prob_non_binary_gender_expansive",
+    "stat": "Gender",
+    "label": "Non-Binary",
+    "value": 0.031000470742583275
+  },
+  {
+    "date": "2024-01-17",
+    "property": "prob_13_17",
+    "stat": "Age",
+    "label": "13-17",
+    "value": 0.001832858077250421
+  },
+  {
+    "date": "2024-01-17",
+    "property": "prob_18_24",
+    "stat": "Age",
+    "label": "18-24",
+    "value": 0.14617332816123962
+  },
+  {
+    "date": "2024-01-17",
+    "property": "prob_25_34",
+    "stat": "Age",
+    "label": "25-34",
+    "value": 0.5937540531158447
+  },
+  {
+    "date": "2024-01-17",
+    "property": "prob_35_over",
+    "stat": "Age",
+    "label": "35+",
+    "value": 0.25823974609375
+  },
+  {
+    "date": "2024-01-24",
+    "property": "prob_male",
+    "stat": "Gender",
+    "label": "Male",
+    "value": 0.8804815411567688
+  },
+  {
+    "date": "2024-01-24",
+    "property": "prob_female",
+    "stat": "Gender",
+    "label": "Female",
+    "value": 0.08802799880504608
+  },
+  {
+    "date": "2024-01-24",
+    "property": "prob_non_binary_gender_expansive",
+    "stat": "Gender",
+    "label": "Non-Binary",
+    "value": 0.03149047866463661
+  },
+  {
+    "date": "2024-01-24",
+    "property": "prob_13_17",
+    "stat": "Age",
+    "label": "13-17",
+    "value": 0.0016240442637354136
+  },
+  {
+    "date": "2024-01-24",
+    "property": "prob_18_24",
+    "stat": "Age",
+    "label": "18-24",
+    "value": 0.15451057255268097
+  },
+  {
+    "date": "2024-01-24",
+    "property": "prob_25_34",
+    "stat": "Age",
+    "label": "25-34",
+    "value": 0.6681838035583496
+  },
+  {
+    "date": "2024-01-24",
+    "property": "prob_35_over",
+    "stat": "Age",
+    "label": "35+",
+    "value": 0.17568157613277435
+  },
+  {
+    "date": "2024-01-31",
+    "property": "prob_male",
+    "stat": "Gender",
+    "label": "Male",
+    "value": 0.9351330399513245
+  },
+  {
+    "date": "2024-01-31",
+    "property": "prob_female",
+    "stat": "Gender",
+    "label": "Female",
+    "value": 0.03300540894269943
+  },
+  {
+    "date": "2024-01-31",
+    "property": "prob_non_binary_gender_expansive",
+    "stat": "Gender",
+    "label": "Non-Binary",
+    "value": 0.03186153993010521
+  },
+  {
+    "date": "2024-01-31",
+    "property": "prob_13_17",
+    "stat": "Age",
+    "label": "13-17",
+    "value": 0.002610813593491912
+  },
+  {
+    "date": "2024-01-31",
+    "property": "prob_18_24",
+    "stat": "Age",
+    "label": "18-24",
+    "value": 0.13346345722675323
+  },
+  {
+    "date": "2024-01-31",
+    "property": "prob_25_34",
+    "stat": "Age",
+    "label": "25-34",
+    "value": 0.6702349781990051
+  },
+  {
+    "date": "2024-01-31",
+    "property": "prob_35_over",
+    "stat": "Age",
+    "label": "35+",
+    "value": 0.1936907172203064
+  },
+  {
+    "date": "2024-02-07",
+    "property": "prob_male",
+    "stat": "Gender",
+    "label": "Male",
+    "value": 0.8660005927085876
+  },
+  {
+    "date": "2024-02-07",
+    "property": "prob_female",
+    "stat": "Gender",
+    "label": "Female",
+    "value": 0.07655220478773117
+  },
+  {
+    "date": "2024-02-07",
+    "property": "prob_non_binary_gender_expansive",
+    "stat": "Gender",
+    "label": "Non-Binary",
+    "value": 0.05744723975658417
+  },
+  {
+    "date": "2024-02-07",
+    "property": "prob_13_17",
+    "stat": "Age",
+    "label": "13-17",
+    "value": 0.0012941622408106923
+  },
+  {
+    "date": "2024-02-07",
+    "property": "prob_18_24",
+    "stat": "Age",
+    "label": "18-24",
+    "value": 0.12456183135509491
+  },
+  {
+    "date": "2024-02-07",
+    "property": "prob_25_34",
+    "stat": "Age",
+    "label": "25-34",
+    "value": 0.7345783114433289
+  },
+  {
+    "date": "2024-02-07",
+    "property": "prob_35_over",
+    "stat": "Age",
+    "label": "35+",
+    "value": 0.13956573605537415
+  },
+  {
+    "date": "2024-02-14",
+    "property": "prob_male",
+    "stat": "Gender",
+    "label": "Male",
+    "value": 0.9409806132316589
+  },
+  {
+    "date": "2024-02-14",
+    "property": "prob_female",
+    "stat": "Gender",
+    "label": "Female",
+    "value": 0.04399648681282997
+  },
+  {
+    "date": "2024-02-14",
+    "property": "prob_non_binary_gender_expansive",
+    "stat": "Gender",
+    "label": "Non-Binary",
+    "value": 0.015022837556898594
+  },
+  {
+    "date": "2024-02-14",
+    "property": "prob_13_17",
+    "stat": "Age",
+    "label": "13-17",
+    "value": 0.0018316948553547263
+  },
+  {
+    "date": "2024-02-14",
+    "property": "prob_18_24",
+    "stat": "Age",
+    "label": "18-24",
+    "value": 0.13744139671325684
+  },
+  {
+    "date": "2024-02-14",
+    "property": "prob_25_34",
+    "stat": "Age",
+    "label": "25-34",
+    "value": 0.5963931083679199
+  },
+  {
+    "date": "2024-02-14",
+    "property": "prob_35_over",
+    "stat": "Age",
+    "label": "35+",
+    "value": 0.2643338143825531
+  },
+  {
+    "date": "2024-02-21",
+    "property": "prob_male",
+    "stat": "Gender",
+    "label": "Male",
+    "value": 0.9021481871604919
+  },
+  {
+    "date": "2024-02-21",
+    "property": "prob_female",
+    "stat": "Gender",
+    "label": "Female",
+    "value": 0.06699279695749283
+  },
+  {
+    "date": "2024-02-21",
+    "property": "prob_non_binary_gender_expansive",
+    "stat": "Gender",
+    "label": "Non-Binary",
+    "value": 0.030859041959047318
+  },
+  {
+    "date": "2024-02-21",
+    "property": "prob_13_17",
+    "stat": "Age",
+    "label": "13-17",
+    "value": 0.002024523913860321
+  },
+  {
+    "date": "2024-02-21",
+    "property": "prob_18_24",
+    "stat": "Age",
+    "label": "18-24",
+    "value": 0.1205049455165863
+  },
+  {
+    "date": "2024-02-21",
+    "property": "prob_25_34",
+    "stat": "Age",
+    "label": "25-34",
+    "value": 0.7112008929252625
+  },
+  {
+    "date": "2024-02-21",
+    "property": "prob_35_over",
+    "stat": "Age",
+    "label": "35+",
+    "value": 0.16626965999603271
+  },
+  {
+    "date": "2024-02-28",
+    "property": "prob_male",
+    "stat": "Gender",
+    "label": "Male",
+    "value": 0.9211463332176208
+  },
+  {
+    "date": "2024-02-28",
+    "property": "prob_female",
+    "stat": "Gender",
+    "label": "Female",
+    "value": 0.0393543541431427
+  },
+  {
+    "date": "2024-02-28",
+    "property": "prob_non_binary_gender_expansive",
+    "stat": "Gender",
+    "label": "Non-Binary",
+    "value": 0.03949928656220436
+  },
+  {
+    "date": "2024-02-28",
+    "property": "prob_13_17",
+    "stat": "Age",
+    "label": "13-17",
+    "value": 0.0021611882839351892
+  },
+  {
+    "date": "2024-02-28",
+    "property": "prob_18_24",
+    "stat": "Age",
+    "label": "18-24",
+    "value": 0.13368918001651764
+  },
+  {
+    "date": "2024-02-28",
+    "property": "prob_25_34",
+    "stat": "Age",
+    "label": "25-34",
+    "value": 0.7102434635162354
+  },
+  {
+    "date": "2024-02-28",
+    "property": "prob_35_over",
+    "stat": "Age",
+    "label": "35+",
+    "value": 0.1539061963558197
+  },
+  {
+    "date": "2024-03-06",
+    "property": "prob_male",
+    "stat": "Gender",
+    "label": "Male",
+    "value": 0.8574298024177551
+  },
+  {
+    "date": "2024-03-06",
+    "property": "prob_female",
+    "stat": "Gender",
+    "label": "Female",
+    "value": 0.07619457691907883
+  },
+  {
+    "date": "2024-03-06",
+    "property": "prob_non_binary_gender_expansive",
+    "stat": "Gender",
+    "label": "Non-Binary",
+    "value": 0.06637559086084366
+  },
+  {
+    "date": "2024-03-06",
+    "property": "prob_13_17",
+    "stat": "Age",
+    "label": "13-17",
+    "value": 0.0021037596743553877
+  },
+  {
+    "date": "2024-03-06",
+    "property": "prob_18_24",
+    "stat": "Age",
+    "label": "18-24",
+    "value": 0.07230491936206818
+  },
+  {
+    "date": "2024-03-06",
+    "property": "prob_25_34",
+    "stat": "Age",
+    "label": "25-34",
+    "value": 0.7449991703033447
+  },
+  {
+    "date": "2024-03-06",
+    "property": "prob_35_over",
+    "stat": "Age",
+    "label": "35+",
+    "value": 0.1805921345949173
+  },
+  {
+    "date": "2024-03-13",
+    "property": "prob_male",
+    "stat": "Gender",
+    "label": "Male",
+    "value": 0.9160641431808472
+  },
+  {
+    "date": "2024-03-13",
+    "property": "prob_female",
+    "stat": "Gender",
+    "label": "Female",
+    "value": 0.06355013698339462
+  },
+  {
+    "date": "2024-03-13",
+    "property": "prob_non_binary_gender_expansive",
+    "stat": "Gender",
+    "label": "Non-Binary",
+    "value": 0.02038579061627388
+  },
+  {
+    "date": "2024-03-13",
+    "property": "prob_13_17",
+    "stat": "Age",
+    "label": "13-17",
+    "value": 0.0025201456155627966
+  },
+  {
+    "date": "2024-03-13",
+    "property": "prob_18_24",
+    "stat": "Age",
+    "label": "18-24",
+    "value": 0.21545109152793884
+  },
+  {
+    "date": "2024-03-13",
+    "property": "prob_25_34",
+    "stat": "Age",
+    "label": "25-34",
+    "value": 0.6263839602470398
+  },
+  {
+    "date": "2024-03-13",
+    "property": "prob_35_over",
+    "stat": "Age",
+    "label": "35+",
+    "value": 0.15564477443695068
+  },
+  {
+    "date": "2024-03-20",
+    "property": "prob_male",
+    "stat": "Gender",
+    "label": "Male",
+    "value": 0.8967263698577881
+  },
+  {
+    "date": "2024-03-20",
+    "property": "prob_female",
+    "stat": "Gender",
+    "label": "Female",
+    "value": 0.06614426523447037
+  },
+  {
+    "date": "2024-03-20",
+    "property": "prob_non_binary_gender_expansive",
+    "stat": "Gender",
+    "label": "Non-Binary",
+    "value": 0.037129320204257965
+  },
+  {
+    "date": "2024-03-20",
+    "property": "prob_13_17",
+    "stat": "Age",
+    "label": "13-17",
+    "value": 0.0014498542295768857
+  },
+  {
+    "date": "2024-03-20",
+    "property": "prob_18_24",
+    "stat": "Age",
+    "label": "18-24",
+    "value": 0.14402233064174652
+  },
+  {
+    "date": "2024-03-20",
+    "property": "prob_25_34",
+    "stat": "Age",
+    "label": "25-34",
+    "value": 0.6392681002616882
+  },
+  {
+    "date": "2024-03-20",
+    "property": "prob_35_over",
+    "stat": "Age",
+    "label": "35+",
+    "value": 0.21525971591472626
+  },
+  {
+    "date": "2024-03-27",
+    "property": "prob_male",
+    "stat": "Gender",
+    "label": "Male",
+    "value": 0.9104802012443542
+  },
+  {
+    "date": "2024-03-27",
+    "property": "prob_female",
+    "stat": "Gender",
+    "label": "Female",
+    "value": 0.0594029575586319
+  },
+  {
+    "date": "2024-03-27",
+    "property": "prob_non_binary_gender_expansive",
+    "stat": "Gender",
+    "label": "Non-Binary",
+    "value": 0.030116839334368706
+  },
+  {
+    "date": "2024-03-27",
+    "property": "prob_13_17",
+    "stat": "Age",
+    "label": "13-17",
+    "value": 0.003031110856682062
+  },
+  {
+    "date": "2024-03-27",
+    "property": "prob_18_24",
+    "stat": "Age",
+    "label": "18-24",
+    "value": 0.17959704995155334
+  },
+  {
+    "date": "2024-03-27",
+    "property": "prob_25_34",
+    "stat": "Age",
+    "label": "25-34",
+    "value": 0.564219057559967
+  },
+  {
+    "date": "2024-03-27",
+    "property": "prob_35_over",
+    "stat": "Age",
+    "label": "35+",
+    "value": 0.2531528174877167
+  },
+  {
+    "date": "2024-04-03",
+    "property": "prob_male",
+    "stat": "Gender",
+    "label": "Male",
+    "value": 0.91996169090271
+  },
+  {
+    "date": "2024-04-03",
+    "property": "prob_female",
+    "stat": "Gender",
+    "label": "Female",
+    "value": 0.04552729055285454
+  },
+  {
+    "date": "2024-04-03",
+    "property": "prob_non_binary_gender_expansive",
+    "stat": "Gender",
+    "label": "Non-Binary",
+    "value": 0.034511033445596695
+  },
+  {
+    "date": "2024-04-03",
+    "property": "prob_13_17",
+    "stat": "Age",
+    "label": "13-17",
+    "value": 0.0011318136239424348
+  },
+  {
+    "date": "2024-04-03",
+    "property": "prob_18_24",
+    "stat": "Age",
+    "label": "18-24",
+    "value": 0.08439110964536667
+  },
+  {
+    "date": "2024-04-03",
+    "property": "prob_25_34",
+    "stat": "Age",
+    "label": "25-34",
+    "value": 0.6835129261016846
+  },
+  {
+    "date": "2024-04-03",
+    "property": "prob_35_over",
+    "stat": "Age",
+    "label": "35+",
+    "value": 0.23096416890621185
+  },
+  {
+    "date": "2024-04-10",
+    "property": "prob_male",
+    "stat": "Gender",
+    "label": "Male",
+    "value": 0.9073948860168457
+  },
+  {
+    "date": "2024-04-10",
+    "property": "prob_female",
+    "stat": "Gender",
+    "label": "Female",
+    "value": 0.05862083286046982
+  },
+  {
+    "date": "2024-04-10",
+    "property": "prob_non_binary_gender_expansive",
+    "stat": "Gender",
+    "label": "Non-Binary",
+    "value": 0.033984240144491196
+  },
+  {
+    "date": "2024-04-10",
+    "property": "prob_13_17",
+    "stat": "Age",
+    "label": "13-17",
+    "value": 0.0022243561688810587
+  },
+  {
+    "date": "2024-04-10",
+    "property": "prob_18_24",
+    "stat": "Age",
+    "label": "18-24",
+    "value": 0.1477692723274231
+  },
+  {
+    "date": "2024-04-10",
+    "property": "prob_25_34",
+    "stat": "Age",
+    "label": "25-34",
+    "value": 0.7355323433876038
+  },
+  {
+    "date": "2024-04-10",
+    "property": "prob_35_over",
+    "stat": "Age",
+    "label": "35+",
+    "value": 0.11447407305240631
+  },
+  {
+    "date": "2024-04-17",
+    "property": "prob_male",
+    "stat": "Gender",
+    "label": "Male",
+    "value": 0.8880126476287842
+  },
+  {
+    "date": "2024-04-17",
+    "property": "prob_female",
+    "stat": "Gender",
+    "label": "Female",
+    "value": 0.07304786145687103
+  },
+  {
+    "date": "2024-04-17",
+    "property": "prob_non_binary_gender_expansive",
+    "stat": "Gender",
+    "label": "Non-Binary",
+    "value": 0.038939476013183594
+  },
+  {
+    "date": "2024-04-17",
+    "property": "prob_13_17",
+    "stat": "Age",
+    "label": "13-17",
+    "value": 0.0013363510370254517
+  },
+  {
+    "date": "2024-04-17",
+    "property": "prob_18_24",
+    "stat": "Age",
+    "label": "18-24",
+    "value": 0.13014444708824158
+  },
+  {
+    "date": "2024-04-17",
+    "property": "prob_25_34",
+    "stat": "Age",
+    "label": "25-34",
+    "value": 0.5944452285766602
+  },
+  {
+    "date": "2024-04-17",
+    "property": "prob_35_over",
+    "stat": "Age",
+    "label": "35+",
+    "value": 0.274073988199234
+  },
+  {
+    "date": "2024-04-24",
+    "property": "prob_male",
+    "stat": "Gender",
+    "label": "Male",
+    "value": 0.9240244626998901
+  },
+  {
+    "date": "2024-04-24",
+    "property": "prob_female",
+    "stat": "Gender",
+    "label": "Female",
+    "value": 0.049083974212408066
+  },
+  {
+    "date": "2024-04-24",
+    "property": "prob_non_binary_gender_expansive",
+    "stat": "Gender",
+    "label": "Non-Binary",
+    "value": 0.026891592890024185
+  },
+  {
+    "date": "2024-04-24",
+    "property": "prob_13_17",
+    "stat": "Age",
+    "label": "13-17",
+    "value": 0.0015441646100953221
+  },
+  {
+    "date": "2024-04-24",
+    "property": "prob_18_24",
+    "stat": "Age",
+    "label": "18-24",
+    "value": 0.1245567724108696
+  },
+  {
+    "date": "2024-04-24",
+    "property": "prob_25_34",
+    "stat": "Age",
+    "label": "25-34",
+    "value": 0.5539594292640686
+  },
+  {
+    "date": "2024-04-24",
+    "property": "prob_35_over",
+    "stat": "Age",
+    "label": "35+",
+    "value": 0.31993958353996277
+  },
+  {
+    "date": "2024-05-01",
+    "property": "prob_male",
+    "stat": "Gender",
+    "label": "Male",
+    "value": 0.8492400646209717
+  },
+  {
+    "date": "2024-05-01",
+    "property": "prob_female",
+    "stat": "Gender",
+    "label": "Female",
+    "value": 0.08956122398376465
+  },
+  {
+    "date": "2024-05-01",
+    "property": "prob_non_binary_gender_expansive",
+    "stat": "Gender",
+    "label": "Non-Binary",
+    "value": 0.061198778450489044
+  },
+  {
+    "date": "2024-05-01",
+    "property": "prob_13_17",
+    "stat": "Age",
+    "label": "13-17",
+    "value": 0.0024020932614803314
+  },
+  {
+    "date": "2024-05-01",
+    "property": "prob_18_24",
+    "stat": "Age",
+    "label": "18-24",
+    "value": 0.16592656075954437
+  },
+  {
+    "date": "2024-05-01",
+    "property": "prob_25_34",
+    "stat": "Age",
+    "label": "25-34",
+    "value": 0.6067118644714355
+  },
+  {
+    "date": "2024-05-01",
+    "property": "prob_35_over",
+    "stat": "Age",
+    "label": "35+",
+    "value": 0.22495952248573303
+  },
+  {
+    "date": "2024-05-08",
+    "property": "prob_male",
+    "stat": "Gender",
+    "label": "Male",
+    "value": 0.8836511373519897
+  },
+  {
+    "date": "2024-05-08",
+    "property": "prob_female",
+    "stat": "Gender",
+    "label": "Female",
+    "value": 0.07364408671855927
+  },
+  {
+    "date": "2024-05-08",
+    "property": "prob_non_binary_gender_expansive",
+    "stat": "Gender",
+    "label": "Non-Binary",
+    "value": 0.04270482808351517
+  },
+  {
+    "date": "2024-05-08",
+    "property": "prob_13_17",
+    "stat": "Age",
+    "label": "13-17",
+    "value": 0.002272391226142645
+  },
+  {
+    "date": "2024-05-08",
+    "property": "prob_18_24",
+    "stat": "Age",
+    "label": "18-24",
+    "value": 0.19596832990646362
+  },
+  {
+    "date": "2024-05-08",
+    "property": "prob_25_34",
+    "stat": "Age",
+    "label": "25-34",
+    "value": 0.6506863236427307
+  },
+  {
+    "date": "2024-05-08",
+    "property": "prob_35_over",
+    "stat": "Age",
+    "label": "35+",
+    "value": 0.1510729193687439
+  },
+  {
+    "date": "2024-05-15",
+    "property": "prob_male",
+    "stat": "Gender",
+    "label": "Male",
+    "value": 0.9257104992866516
+  },
+  {
+    "date": "2024-05-15",
+    "property": "prob_female",
+    "stat": "Gender",
+    "label": "Female",
+    "value": 0.05201523005962372
+  },
+  {
+    "date": "2024-05-15",
+    "property": "prob_non_binary_gender_expansive",
+    "stat": "Gender",
+    "label": "Non-Binary",
+    "value": 0.022274255752563477
+  },
+  {
+    "date": "2024-05-15",
+    "property": "prob_13_17",
+    "stat": "Age",
+    "label": "13-17",
+    "value": 0.0026816597674041986
+  },
+  {
+    "date": "2024-05-15",
+    "property": "prob_18_24",
+    "stat": "Age",
+    "label": "18-24",
+    "value": 0.13184863328933716
+  },
+  {
+    "date": "2024-05-15",
+    "property": "prob_25_34",
+    "stat": "Age",
+    "label": "25-34",
+    "value": 0.6552855968475342
+  },
+  {
+    "date": "2024-05-15",
+    "property": "prob_35_over",
+    "stat": "Age",
+    "label": "35+",
+    "value": 0.21018412709236145
+  },
+  {
+    "date": "2024-05-22",
+    "property": "prob_male",
+    "stat": "Gender",
+    "label": "Male",
+    "value": 0.9307233691215515
+  },
+  {
+    "date": "2024-05-22",
+    "property": "prob_female",
+    "stat": "Gender",
+    "label": "Female",
+    "value": 0.04330086335539818
+  },
+  {
+    "date": "2024-05-22",
+    "property": "prob_non_binary_gender_expansive",
+    "stat": "Gender",
+    "label": "Non-Binary",
+    "value": 0.025975698605179787
+  },
+  {
+    "date": "2024-05-22",
+    "property": "prob_13_17",
+    "stat": "Age",
+    "label": "13-17",
+    "value": 0.0011958152754232287
+  },
+  {
+    "date": "2024-05-22",
+    "property": "prob_18_24",
+    "stat": "Age",
+    "label": "18-24",
+    "value": 0.12792792916297913
+  },
+  {
+    "date": "2024-05-22",
+    "property": "prob_25_34",
+    "stat": "Age",
+    "label": "25-34",
+    "value": 0.7528542876243591
+  },
+  {
+    "date": "2024-05-22",
+    "property": "prob_35_over",
+    "stat": "Age",
+    "label": "35+",
+    "value": 0.11802194267511368
+  },
+  {
+    "date": "2024-05-29",
+    "property": "prob_male",
+    "stat": "Gender",
+    "label": "Male",
+    "value": 0.8909093141555786
+  },
+  {
+    "date": "2024-05-29",
+    "property": "prob_female",
+    "stat": "Gender",
+    "label": "Female",
+    "value": 0.0721365436911583
+  },
+  {
+    "date": "2024-05-29",
+    "property": "prob_non_binary_gender_expansive",
+    "stat": "Gender",
+    "label": "Non-Binary",
+    "value": 0.0369541235268116
+  },
+  {
+    "date": "2024-05-29",
+    "property": "prob_13_17",
+    "stat": "Age",
+    "label": "13-17",
+    "value": 0.0014180670259520411
+  },
+  {
+    "date": "2024-05-29",
+    "property": "prob_18_24",
+    "stat": "Age",
+    "label": "18-24",
+    "value": 0.2328028678894043
+  },
+  {
+    "date": "2024-05-29",
+    "property": "prob_25_34",
+    "stat": "Age",
+    "label": "25-34",
+    "value": 0.6285983324050903
+  },
+  {
+    "date": "2024-05-29",
+    "property": "prob_35_over",
+    "stat": "Age",
+    "label": "35+",
+    "value": 0.13718077540397644
+  }
+]
