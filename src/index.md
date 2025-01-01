@@ -29,19 +29,17 @@ h1.hero {
 
 I'm an engineer and also a human person.
 
-## About me
+# About Me
 
-I work in building construction as a controls engineer and project manager. I'm interested in thermodynamics, air quality, and building comfort in commercial and industrial settings.
+I work in building construction as an HVAC controls engineer. I'm interested in thermodynamics, air quality, and building comfort in residential and commercial settings.
 
 I fiddle with computers, like the one serving you this webpage. I usually build things in python or rust and deploy them in docker. I believe in simplicity, and I believe in interpreting that term liberally.
 
 I run a few tabletop games for my friends and family. I enjoy systems focusing on collaborative worldbuilding, genre-bending narratives, and interesting characters.
 
-I believe in quantifying things when it's possible and helpful. I believe in trying and failing and learning.
+I believe in quantifying things when it's both meaningful and helpful. I believe in trying and failing and learning.
 
----
-
-## My projects
+# My Projects
 
 <div class="grid grid-cols-2">
   <div class="card gallery">
@@ -90,7 +88,7 @@ I believe in quantifying things when it's possible and helpful. I believe in try
 
 ---
 
-## Links
+# Links
 
 <div class="grid grid-cols-3">
   <div class="card center">
