@@ -59,3 +59,5 @@ As of summer 2024 this process was fairly straightforward. I believe you need to
 3. Wait 2-4 weeks.
 4. Open up your `package.zip` and navigate to `activity` > `analytics` > `events-2024-XXXX...`.
 5. Open it up and search for `predicted_gender` or `predicted_age`.
+
+When I ran the export again in December 2024 the events file only had a single prediction for age and gender, so it seems like the found one model that worked well and stuck with it.

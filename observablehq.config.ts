@@ -51,6 +51,7 @@ export default {
         { name: 'Discord Gender', path: '/discord-gender/' },
         { name: 'Genesis 3:1', path: '/genesis/' },
         { name: 'Outer Wilds', path: '/outer-wilds/' },
+        { name: 'Wedding', path: '/wedding/' },
         { name: 'Work Emails', path: '/work-emails/' },
         { name: 'Work Mileage', path: '/work-mileage/' },
       ]
