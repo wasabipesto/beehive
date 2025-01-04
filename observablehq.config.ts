@@ -57,16 +57,22 @@ export default {
       ]
     }
   ],
+  // Paths of pages to be server-side rendered.
+  dynamicPaths: [
+    "/feed/rss.xml"
+  ],
   // Some additional configuration options and their defaults:
   theme: 'coffee', // https://observablehq.com/framework/themes
   // what to stick in the head tag (HTML)
-  head: `<link rel="icon" type="image/png" href="/homepage/crows.40x40.png">`,
+  head: '\
+    <link rel="icon" type="image/png" href="/homepage/crows.40x40.png"> \
+    <link rel="alternate" type="application/rss+xml" title="RSS" href="https://wasabipesto.com/feed/rss.xml" />',
   // what to show in the header (HTML)
   header: '', 
   // what to show in the footer (HTML)
   footer: '\
     Made with ❤️ by <a href="https://wasabipesto.com">wasabipesto</a>. \
-    Generated with <a href="https://observablehq.com/framework/">Observable Framework</a>. \
+    Generated with <a href="https://observablehq.com/framework/">Observable Framework</a>. <br />\
     Page source and data loaders can be found on <a href="https://github.com/wasabipesto/beehive">GitHub</a>. \
     Content is licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0 Deed</a>.', 
   toc: true, // whether to show the table of contents

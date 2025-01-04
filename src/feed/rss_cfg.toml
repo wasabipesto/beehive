@@ -1,0 +1,123 @@
+title = "wasabipesto"
+link = "https://wasabipesto.com"
+description = "Website updates and new blog posts."
+
+[[entries]]
+title = "My Hardware"
+date = 2024-02-23
+link = "https://wasabipesto.com/hardware"
+summary = "An evergreen collection of my hardware."
+
+[[entries]]
+title = "My Software"
+date = 2024-03-03
+link = "https://wasabipesto.com/software"
+summary = "An evergreen collection of my software."
+
+[[entries]]
+title = "My Blogroll"
+date = 2024-03-07
+link = "https://wasabipesto.com/blogroll"
+summary = "An evergreen collection of my subscribed RSS feeds."
+
+[[entries]]
+title = "Plex"
+date = 2024-03-10
+link = "https://wasabipesto.com/plex"
+summary = "Some data about my Plex server libraries and activity."
+
+[[entries]]
+title = "My Media"
+date = 2024-04-10
+link = "https://wasabipesto.com/media"
+summary = "An evergreen collection of my favorite media."
+
+[[entries]]
+title = "Nice Numbers"
+date = 2024-06-23
+link = "https://wasabipesto.com/nice"
+summary = "A story about attempting to solve a silly math problem with high-performance computing."
+
+[[entries]]
+title = "Genesis"
+date = 2024-08-18
+link = "https://wasabipesto.com/genesis"
+summary = "A microfiction retelling of Genesis 3:1 with Donald Knuth."
+
+[[entries]]
+title = "Outer Wilds"
+date = 2024-08-18
+link = "https://wasabipesto.com/outer-wilds"
+summary = "A collection of minimal-spoiler hints for the game Outer Wilds."
+
+[[entries]]
+title = "Temperature Sensing"
+date = 2024-08-18
+link = "https://wasabipesto.com/temperature-sensing"
+summary = "A brief overview of temperature sensors with some thermistor charts."
+
+[[entries]]
+title = "The Old Schoolhouse"
+date = 2024-12-30
+link = "https://wasabipesto.com/schoolhouse"
+summary = "A digression into how you might approach upgrading HVAC in an old building."
+
+[[entries]]
+title = "Life as a Controls Subcontractor"
+date = 2024-12-30
+link = "https://wasabipesto.com/controls-life"
+summary = "A rambling list of things you might do as a controls subcontractor."
+
+[[entries]]
+title = "Thoughts on AI Crawling"
+date = 2024-12-30
+link = "https://wasabipesto.com/ai-crawling"
+summary = "Some disorganized thoughts on AI crawlers and my content."
+
+[[entries]]
+title = "State of the Apps 2024"
+date = 2024-12-30
+link = "https://wasabipesto.com/sota-2024"
+summary = "The apps and programs I'm using at the end of 2024 and some brief thoughts for each."
+
+[[entries]]
+title = "Reading/Playing/Watching 2024"
+date = 2024-12-30
+link = "https://wasabipesto.com/media-2024"
+summary = "A list of things I read, played, or watched in 2024 and some brief thoughts for each."
+
+[[entries]]
+title = "Work Emails"
+date = 2024-12-30
+link = "https://wasabipesto.com/work-emails"
+summary = "An analysis of my work emails sent over time and their recipients."
+
+[[entries]]
+title = "Work Mileage"
+date = 2024-12-30
+link = "https://wasabipesto.com/work-mileage"
+summary = "An analysis of how much I drove for work. It was less than I thought but still a lot."
+
+[[entries]]
+title = "SSH Tarpit"
+date = 2024-12-31
+link = "https://wasabipesto.com/ssh-tarpit"
+summary = "Some data from the SSH Tarpit I've had running for a year now."
+
+[[entries]]
+title = "City Superposition Calculator"
+date = 2024-12-31
+link = "https://wasabipesto.com/city-superposition"
+summary = "A calculator I made for a silly presentation. Work in progress."
+
+[[entries]]
+title = "My Discord-Assigned Age & Gender"
+date = 2024-12-31
+link = "https://wasabipesto.com/discord-gender"
+summary = "An export of my Discord data which includes their guesses about my demographic data."
+
+[[entries]]
+title = "Our Wedding"
+date = 2025-01-03
+link = "https://wasabipesto.com/wedding"
+summary = "Some lessons learned from our wedding, and some unsolicited advice for weddings in general."

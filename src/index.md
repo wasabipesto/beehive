@@ -120,6 +120,7 @@ Some of my favorite posts are listed here:
 | github    | [github.com/wasabipesto](https://github.com/wasabipesto)                                       |
 | tumblr    | [wasabipesto.tumblr.com](https://wasabipesto.tumblr.com)                                       |
 | manifold  | [manifold.markets/wasabipesto](https://manifold.markets/wasabipesto)                           |
+| site rss  | [wasabipesto.com/feed/rss.xml](https://wasabipesto.com/feed/rss.xml)                           |
 | ssh keys  | [api.github.com/users/wasabipesto/keys](https://api.github.com/users/wasabipesto/keys)         |
 | gpg keys  | [api.github.com/users/wasabipesto/gpg_keys](https://api.github.com/users/wasabipesto/gpg_keys) |
 | copyright | [CC BY-NC-SA 4.0 Deed](https://creativecommons.org/licenses/by-nc-sa/4.0/)                     |

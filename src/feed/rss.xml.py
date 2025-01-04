@@ -1,25 +1,24 @@
-import os
-import sys
-import frontmatter
-from markdown2 import markdown
+import tomllib
+from datetime import datetime, timezone
 from feedgen.feed import FeedGenerator
 
-markdown_folder = "/opt/beehive/src/feed"
-output_folder = sys.argv[1]
+rss_cfg_file = "src/feed/rss_cfg.toml"
+with open(rss_cfg_file, "rb") as file:
+    rss_cfg = tomllib.load(file)
 
 fg = FeedGenerator()
-fg.title("wasabipesto")
-fg.link(href="https://wasabipesto.com")
-fg.description("Infrequent updates about the site and my other projects.")
+fg.title(rss_cfg["title"])
+fg.link(href=rss_cfg["link"])
+fg.description(rss_cfg["description"])
 
-for file_name in os.listdir(markdown_folder):
-    if file_name.endswith(".md"):
-        post = frontmatter.load(os.path.join(markdown_folder, file_name))
-        fe = fg.add_entry()
-        fe.guid("https://wasabipesto.com/dev/null/" + post["date"].isoformat())
-        fe.title(post["title"])
-        fe.published(post["date"].isoformat() + "T00:00:00Z")
-        fe.description(markdown(post.content))
+for item in rss_cfg["entries"]:
+    fe = fg.add_entry()
+    fe.title(item["title"])
+    fe.published(
+        datetime.combine(item["date"], datetime.min.time(), tzinfo=timezone.utc)
+    )
+    fe.guid(item["link"])
+    fe.description(item["summary"])
 
-fg.rss_file(os.path.join(output_folder, "rss.xml"), pretty=True)
-# fg.atom_file(os.path.join(output_folder, "atom.xml"), pretty=True)
+rss_feed_str = fg.rss_str(pretty=True).decode("utf-8")
+print(rss_feed_str)
