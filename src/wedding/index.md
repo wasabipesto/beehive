@@ -1,4 +1,4 @@
-# The Wedding
+# Our Wedding
 
 ## Original Plans
 

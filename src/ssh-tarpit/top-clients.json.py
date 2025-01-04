@@ -10,7 +10,36 @@ import socket
 load_dotenv()
 api_base = os.environ["PROMETHEUS_API_BASE"]
 
+CACHE_FILE = "reverse_dns_cache.json"
 
+
+# Load cache from disk
+def load_cache():
+    if os.path.exists(CACHE_FILE):
+        with open(CACHE_FILE, "r") as f:
+            return json.load(f)
+    return {}
+
+
+# Save cache to disk
+def save_cache(cache):
+    with open(CACHE_FILE, "w") as f:
+        json.dump(cache, f)
+
+
+# Perform reverse DNS lookup with caching
+def reverse_dns_lookup(ipv4, cache):
+    if ipv4 in cache:
+        return cache[ipv4]
+    try:
+        hostname = socket.gethostbyaddr(ipv4)[0]
+    except socket.herror:
+        hostname = None
+    cache[ipv4] = hostname
+    return hostname
+
+
+# Get data from Prometheus API
 def get_data_inst(query):
     params = {"query": query}
     response = requests.get(f"{api_base}/query", params=params)
@@ -18,32 +47,40 @@ def get_data_inst(query):
         data = response.json()["data"]["result"]
     except:
         print(response.text)
-        raise Exception
+        raise Exception("Error fetching data from Prometheus API")
     return data
 
 
-def reverse_dns_lookup(ipv4):
-    try:
-        return socket.gethostbyaddr(ipv4)[0]
-    except socket.herror:
-        return None
+# Load the cache
+cache = load_cache()
 
-
+# Query Prometheus API
 data = get_data_inst(
-    "sum(increase(endlessh_client_open_count[90d])) by (ip, country, geohash) > 10"
+    "sum(increase(endlessh_client_open_count[90d])) by (ip, country, geohash) >= 10"
 )
-output = [
-    {
-        "ip": item["metric"]["ip"],
-        "rdns": reverse_dns_lookup(item["metric"]["ip"]),
-        "geohash": item["metric"]["geohash"],
-        "lat": geohash2.decode(item["metric"]["geohash"])[0],
-        "long": geohash2.decode(item["metric"]["geohash"])[1],
-        "country": item["metric"]["country"],
-        "count": round(float(item["value"][1])),
-    }
-    for item in data
-]
-output.sort(key=lambda x: x["count"], reverse=True)
 
+# Process the data
+output = []
+for item in data:
+    ip = item["metric"]["ip"]
+    rdns = reverse_dns_lookup(ip, cache)
+    geohash = item["metric"]["geohash"]
+    lat, long = geohash2.decode(geohash)
+    output.append(
+        {
+            "ip": ip,
+            "rdns": rdns,
+            "geohash": geohash,
+            "lat": lat,
+            "long": long,
+            "country": item["metric"]["country"],
+            "count": round(float(item["value"][1])),
+        }
+    )
+
+# Save the updated cache
+save_cache(cache)
+
+# Sort the output by count and print
+output.sort(key=lambda x: x["count"], reverse=True)
 print(json.dumps(output, indent=4))

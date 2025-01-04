@@ -1,3 +1,7 @@
+---
+title: Home
+---
+
 <style>
 h1.hero {
   margin: 2rem 0;
@@ -38,6 +42,18 @@ I fiddle with computers, like the one serving you this webpage. I usually build 
 I run a few tabletop games for my friends and family. I enjoy systems focusing on collaborative worldbuilding, genre-bending narratives, and interesting characters.
 
 I believe in quantifying things when it's both meaningful and helpful. I believe in trying and failing and learning.
+
+## My Blog
+
+To the left you'll find some blog posts, authored by me. Many of them contain some amount of data visualization, not because I'm good at it but because I find data interesting.
+
+Some of my favorite posts are listed here:
+
+- [Nice Numbers](/nice/), a story about attempting to solve a silly math problem with high-performance computing.
+- [The Old Schoolhouse](/schoolhouse/), a digression into how you might approach upgrading HVAC in an old building.
+- [Our Wedding](/wedding/), some lessons learned from our wedding, and some unsolicited advice for weddings in general.
+
+---
 
 # My Projects
 

@@ -8,18 +8,20 @@ const concurrent_connections = FileAttachment('concurrent-connections.json').jso
 const top_clients = FileAttachment('top-clients.json').json()
 ```
 
-## The Tarpit
+# The Tarpit
 
 I use the docker container from [this repository](https://github.com/shizunge/endlessh-go), which takes the original idea from EndleSSH and adds some more features. Namely, this one geolocates attackers by IP and exports everything to Prometheus. It also packages everything up in a handy Docker container.
 
-## The Data
+This page uses the stats collected by my Prometheus instance. It was last updated on ${new Date(FileAttachment('time-wasted.json').lastModified).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}.
+
+# The Data
 
 I've had this exporter running for about a year now. Let's see how much time we've wasted.
 
 ```js
 Plot.plot({
   title: 'Total Hours Wasted per Week',
-  y: { grid: true },
+  y: { label: 'hours', grid: true },
   marks: [
     Plot.rectY(
       time_wasted,
@@ -96,13 +98,19 @@ Plot.plot({
 })
 ```
 
-There seems to have been a lull through this past fall (October, mainly). I also expected much more of a spike over the summer after the xz vulnerability.
+There seems to have been a lull through this past fall (October, mainly). I also expected much more of a spike over the summer after the `xz` vulnerability.
 
 # The Attackers
 
 So who's trying to connect? And where are they?
 
-Here's the top offending IPs from the last three months, ranked by total number of connections:
+## An Aside
+
+Is it fair to categorize anyone trying to connect to port 22 as an attacker? After all, I'm the one who made the port publicly available. Maybe someone mistyped their own IP address, or a client is misconfigured, or maybe internet researchers are trying to connect to collect data.
+
+Well, I'm taking the unfair leap that anyone who gets stuck in this tarpit ten times or more is either an attacker or has a similar enough effect to be categorized as one. If you see your IP on the list below and feel as though you've been miscategorized as an attacker, you can remove yourself from the list by stopping the malicious connections. For more information, see [Dr. Neal Krawetz's post about scans vs attacks](https://www.hackerfactor.com/blog/index.php?/archives/775-Scans-and-Attacks.html).
+
+With that hurdle crossed, let's look at the data. Here's the top offending IPs from the last three months, ranked by total number of connections. I also ran a reverse DNS lookup on each to see if they had any associated hostnames.
 
 ```js
 Inputs.table(top_clients, {
@@ -126,6 +134,8 @@ Inputs.table(top_clients, {
   reverse: true
 })
 ```
+
+## The Map
 
 Let's go ahead and throw those on a map.
 
@@ -165,7 +175,9 @@ Plot.plot({
 })
 ```
 
-I expect many of these are proxied, and so are more revealing of locations that just aren't as responsive to takedown requests or reports of malicious activity than the locations of actual attackers. Still, it's interesting to see where the hotspots are.
+I expect many of these are proxied, and so are more revealing of providers that just aren't as responsive to takedown requests or reports of malicious activity than the locations of actual attackers. Still, it's interesting to see where the hotspots are.
+
+## Aggregated
 
 We can also break down the stats by country or domain to see just how egregious some are.
 

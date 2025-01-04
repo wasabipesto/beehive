@@ -6,6 +6,8 @@ const tautulli = FileAttachment('tautulli.json').json()
 
 Part of the purpose of my home server is to download, process, and serve media to my close friends and family through a software called [Plex](https://plex.tv). The server runs from my office closet and doesn't have anywhere near 100% uptime, but it's awfully convenient as an alternative to Netflix.
 
+This page uses the stats collected by my Tautulli instance. It was last updated on ${new Date(FileAttachment('tautulli.json').lastModified).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}.
+
 ## Libraries
 
 My two main libraries are Movies and TV. On the server there are ${tautulli.library_movies.count.toLocaleString("en-US")} movies, which have been watched a total of ${tautulli.library_movies.plays.toLocaleString("en-US")} times. In the TV library there are ${tautulli.library_tv.count.toLocaleString("en-US")} shows with a total of ${tautulli.library_tv.parent_count.toLocaleString("en-US")} seasons and ${tautulli.library_tv.child_count.toLocaleString("en-US")} episodes, watched a total of ${tautulli.library_tv.plays.toLocaleString("en-US")} times.

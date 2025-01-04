@@ -1,8 +1,8 @@
 ```js
-const thermistors = FileAttachment('thermistors.csv').csv({typed: true})
+const thermistors = FileAttachment('thermistors.csv').csv({ typed: true })
 ```
 
-# Temperature Sensors
+# Temperature Sensing
 
 There are lots of ways to detect temperature, from old mercury thermometers to bimetallic strips. Most of these rely on some material property that changes as the material heats or cools:
 
@@ -35,19 +35,16 @@ Often you find old sensors in the field connected to old controllers with no doc
 
 ```js
 Plot.plot({
-  title: "Resistance vs Temperature",
+  title: 'Resistance vs Temperature',
   width: 1200,
-  x: { type: "log" },
+  x: { type: 'log' },
   marks: [
-    Plot.lineY(
-      thermistors,
-      {
-        x: "ohms",
-        y: "f",
-        stroke: "type",
-        tip: true
-      },
-    )
+    Plot.lineY(thermistors, {
+      x: 'ohms',
+      y: 'f',
+      stroke: 'type',
+      tip: true
+    })
   ]
 })
 ```
@@ -58,19 +55,16 @@ Plot.plot({
 
 ```js
 Plot.plot({
-  title: "Temperature vs Resistance",
+  title: 'Temperature vs Resistance',
   width: 1200,
-  y: { type: "log" },
+  y: { type: 'log' },
   marks: [
-    Plot.lineY(
-      thermistors,
-      {
-        x: "f",
-        y: "ohms",
-        stroke: "type",
-        tip: true
-      },
-    )
+    Plot.lineY(thermistors, {
+      x: 'f',
+      y: 'ohms',
+      stroke: 'type',
+      tip: true
+    })
   ]
 })
 ```
@@ -81,19 +75,19 @@ Plot.plot({
 
 ```js
 Plot.plot({
-  title: "Temperature vs Resistance",
-  subtitle: "Zoomed in to typical ambient range",
+  title: 'Temperature vs Resistance',
+  subtitle: 'Zoomed in to typical ambient range',
   width: 1200,
-  y: { type: "log" },
+  y: { type: 'log' },
   marks: [
     Plot.lineY(
-      thermistors.filter(obj => obj.f >= 55 && obj.f <= 85),
+      thermistors.filter((obj) => obj.f >= 55 && obj.f <= 85),
       {
-        x: "f",
-        y: "ohms",
-        stroke: "type",
+        x: 'f',
+        y: 'ohms',
+        stroke: 'type',
         tip: true
-      },
+      }
     )
   ]
 })

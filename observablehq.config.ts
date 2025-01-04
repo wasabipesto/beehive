@@ -26,7 +26,7 @@ export default {
       pages: [
         { name: 'The Old Schoolhouse', path: '/schoolhouse/' },
         { name: 'Life as a Controls Subcontractor', path: '/controls-life/' },
-        { name: 'Thermistors', path: '/thermistors/' }
+        { name: 'Temperature Sensing', path: '/temperature-sensing/' }
       ]
     },
     {
@@ -50,8 +50,8 @@ export default {
         { name: 'City Superposition', path: '/city-superposition/' },
         { name: 'Discord Gender', path: '/discord-gender/' },
         { name: 'Genesis 3:1', path: '/genesis/' },
+        { name: 'Our Wedding', path: '/wedding/' },
         { name: 'Outer Wilds', path: '/outer-wilds/' },
-        { name: 'Wedding', path: '/wedding/' },
         { name: 'Work Emails', path: '/work-emails/' },
         { name: 'Work Mileage', path: '/work-mileage/' },
       ]
@@ -59,12 +59,19 @@ export default {
   ],
   // Some additional configuration options and their defaults:
   theme: 'coffee', // https://observablehq.com/framework/themes
+  // what to stick in the head tag (HTML)
   head: `<link rel="icon" type="image/png" href="/homepage/crows.40x40.png">`,
-  header: '', // what to show in the header (HTML)
-  footer: '', // what to show in the footer (HTML)
+  // what to show in the header (HTML)
+  header: '', 
+  // what to show in the footer (HTML)
+  footer: '\
+    Made with ❤️ by <a href="https://wasabipesto.com">wasabipesto</a>. \
+    Generated with <a href="https://observablehq.com/framework/">Observable Framework</a>. \
+    Page source and data loaders can be found on <a href="https://github.com/wasabipesto/beehive">GitHub</a>. \
+    Content is licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0 Deed</a>.', 
   toc: true, // whether to show the table of contents
   pager: false, // whether to show previous & next links in the footer
-  root: 'src' // path to the source root for preview
+  root: 'src', // path to the source root for preview
   // output: "dist", // path to the output root for build
-  // search: true, // whether to enable search on the project
+  search: true, // whether to enable search on the project
 }
