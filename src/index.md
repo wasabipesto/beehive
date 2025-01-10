@@ -61,7 +61,7 @@ Some of my favorite posts are listed here:
   <div class="card gallery">
   <a href="https://calibration.city/">
     <h3>Calibration City</h3>
-    <div>Preciction market calibration and accuracy analysis.</div>
+    <div>Prediction market calibration and accuracy analysis.</div>
     <p><img src="homepage/projects/calibrationcity.png" /></p>
   </a>
   </div>

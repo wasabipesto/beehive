@@ -4,19 +4,19 @@ What is air conditioning? What is air, actually? What makes it comfortable or un
 
 ## Air is weird
 
-Air is great. Everybody loves air. You’ve got Oxygen, the star of the show. Carbon dioxide, plants love that stuff. Nitrogen, which is presumably important for something. Add a dash of Argon a pinch of “other” and you’ve made the pie chart from every 3rd grade science book. But that’s not what we’re here to talk about, really.
+Air is great. Everybody loves air. You’ve got oxygen, the star of the show. Carbon dioxide, plants love that stuff. Nitrogen, which is presumably important for something. Add a dash of argon a pinch of “other” and you’ve made the pie chart from every 3rd grade science book. But that’s not what we’re here to talk about, really.
 
-1. The air is wet! There’s usually more water in the air than Argon! I could rant about this for an hour, but humidity changes everything. Too much or not enough humidity can be a health issue, but way before that you’ll notice if the air is too dry or sticky. Water in the air takes a lot of energy to condition or remove, so it’s usually one of our first priorities.
+1. The air is wet! There’s usually more water in the air than argon! I could rant about this for an hour, but humidity changes everything. Too much or not enough humidity can be a health issue, but way before that you’ll notice if the air is too dry or sticky. Water in the air takes a lot of energy to condition or remove, so it’s usually one of our first priorities.
 2. Even a tiny amount of bad stuff is bad. Smoke and exhaust can contain aerosolized heavy metals and carcinogens that are dangerous and hard to measure. Your body can catch most of the larger particles, so the smaller ones are typically more concerning. Instead of trying to measure individual particles, we take samples and measure the number of small particles under a certain threshold (2.5 or 10 micrometers across, known as PM2.5 or PM10 respectively).
 
-## So what are we trying to do here
+## So what are we trying to do here?
 
 Let’s look at all of the things about the air we’re going to try to control:
 
 - Temperature: People are most comfortable around 70F and can notice very slight changes in temperature. They also like to be able to request a higher or lower temperature.
-- Humidity: Dependent on temperature, most people okay anywhere from 20 to 80% relative humidity. Comfortable levels are generally between 30 to 50%.
+- Humidity: Dependent on temperature, most people are okay anywhere from 20 to 80% relative humidity. Comfortable levels are generally between 30 to 50%.
 - Carbon dioxide: CO2 builds up in a space over time as people exhale, and can make them feel drowsy or distracted. Higher concentrations can make the room feel stuffy.
-- Particulates/Odor: Not all small particles are harmful, but they can be annoying and we should try and keep them out of the air anyways.
+- Particulates/Odor: Not all small particles are harmful, but they can be annoying and we should try to keep them out of the air anyway.
 - Energy/Cost: We should do all of this while using as little energy as possible - which also means reduced costs.
 - Maintenance: Whatever is installed should be easy and cheap to maintain and repair.
 - Freeze Protection: If your application is in a location that can drop below 32F, your solution needs to be resilient against freezing.
@@ -33,11 +33,11 @@ If you’ve stayed at a hotel you’ve probably seen a packaged terminal air con
 
 ### Temperature ✅
 
-Assuming the units are properly sized, they actually do a pretty good job at keeping the space at the target temperature.
+Assuming the units are properly sized, they actually do a pretty good job of keeping the space at the target temperature.
 
 For cooling we have a small refrigeration circuit, much like a small air conditioner you’d fit in a window. The circuit exposes cold fluid to the interior, cooling down the air, while radiating that heat outside. This also takes a fair bit of energy, plus a charge of refrigerant to actually run the system.
 
-For heating, we picked a unit with resistive heating. This works like a hair dryer or space heater, pushing electricity through an element to heat it up. Unfortunately it takes a lot of energy: we had to install a new circuit for each classroom in order to get enough electrons. The school needed a new electrical switchgear anyways.
+For heating, we picked a unit with resistive heating. This works like a hair dryer or space heater, pushing electricity through an element to heat it up. Unfortunately it takes a lot of energy: we had to install a new circuit for each classroom in order to get enough electrons. The school needed a new electrical switchgear anyway.
 
 If we wanted, we could add a heat pump to the heating side. It utilizes the same refrigerant as the cooling side, so it doesn’t add much complexity to the system. The system would still utilize the resistive element for quick warm-up and for extremely low temperatures, but during typical use the heat pump would effectively run the refrigerant “backwards”, cooling the outside air and heating the inside. The benefit here is lower energy costs when it’s between 30 and 50F outside.
 
@@ -120,7 +120,7 @@ Well, if you’ve got a nice mechanical mezzanine somewhere, or maybe a classroo
 
 ### Temperature ✅
 
-When only one room needs cooling, we just kick on the fan, bring in a little bit of outside air and little bit of return air from the space, and open the cooling coil little bit. The cold water from our chiller will cool down the air, then we can push it out into our ductwork.
+When only one room needs cooling, we just kick on the fan, bring in a little bit of outside air and a little bit of return air from the space, and open the cooling coil little bit. The cold water from our chiller will cool down the air, then we can push it out into our ductwork.
 
 How do we make sure that air gets to the right room? Well, each branch of duct will need to have a little damper, so we can direct the air to the space that requested it.
 
@@ -144,7 +144,7 @@ I mentioned earlier that we didn’t need louvers under every window, but we wil
 
 ### Pressurization ✅
 
-it wasn’t on our list before, but with a centralized solution like this we can control the building’s pressure. Have you ever tried to open a door and felt a suction holding it shut, or saw a door that was held open by an inch or so as air rushed out? Those are examples of poor building pressure - our goal is to keep the unconditioned outside air from leaking in through gaps and cracks in the exterior walls without blowing doors or windows open. In some facilities like hospitals or pathogen research labs, you may want each room to keep air from entering or exiting unless it passes through a filter.
+It wasn’t on our list before, but with a centralized solution like this we can control the building’s pressure. Have you ever tried to open a door and felt a suction holding it shut, or saw a door that was held open by an inch or so as air rushed out? Those are examples of poor building pressure - our goal is to keep the unconditioned outside air from leaking in through gaps and cracks in the exterior walls without blowing doors or windows open. In some facilities like hospitals or pathogen research labs, you may want each room to keep air from entering or exiting unless it passes through a filter.
 
 Since we’ve got a few big fans here that supply air to the spaces, we can measure the pressure differential between the interior and exterior and modulate the fan speeds to keep it exactly where we want it. (I should note that this is technically possible with some of the previous solutions but quite tricky to implement in practice. Centralization helps significantly!)
 

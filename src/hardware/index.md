@@ -44,7 +44,7 @@ function histogram_norm(series, instance, label, width, percent, max) {
 
 These are the machines and other hardware I use regularly.
 
-Some of the stats on page are generated from data collected by my prometheus instance over the last month. It was last updated on ${new Date(FileAttachment('prometheus.json').lastModified).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}.
+Some of the stats on this page are generated from data collected by my prometheus instance over the last month. It was last updated on ${new Date(FileAttachment('prometheus.json').lastModified).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}.
 
 ## Phone: Leandros
 

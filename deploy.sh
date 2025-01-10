@@ -5,8 +5,11 @@ source .env || exit
 echo Starting beehive deployment...
 
 if [ "$1" = "--invalidate-all" ]; then
-    find src/.observablehq/cache -type f -name '*.json' -exec mv '{}' '{}.bak' \; || exit
-    echo Invalidated cached data loaders.
+    find src/.observablehq/cache -type f \( -name "*.json" -o -name "*.csv" \) -exec sh -c '
+        for file; do
+            mv "$file" "$file.bak" && echo "Moved: $file"
+        done
+    ' sh '{}' + || exit
 fi
 
 if [ "$1" = "--invalidate" ]; then
@@ -24,8 +27,6 @@ yarn observable build || exit
 echo Copying static assets...
 mkdir dist/assets
 cp -r src/assets/* dist/assets/
-
-# exit # TODO: update deployment process
 
 # copy to beta site
 rm -r ${DEPLOY_PATH}/${DEV_SITE}/*

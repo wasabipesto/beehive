@@ -302,7 +302,7 @@ You're right, even with all of these options there doesn't seem to be any other 
 
 Okay, it doesn’t seem feasible to check every single number in every single base. That would take literally forever. We have to make some optimizations.
 
-First, We’re going to be talking about “${tex`n^2`} and ${tex`n^3`}, as represented in base ${tex`b`}" a lot, so I’m going to call that set the <b>sqube</b>.
+First, we’re going to be talking about “${tex`n^2`} and ${tex`n^3`}, as represented in base ${tex`b`}" a lot, so I’m going to call that set the <b>sqube</b>.
 
 Second, let's look at that plot again, but this time at the total number of digits in the sqube.
 
@@ -371,7 +371,7 @@ We just took this problem from "stupid and literally impossible" to "stupid and 
 
 ## A brief aside
 
-I should probably calrify some things. I did not come up with this problem, nor most of the clever tricks in this post. Most of this came from the exceptional Jacob Cohen, AKA Conflux, and you can read his account of the search for nice numbers over [on his blog](https://beautifulthorns.wixsite.com/home/post/is-69-unique). I am but your humble guide on this safari into the savannah of pointless math, and I beg you indulge me for just a few minutes more.
+I should probably clarify some things. I did not come up with this problem, nor most of the clever tricks in this post. Most of this came from the exceptional Jacob Cohen, AKA Conflux, and you can read his account of the search for nice numbers over [on his blog](https://beautifulthorns.wixsite.com/home/post/is-69-unique). I am but your humble guide on this safari into the savanna of pointless math, and I beg you indulge me for just a few minutes more.
 
 Also for any pedants: I'm only counting real, positive integers here. That should technically be in the definition, so here you go:
 
@@ -426,7 +426,7 @@ These continue on infinitely, but our search doesn't.
 
 You can build a pretty sweet gaming PC for a few thousand bucks. My desktop computer can chew through these numbers pretty fast, calculating bases and squbes and unique numbers faster than it can print them out on the screen. But we're talking about searching trillions of numbers here, so we'll need more than my desktop.
 
-There's a reason that "supercomputers" aren't just built like one huge gaming PC: they're designed to break up big tasks into hundreds of smaller ones and run them across dozens of machines. If you're a researcher, you can queue up jobs on your friendly local cluster that will eventually run on a random node and get your results back within 3-5 business days. If you're a rnadom guy looking for nice numbers, you can hack together an API server to break up the infinite search field into chunks and connect all of the spare computers you have around the house to it and get results immediately.
+There's a reason that "supercomputers" aren't just built like one huge gaming PC: they're designed to break up big tasks into hundreds of smaller ones and run them across dozens of machines. If you're a researcher, you can queue up jobs on your friendly local cluster that will eventually run on a random node and get your results back within 3-5 business days. If you're a random guy looking for nice numbers, you can hack together an API server to break up the infinite search field into chunks and connect all of the spare computers you have around the house to it and get results immediately.
 
 The plan is:
 
@@ -440,12 +440,12 @@ The plan is:
 
 Instead of one PC running the search script, now we have a dozen computers running at full blast without stepping on each other's toes. Surely we'll find something in no time at all!
 
-## How long is this thing, anyways?
+## How long is this thing, anyway?
 
 How far are we going to have to search before we find another nice number? In order to figure that out we need two pieces of information:
 
 1. How large is our search range?
-2. How frequent are nice numbers are in that range?
+2. How frequent are nice numbers in that range?
 
 We know the first bit, so let's focus on the second.
 
@@ -505,7 +505,7 @@ You might think we're at a dead end. The probability of a nice number anywhere p
 
 Thankfully for us, it's not <i>actually</i> zero. It's just so incredibly small that every calculator in the world will round down. (Aren't we having fun yet?)
 
-For completeness's sake, let's show the other half of our equation: the size of each base range.
+For completeness' sake, let's show the other half of our equation: the size of each base range.
 
 <div class="card">
 
@@ -574,7 +574,7 @@ Let's see how long it'll take to get to those endless fields of nice numbers...
 
 (Maybe exponential scaling isn't all that great.)
 
-Unbowed, unbent, unbroken, we carry on. This problem is tuly a giant, but if we keep hacking away then there's a (technically) non-zero chance we'll find something! And won't it be funny if the next nice number was something like 69^420?
+Unbowed, unbent, unbroken, we carry on. This problem is truly a giant, but if we keep hacking away then there's a (technically) non-zero chance we'll find something! And won't it be funny if the next nice number was something like 69^420?
 
 <!--
 
@@ -590,7 +590,7 @@ We can do better!
 
 So far we've exhaustively searched through base 48, and we have detailed analytics into base 42. We've found no nice numbers, though we did find one number that was surprisingly close (4,134,931,983,708). We've found no specific patterns in digit distribution or niceness, but that doesn't mean we've come away empty-handed.
 
-One metric we gather of each base range is the "niceness", or the ratio of uniques to the base (if the niceness of any number is 1, it's a perfectly nice number). This could be useful to see if there's a pattern of specific bases being "nicer" than others. The niceness of each base range seems to be narrowing down on 0.632, which is the value of ${tex`1-1/e`} (and what one would expect if the digit distributions are indeed psuedorandom).
+One metric we gather of each base range is the "niceness", or the ratio of uniques to the base (if the niceness of any number is 1, it's a perfectly nice number). This could be useful to see if there's a pattern of specific bases being "nicer" than others. The niceness of each base range seems to be narrowing down on 0.632, which is the value of ${tex`1-1/e`} (and what one would expect if the digit distributions are indeed pseudorandom).
 
 The charts below are reproduced with a bit more color and updated more often at [https://nicenumbers.net](https://nicenumbers.net).
 

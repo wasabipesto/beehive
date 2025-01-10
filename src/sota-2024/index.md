@@ -1,6 +1,6 @@
 # State of the Apps 2024
 
-This is a list inspired by [CGP Grey's State of the Apps](https://web.archive.org/web/20240710214655/https://www.cgpgrey.com/blog/state-of-the-apps-2014), continued on the [Cortex podcast](https://cgpgrey.substack.com/p/state-of-the-apps-2025). If you're reading this around the end of 2024, these will match what's currently on my [Software](https://wasabipesto.com/software/) page, but that page will be updated over time to what I'm currently using while this one will remain static for historical interest.
+This is a list inspired by [CGP Grey's State of the Apps](https://web.archive.org/web/20240710214655/https://www.cgpgrey.com/blog/state-of-the-apps-2014), continued on the [Cortex podcast](https://cgpgrey.substack.com/p/state-of-the-apps-2025). If you're reading this around the end of 2024, these will match what's currently on my [Software](https://wasabipesto.com/software/) page, but that page will be updated over time to reflect what I'm currently using while this one will remain static for historical interest.
 
 # Art & Games
 
@@ -10,7 +10,7 @@ Steam is a great platform that makes playing games dead simple, even on Linux. I
 
 ### Virtual Tabletop: Foundry
 
-Foundry is leagues better than Roll20 for D&D. It can be a little heavier, but it has way more features and has worked much smoother for me when setting up scenes. The [5e.tools](http://5e.tools) importer makes creaking new 5e characters a breeze. I’ll keep an eye on the space but I don’t see myself moving away from it anytime soon.
+Foundry is leagues better than Roll20 for D&D. It can be a little heavier, but it has way more features and has worked much more smoothly for me when setting up scenes. The [5e.tools](http://5e.tools) importer makes creating new 5e characters a breeze. I’ll keep an eye on the space but I don’t see myself moving away from it anytime soon.
 
 ### Sketches: Excalidraw
 
@@ -22,19 +22,19 @@ Right now this is just for bad/funny photo edits. I’m sure there are better to
 
 ### Generative AI: Stable Diffusion WebUI
 
-I used the SD WebUI a while back for D&D character/location art, but haven’t used it since. I actually installed StabilityMatrix recently, but I haven’t started on the project that I’ll actually use these for yet. I imagine new apps in this realm will pop up over the next year, and I may or may not pick a few favorite by then.
+I used the SD WebUI a while back for D&D character/location art, but haven’t used it since. I actually installed StabilityMatrix recently, but I haven’t started on the project that I’ll actually use these for yet. I imagine new apps in this realm will pop up over the next year, and I may or may not pick a new favorite by then.
 
 ### Miscellaneous:
 
 - Inkarnate: Online map-making software for fantasy games.
-- OBS Studio: Online map-making software for fantasy games.
+- OBS Studio: Desktop streaming and recording software.
 - Piper: Configure gaming devices like my Logitech G502.
 
 # Communication
 
 ### Primary Messaging: Beeper
 
-It’s extremely convenient to get all of my messages in one place, on mobile or desktop. Auto-copying OTP messages is also super nice. Recently purchased by Automattic so I’m waiting on the Desktop app update. I don’t see myself changing main apps anytime soon.
+It’s extremely convenient to get all of my messages in one place, on mobile or desktop. Auto-copying OTP messages is also super nice. Recently purchased by Automattic so I’m waiting on the desktop app update. I don’t see myself changing main apps anytime soon.
 
 ### Other Messaging: Discord, Google Messages
 
@@ -66,9 +66,9 @@ I enjoy the Gnome look and feel over KDE, though I might try out the new Plasma 
 
 I started dabbling in tiling window managers and I particularly enjoy how Forge provides a nice middleground between a traditional window manager and something fully tiling. I may dive further into sway when I try Nix again in the future.
 
-### Desktop Terminal: Alactritty
+### Desktop Terminal: Alacritty
 
-After using the default Gnome terminal emulator for a while I tried out Alactritty and didn’t really notice a difference. I might try out Ghostty here soon, or switch back to the default.
+After using the default Gnome terminal emulator for a while I tried out Alacritty and didn’t really notice a difference. I might try out Ghostty here soon, or switch back to the default.
 
 ### Mobile SSH Client:
 
@@ -112,7 +112,7 @@ I tried Nix this year. I have more to say about this but nothing I say will be n
 
 ### Calendar: Google Calendar
 
-I use Google Calendar because it’s simple and shareable. I can see my scheduled events, meal plan, work meetings, reminders, birthdays, and anything else all in one place. I can share that with everyone else in my household and everyone sees the same thing. I’d be interested in seeing alternatives but hesitant to change.
+I use Google Calendar because it’s simple and shareable. I can see my scheduled events, meal plan, work meetings, reminders, birthdays, and anything else all in one place. I can share that with everyone else in my household and everyone sees the same thing. I’d be interested in seeing alternatives but am hesitant to change.
 
 ### To-Do Lists: Google Tasks
 
@@ -215,7 +215,7 @@ I’ve used this combo for a decade, it’s the de facto standard by this point.
 
 ### Social Archiving: Gallery-DL, YouTube-DL
 
-These apps are invaluable for getting content out of walled gardens. I can save stuff to watch later, remix and edit, or just have on my hard drive for later.
+These apps are invaluable for getting content out of walled gardens. I can save stuff to watch later, remix and edit, or just have it on my hard drive for later.
 
 # Monitoring
 
@@ -248,7 +248,7 @@ I use a set of simple scripts to make backups on every machine every day with Re
 
 ### DNS Nameserver: Cloudflare
 
-I have all of my domains set up through Cloudflare for DNS. Running through Cloudlare’s edge sets up HTTPS automatically, runs through any redirects or page rules I set up, and serves from a cache if possible. A no-brainer to reduce server load.
+I have all of my domains set up through Cloudflare for DNS. Running through Cloudflare’s edge sets up HTTPS automatically, runs through any redirects or page rules I set up, and serves from a cache if possible. A no-brainer to reduce server load.
 
 ### Ingress Tunnel: Cloudflare
 

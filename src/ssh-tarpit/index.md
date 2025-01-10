@@ -130,6 +130,7 @@ Inputs.table(top_clients, {
     country: 'left',
     rdns: 'left'
   },
+  select: false,
   sort: 'count',
   reverse: true
 })

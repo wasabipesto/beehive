@@ -20,7 +20,7 @@ Our wedding was amazing, the day was less stressful than I expected, and it seem
 
 We originally estimated 120 guests for the purposes of venue selection. There seems to be a cutoff for a lot of venues around 100 guests and we wanted to keep our venue options open to avoid feeling restricted when inviting people.
 
-When we actually put together an invitation list in early 2023, the number of people we interacted with regularly had dropped. We ended up inviting only 90 people, several of which we knew would not be able to attend.
+When we actually put together an invitation list in early 2023, the number of people we interacted with regularly had dropped. We ended up inviting only 90 people, several of whom we knew would not be able to attend.
 
 ```js
 const invites = [
@@ -66,11 +66,11 @@ Plot.plot({
 })
 ```
 
-Out of the 90 invitations, we had 62 able to attend. This is around 70%, a fair bit lower than the rule of thumb at 80%. My family is a bit larger than my wife's, so the approximate breakdown by each side was something we had guessed in advance.
+Out of the 90 invitations, we had 62 able to attend. This is around 70%, a fair bit lower than the rule of thumb of 80%. My family is a bit larger than my wife's, so the approximate breakdown by each side was something we had guessed in advance.
 
 We ended up with 71 catering plates to accommodate ourselves, the photographers, and some extra helpers. Gotta make sure everyone has food!
 
-I feel like 60-80 guests is my ideal sweet spot. It's small enough to be able to chat with everyone without having to rush or exclude people. There's several people I'm sad weren't able to make it on both sides.
+I feel like 60-80 guests is my ideal sweet spot. It's small enough to be able to chat with everyone without having to rush or exclude people. There are several people I'm sad weren't able to make it on both sides.
 
 ## Budget
 
@@ -397,8 +397,8 @@ We ignored a lot of traditional wedding advice, but I think we did so strategica
 
 - Create a list of which typical events you (both) are interested in, which you are okay with, and which you would prefer not to do.
 - Your average guest has a mental plan of events for the wedding. Do your best to understand what that is before you start changing things.
-- Each change you make from the default "traditional" wedding will have some impact. There's not a good way to quantify this, but try to imagine how non-traditional of a wedding you would be comfortable with and use this as a "budget" of possible changes.
-- For events you remove, try to understand its purpose or value and find an alternative that can fulfill that. You'll find that many events don't serve a purpose at all.
+- Each change you make from the default "traditional" wedding will have some impact. There's not a good way to quantify this, but try to imagine how non-traditional a wedding you would be comfortable with and use this as a "budget" of possible changes.
+- For events you remove, try to understand their purpose or value and find an alternative that can fulfill that. You'll find that many events don't serve a purpose at all.
 - For events you are on the fence about, see if you can add flexibility to the schedule to give you an out on the day of. This is especially good for photographs in case you need to duck out early to chill.
 - At the end of the day, weigh your own preferences 5-10 times higher than your guests. Not an overwhelming amount, but significantly more than you might expect.
 
@@ -406,8 +406,8 @@ Some examples of this strategy:
 
 - We had a very short, non-religious ceremony. I knew religion was very important to my family but a non-religious ceremony was very important to both of us. Our preferences significantly outweighed the tradition. As for length, we didn't want anything to feel like filler. I think this is an objectively good decision since it keeps the focus on the vows.
 - We only had two dances at the reception, and no open dancing. I'm sure lots of people would have enjoyed dancing, but it makes me very uncomfortable and I veto'd it. (My wife had to fight for the dances that we did have.)
-- Neither of us are huge fans of cake, so we got gelato for dessert. Cake is traditional but is commonly changed, so it was an easy change to make. It was also a huge hit with guests and got us out of the "slicing the cake" tradition.
-- We sat at a long table with our wedding party for the reception instead of our own table. We knew we would be exhausted and would rather listen to our friends talk than chat between ourselves. This is technically against tradition, but nobody ever seems to care.
+- Neither of us is a huge fan of cake, so we got gelato for dessert. Cake is traditional but is commonly changed, so it was an easy change to make. It was also a huge hit with guests and got us out of the "slicing the cake" tradition.
+- We sat at a long table with our wedding party for the reception instead of at our own table. We knew we would be exhausted and would rather listen to our friends talk than chat between ourselves. This is technically against tradition, but nobody ever seems to care.
 
 Other miscellaneous advice:
 

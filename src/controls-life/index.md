@@ -6,7 +6,7 @@ You’re a controls subcontractor. Your job is to take everything the mechanical
 
 Sometimes you’re a salesperson. Ideally you’d have time to learn everything there is to know about the job before you give a price, but there’s a thousand pages of specs and only two weeks before bids are due, plus you have five other projects to bid. So you figure out the most important details:
 
-- What equipment is going to be installed by others that need to be controlled?
+- What equipment is going to be installed by others that needs to be controlled?
 - What equipment are we going to install and control?
 - What existing equipment are we going to control?
 - Who are the approved vendors for equipment and devices?
@@ -37,7 +37,7 @@ Sometimes you’re the estimator. You open up your excel spreadsheet and start p
 After you have a base number, you should look at:
 
 - For similar types of projects in the past, what unexpected incidents did we run into? How likely are they to pop up here?
-- Have you had good experience with this project team in the past? Are there recurring issues you can plan for now?
+- Have you had good experiences with this project team in the past? Are there recurring issues you can plan for now?
 - Does this project span multiple years? How much will inflation impact your material or labor rates?
 - Will you have good competition between subcontractors, or do you have to use one particular group?
 - What are the known unknowns? Are there any big “I’ll get back to you about that”s from the engineer? Anything you were unable to get eyes on during the pre-bid?
@@ -62,7 +62,7 @@ You start by doing everything they did, but correctly this time. You find 5 heat
 
 Now with all that out of the way, you can start your _actual_ job.
 
-- Are any controls going the be factory-mounted? If so, make sure they have your contact info. Send them how you want everything mounted and wired. Get a sales order number and get the material sent over.
+- Are any controls going to be factory-mounted? If so, make sure they have your contact info. Send them how you want everything mounted and wired. Get a sales order number and get the material sent over.
 - Size out your valves and dampers. Don’t go off the drawings, go off the submittals so you know what was actually purchased. If the approved submittals are significantly different you could submit an RFI… or just go with it. Ship the valves to your mechanical contractor and dampers to your sheet metal contractor.
 - Grab an empty floorplan layout and mark where in the building everything is. If you don’t have an empty floorplan, RFI.
 - Connect all of the dots. Some devices need an ethernet connection from a main switch. Some devices need 24V power from a transformer. Some devices need a BACnet MSTP connection from a field server. Think about how your electrician is going to connect all of these.

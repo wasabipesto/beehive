@@ -20,7 +20,7 @@ its low cost, simple installation, and simple output.
 
 - You can find a thermistor with a standard characteristic resistivity curve in any number of mounting options for $20-50 each. This is less than the labor it costs to install them.
 - The accuracy of a thermistor is typically less than one degree Fahrenheit, which is more than sufficient for most applications.
-- Each thermistor comes in an assembly for a specific application, such as on the end of an 18" rod for positioning in the center of a duct, inside a shielded enclosure for outdoor air sensing, a metal well with thermally ciductive paste for in-pipe sensing, or with a buffer fluid for low-temperature sensing.
+- Each thermistor comes in an assembly for a specific application, such as on the end of an 18" rod for positioning in the center of a duct, inside a shielded enclosure for outdoor air sensing, a metal well with thermally conductive paste for in-pipe sensing, or with a buffer fluid for low-temperature sensing.
 - Sensors use one of a few standard "curves" for specific metals and alloys, which most controllers have pre-mapped for automatic conversion.
 - Since there are no active powered circuits, there is no power draw and very little that can fail. Sensors can remain in service for over 30 years with little to no degradation.
 - Multiple sensors can be averaged together with a simple parallel-series circuit, allowing for arrays of sensors that read as one.
@@ -36,7 +36,7 @@ Often you find old sensors in the field connected to old controllers with no doc
 ```js
 Plot.plot({
   title: 'Resistance vs Temperature',
-  width: 1200,
+  width: 830,
   x: { type: 'log' },
   marks: [
     Plot.lineY(thermistors, {
@@ -56,7 +56,7 @@ Plot.plot({
 ```js
 Plot.plot({
   title: 'Temperature vs Resistance',
-  width: 1200,
+  width: 830,
   y: { type: 'log' },
   marks: [
     Plot.lineY(thermistors, {
@@ -77,7 +77,7 @@ Plot.plot({
 Plot.plot({
   title: 'Temperature vs Resistance',
   subtitle: 'Zoomed in to typical ambient range',
-  width: 1200,
+  width: 830,
   y: { type: 'log' },
   marks: [
     Plot.lineY(

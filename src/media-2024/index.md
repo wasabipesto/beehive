@@ -30,7 +30,7 @@ This is my first time really enjoying a descent-into-madness story, and I think 
 
 ### Did Not Finish:
 
-- Crytonomicon
+- Cryptonomicon
 - Almost Nowhere
 
 # Games
@@ -107,7 +107,7 @@ I was caught by surprise with this movie. It’s shockingly earnest, doesn’t b
 
 The mostly-untrue story of Stalin’s death and the chaos around it.
 
-Equal parts grave, awkward, funny, and depressing. I was lucky enough to watch it with someone much better informed about Russian history than I am, who was able to fill in my wide cracks of understanding and make the movie much funnier.
+Equal parts grave, awkward, funny, and depressing. I was lucky enough to watch it with someone much better informed about Russian history than I am, who was able to fill in my wide gaps of understanding and make the movie much funnier.
 
 # TV Series
 
@@ -121,7 +121,7 @@ This show was just not for me. I found a few of the characters interesting, but 
 
 The crew of a heist goes their separate ways to live a happily-ever after, until…
 
-I think this show did a lot of things well: setting up the main character’s new happy life, showing the threat approaching, letting them collide in interesting ways with some neat side characters. Overall I think it did everything right, but the result just didn't move me in the end.
+I think this show did a lot of things well: setting up the main character’s new happy life, showing the threat approaching, and letting them collide in interesting ways with some neat side characters. Overall I think it did everything right, but the result just didn't move me in the end.
 
 ### Fallout
 
@@ -131,7 +131,7 @@ I was not impressed by the beginning of the season, but by the end I was investe
 
 ### The Boys
 
-What if superheros were jerks, and we had to be bigger jerks to stop them?
+What if superheroes were jerks, and we had to be bigger jerks to stop them?
 
 In a sub-genre that’s already got good competition (Invincible), The Boys takes itself seriously while still being fun at times. There are a lot of references to current events which can make some scenes feel dated, but each season does its best to end on a solid conclusion without big cliffhangers. Lots of sex and gore, but didn't overly rely on it.
 
@@ -155,7 +155,7 @@ I started this show a while ago and finally finished season 1, which ends a comp
 
 ### The Apothecary Diaries
 
-The Tang dynasty catgirl House M.D. anime.
+The Tang Dynasty catgirl House M.D. anime.
 
 I don’t typically like crime/hospital procedurals, but this is only like 30% procedural. The rest is romance and palace intrigue, which comes together in a very charming way.
 
@@ -169,7 +169,7 @@ If you haven’t seen Fullmetal Alchemist by now, you’ve at least heard of it.
 
 Fake married, real spies.
 
-I haven’t seen the original movie, but this show worked very well on its own. The characters never know what’s expected of them, from each other or their agency, and the actors play that tension realistically. I though the pacing was fast, almost too fast, and I’m very interested in seeing more.
+I haven’t seen the original movie, but this show worked very well on its own. The characters never know what’s expected of them, from each other or their agency, and the actors play that tension realistically. I thought the pacing was fast, almost too fast, and I’m very interested in seeing more.
 
 ### Scavengers Reign
 
@@ -205,7 +205,7 @@ A funny gimmick in a stock setting that leads you down a rabbit hole of thorough
 
 The magic bugs don’t want to hurt you, they just don’t know any better.
 
-Probably the only truly episodic thing on this list, but a phenomenal example of hitting the perfect tone every time. A slow, contemplative series of stories in a world where humans can coexist with nature, if they take the time to listen. Again: not typically my jam, but this it was executed so well that I wish I could capture it in my own worldbuilding.
+Probably the only truly episodic thing on this list, but a phenomenal example of hitting the perfect tone every time. A slow, contemplative series of stories in a world where humans can coexist with nature, if they take the time to listen. Again: not typically my jam, but it was executed so well that I wish I could capture it in my own worldbuilding.
 
 ### Frieren: Beyond Journey’s End
 

@@ -50,8 +50,10 @@ export default {
         { name: 'City Superposition', path: '/city-superposition/' },
         { name: 'Discord Gender', path: '/discord-gender/' },
         { name: 'Genesis 3:1', path: '/genesis/' },
+        { name: 'Home Budget', path: '/budget/' },
         { name: 'Our Wedding', path: '/wedding/' },
         { name: 'Outer Wilds', path: '/outer-wilds/' },
+        { name: 'Salary Transparency', path: '/salary/' },
         { name: 'Work Emails', path: '/work-emails/' },
         { name: 'Work Mileage', path: '/work-mileage/' },
       ]

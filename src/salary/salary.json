@@ -1,0 +1,52 @@
+[
+    {
+        "start": "2018-05-01",
+        "end": "2020-01-31",
+        "title": "Energy Management Intern",
+        "pay_description": "Hourly at $20/hour, 20h/week",
+        "pay_yearly": 20800,
+        "leave_reason": "Quit"
+    },{
+        "start": "2020-02-01",
+        "end": "2021-10-31",
+        "title": "System Engineer",
+        "pay_description": "$52,500 Salary",
+        "pay_yearly": 52500,
+        "leave_reason": "Quit"
+    },{
+        "start": "2021-11-01",
+        "end": "2022-02-28",
+        "title": "Controls Design Engineer",
+        "pay_description": "$72,000 Salary",
+        "pay_yearly": 72000,
+        "leave_reason": "Raise"
+    },{
+        "start": "2022-03-01",
+        "end": "2023-02-28",
+        "title": "Controls Design Engineer",
+        "pay_description": "$75,840 Salary",
+        "pay_yearly": 75840,
+        "leave_reason": "Raise"
+    },{
+        "start": "2023-03-01",
+        "end": "2024-02-28",
+        "title": "Controls Design Engineer",
+        "pay_description": "$80,011 Salary",
+        "pay_yearly": 80011,
+        "leave_reason": "Raise"
+    },{
+        "start": "2024-03-01",
+        "end": "2024-12-31",
+        "title": "Controls Design Engineer",
+        "pay_description": "$84,412 Salary",
+        "pay_yearly": 84412,
+        "leave_reason": "Quit"
+    },{
+        "start": "2025-01-01",
+        "end": null,
+        "title": "Associated Engineer",
+        "pay_description": "$105,000 Salary",
+        "pay_yearly": 105000,
+        "leave_reason": "Current"
+    }
+]

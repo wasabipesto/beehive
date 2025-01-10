@@ -75,7 +75,7 @@ At around 150 emails (sent and received) per week, comprising around 30% of my w
 
 ## Recipients
 
-Who did I email? I've ranked the top 50 users I corresponded with, along with if they were internal to my company or external users.
+Who did I email? I've ranked the top 50 users I corresponded with, along with whether they were internal to my company or external users.
 
 ```js
 Plot.plot({
