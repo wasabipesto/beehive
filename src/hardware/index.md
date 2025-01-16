@@ -61,21 +61,40 @@ The little box glued to my side. I use it for communication, photography, note-t
 
 ---
 
+## Laptop: Arwen
+
+I got this laptop after my high school graduation in 2015 and it served me well as a phenomenal little note-taking laptop through college. More recently I use it when I'm away from the house for extended periods and work on some project.
+
+If I ever replace Arwen, it will likely be with a Framework 13 to match my wife's FW16.
+
+| Attribute           | Value                          |
+| ------------------- | ------------------------------ |
+| Model               | Dell XPS 13 9343               |
+| Operating System    | Debian GNU/Linux 12 (bookworm) |
+| Desktop Environment | Vanilla GNOME                  |
+| CPU                 | Intel i5-5200U (4) @ 2.700GHz  |
+| GPU                 | Intel HD Graphics 5500         |
+| RAM                 | 8 GB 1600 MHz DDR3L‑RS         |
+| Storage             | Samsung PM851 M.2 128 GB       |
+| Monitor             | 13.3” 1920x1080 60 Hz          |
+| Battery             | 4‑cell 52 WHr Li-ion           |
+
+---
+
 ## Desktop: Demoux
 
-This is my general-purpose machine for development, gaming, and anything else I do while at home.
+This is my general-purpose machine for development, gaming, and anything else I do while at home. I've rebuilt this machine several times, most recently in 2022.
 
 | Attribute           | Value                             |
 | ------------------- | --------------------------------- |
 | Operating System    | Debian GNU/Linux trixie/sid       |
-| Desktop Environment | GNOME 44                          |
+| Desktop Environment | GNOME + Forge                     |
 | CPU                 | AMD Ryzen 5 5600X (12) @ 3.700GHz |
 | GPU                 | NVIDIA GeForce RTX 3060           |
 | RAM                 | 48 GB 2133 MHz                    |
 | Storage             | SAMSUNG 870 EVO 1TB               |
 | Mouse               | Logitech G502                     |
 | Keyboard            | Das Keyboard Prime 13             |
-| Gamepad             | Logitech G13                      |
 | Headset             | HyperX Cloud II                   |
 | Monitors            | 25” HP 2511x                      |
 |                     | 24” ViewSonic (salvaged)          |
