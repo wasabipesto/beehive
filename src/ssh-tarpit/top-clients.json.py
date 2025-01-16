@@ -10,7 +10,7 @@ import socket
 load_dotenv()
 api_base = os.environ["PROMETHEUS_API_BASE"]
 
-CACHE_FILE = "reverse_dns_cache.json"
+CACHE_FILE = "src/ssh-tarpit/reverse_dns_cache.json"
 
 
 # Load cache from disk
