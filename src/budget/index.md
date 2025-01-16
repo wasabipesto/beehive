@@ -110,7 +110,9 @@ Plot.plot({
 })
 ```
 
-So this is a little misleading. For one, it includes the automatic spending which will always be spot-on to the budgets. Second, we adjust our budgets over time to accommodate changes in our spending habits (and we just completed another one of those), so it's more descriptive than prescriptive.
+You can see our top expenditures are taxes and housing, together taking around 35% of our budget. Beyond that we have our project budget, which is over-utilized, followed by groceries and healthcare which are coincidentally the same proportion of our budget. Further down you can see restaurants which are over-utilized, and entertainment which is under-utilized.
+
+Unfortunately this chart a little misleading - it makes us look great at sticking exactly to our budgeted amounts. For one, it includes the automatic spending which will always be spot-on to the budgets. Second, we adjust our budgets over time to accommodate changes in our spending habits (and we just completed another one of those), so it's more descriptive than prescriptive.
 
 How good are we at maintaining a _consistent_ budget?
 
@@ -233,7 +235,7 @@ Groceries are at the top of the list here, due to lots of $100-150 weekly shoppi
 
 ## Utilities
 
-Not all of these may seem like utilities, but we consider them essentials and categorize them the same. It's also beneficial for us to be able to plan ahead and expect that these costs will continue at approximately the same monthly rate for the foreseeable future.
+Next, let's break down that single utilities number into what we're actually paying for. Note that not all of these expenses may seem like traditional utilities, but we categorize them all in this bucket because they're regular expenses for services we expect to have available for the home. It's also beneficial for us to be able to plan ahead and expect that these costs will continue at approximately the same monthly rate for the foreseeable future.
 
 ```js
 Plot.plot({
@@ -255,9 +257,9 @@ Plot.plot({
 })
 ```
 
-I was quite surprised that our sewer costs significantly more than our clean water every month! It's also interesting that our electricity bill is significantly higher than anything else - even our home insurance.
+I was quite surprised that our sewer connection costs significantly more than our clean water every month! It's also interesting that our electricity bill is significantly higher than anything else - even our home insurance.
 
-Is our electricity cost seasonal?
+Since our electricity costs are so high, let's dig into those even further. I anticipate that our electricity bill is periodic though the year, let's check that.
 
 ```js
 Plot.plot({
@@ -277,22 +279,6 @@ Plot.plot({
           z: null
         }
       }
-    }),
-    Plot.ruleY([0])
-  ]
-})
-```
-
-```js
-Plot.plot({
-  title: 'Monthly Electricity Spending',
-  height: 300,
-  x: { label: 'Month' },
-  y: { label: 'Dollars', grid: true },
-  marks: [
-    Plot.boxY(electricity, {
-      x: (i) => new Date(i.Date).getMonth(),
-      y: 'Amount'
     }),
     Plot.ruleY([0])
   ]
