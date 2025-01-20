@@ -133,3 +133,9 @@ title = "Home Budget"
 date = 2025-01-10
 link = "https://wasabipesto.com/budget"
 summary = "A breakdown of our budget and expenses for the home. Where does it all go?"
+
+[[entries]]
+title = "Better Spotify Wrapped"
+date = 2025-01-19
+link = "https://wasabipesto.com/spotify"
+summary = "It's like Spotify Wrapped, but better. Featuring a genre map, artist diveristy algorithms, and a populatity contest."
