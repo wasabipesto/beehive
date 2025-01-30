@@ -633,7 +633,7 @@ Plot.plot({
 })
 ```
 
-Here we can actually see something! My favorite bands to already be reasonably popular, above Spotify's popularity score of 70,000. I do still have a fair number of bands I like below that point (hipster cred) but I don't listen to them as much.
+Here we can actually see something! My favorite bands seem to already be reasonably popular, above Spotify's popularity score of 70,000. I do still have a fair number of bands I like below that point (hipster cred) but I don't listen to them as much.
 
 Now let's do the same thing for individual songs:
 
