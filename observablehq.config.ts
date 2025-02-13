@@ -52,7 +52,7 @@ export default {
         { name: 'Discord Gender', path: '/discord-gender/' },
         { name: 'Genesis 3:1', path: '/genesis/' },
         { name: 'Home Budget', path: '/budget/' },
-        { name: 'Mafia Walrus 2025', path: '/mafia-walrus-2025/' },
+        { name: 'Syndicate Walrus 2025', path: '/syndicate-walrus-2025/' },
         { name: 'Our Wedding', path: '/wedding/' },
         { name: 'Outer Wilds', path: '/outer-wilds/' },
         { name: 'Salary Transparency', path: '/salary/' },

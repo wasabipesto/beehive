@@ -1,4 +1,4 @@
-# Mafia Walrus 2025
+# Syndicate Walrus 2025
 
 I was recently invited to participate in a walrus, a music event where contestants submit some of their favorite songs to be judged in various categories. Each category is intended to elicit a different style or genre so that the judge can be exposed to a wide variety of new music. Each contestant needs to weigh how well the song fits the category, how much they like the song, how much they think the judge will like it, and if they think the judge already knows it.
 
@@ -134,7 +134,7 @@ Sometimes you aren’t paying close attention or even trying to find something n
 Music can be more than just a bunch of neat sounds you like to hear occasionally. It can be meaningful. It can change things. It can make you _understand_. You were uncertain, and now the pieces have been put together. With each note, you know a little more than you did before. **What song made a situation “click” for you?**
 
 - Winner
-  - [Arrow​ by Polite Fiction](https://open.spotify.com/track/2v5J6VEWxP2s9VESGR7HaK) ([BandCamp](https://politefiction.bandcamp.com/track/arrow))
+  - [Arrow​ by Polite Fiction](https://open.spotify.com/track/2v5J6VEWxP2s9VESGR7HaK) ([Bandcamp](https://politefiction.bandcamp.com/track/arrow))
 - Runners-Up
   - [1:15​ by 8485](https://open.spotify.com/track/0TNFCRzOnlgu7W1K47sFnY)
   - [Light My Way​ by Denny](https://open.spotify.com/track/1B70D7VmK6mOhSpXhaD0WM)
