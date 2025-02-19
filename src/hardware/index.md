@@ -91,7 +91,7 @@ This is my general-purpose machine for development, gaming, and anything else I 
 | Desktop Environment | GNOME + Forge                     |
 | CPU                 | AMD Ryzen 5 5600X (12) @ 3.700GHz |
 | GPU                 | NVIDIA GeForce RTX 3060           |
-| RAM                 | 48 GB 2133 MHz                    |
+| RAM                 | 128 GB 3200 MHz                   |
 | Storage             | SAMSUNG 870 EVO 1TB               |
 | Mouse               | Logitech G502                     |
 | Keyboard            | Das Keyboard Prime 13             |
