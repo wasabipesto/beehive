@@ -6,4 +6,4 @@ src/assets/
 node_modules/
 yarn-error.log
 
-**/*-cache.json
+**/*cache.json
