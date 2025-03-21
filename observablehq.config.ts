@@ -17,9 +17,7 @@ export default {
     },
     {
       name: 'Projects',
-      pages: [
-        { name: 'Nice Numbers', path: '/nice/' },
-      ]
+      pages: [{ name: 'Nice Numbers', path: '/nice/' }]
     },
     {
       name: 'HVAC',
@@ -33,7 +31,7 @@ export default {
       name: 'Server',
       pages: [
         { name: 'Plex', path: '/plex/' },
-        { name: 'SSH Tarpit', path: '/ssh-tarpit/' },
+        { name: 'SSH Tarpit', path: '/ssh-tarpit/' }
       ]
     },
     {
@@ -41,7 +39,7 @@ export default {
       pages: [
         { name: 'State of the Apps 2024', path: '/sota-2024/' },
         { name: 'Reading/Playing/Watching 2024', path: '/media-2024/' },
-        { name: 'Better Spotify Wrapped', path: '/spotify/' },
+        { name: 'Better Spotify Wrapped', path: '/spotify/' }
       ]
     },
     {
@@ -57,14 +55,12 @@ export default {
         { name: 'Outer Wilds', path: '/outer-wilds/' },
         { name: 'Salary Transparency', path: '/salary/' },
         { name: 'Work Emails', path: '/work-emails/' },
-        { name: 'Work Mileage', path: '/work-mileage/' },
+        { name: 'Work Mileage', path: '/work-mileage/' }
       ]
     }
   ],
   // Paths of pages to be server-side rendered.
-  dynamicPaths: [
-    "/feed/rss.xml"
-  ],
+  dynamicPaths: ['/feed/rss.xml'],
   // Some additional configuration options and their defaults:
   theme: 'coffee', // https://observablehq.com/framework/themes
   // what to stick in the head tag (HTML)
@@ -72,16 +68,21 @@ export default {
     <link rel="icon" type="image/png" href="/homepage/crows.40x40.png"> \
     <link rel="alternate" type="application/rss+xml" title="RSS" href="https://wasabipesto.com/feed/rss.xml" />',
   // what to show in the header (HTML)
-  header: '', 
+  header: '',
   // what to show in the footer (HTML)
-  footer: '\
+  footer:
+    '\
     Made with ❤️ by <a href="https://wasabipesto.com">wasabipesto</a>. \
     Generated with <a href="https://observablehq.com/framework/">Observable Framework</a>. <br />\
     Page source and data loaders can be found on <a href="https://github.com/wasabipesto/beehive">GitHub</a>. \
-    Content is licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0 Deed</a>.', 
+    Content is licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0 Deed</a>.',
   toc: true, // whether to show the table of contents
   pager: false, // whether to show previous & next links in the footer
   root: 'src', // path to the source root for preview
   // output: "dist", // path to the output root for build
   search: true, // whether to enable search on the project
+  // language overrides
+  interpreters: {
+    '.py': ['uv', 'run']
+  }
 }

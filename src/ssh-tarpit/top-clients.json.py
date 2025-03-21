@@ -24,7 +24,7 @@ def load_cache():
 # Save cache to disk
 def save_cache(cache):
     with open(CACHE_FILE, "w") as f:
-        json.dump(cache, f)
+        json.dump(cache, f, indent=4, sort_keys=True)
 
 
 # Perform reverse DNS lookup with caching
