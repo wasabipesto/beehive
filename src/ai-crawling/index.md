@@ -9,6 +9,8 @@ I think these posts bring up valid concerns about the control that creators have
 
 I’m still working through how I feel about these for my own site, so this is a kind of thinking-out-loud post.
 
+Update (March 2025): This post was originally written about ideological/financial reasons to prevent crawling, not technological ones. Recently, some poorly-behaved scrapers have been crawling certain sites to death. This is bad for many reasons, and Xe's [Anubis](https://github.com/TecharoHQ/anubis) project seems to be a good measure to take to prevent that from happening. If you are getting DDOS'd due to AI scrapers, please ignore the rest of this post and do what you need to do to stop that from happening.
+
 ## Different Kinds of Bots
 
 One of the services I use has started blocking requests from specific user-agents using [this list](https://github.com/ai-robots-txt/ai.robots.txt). I don’t have any huge objections with this list, these agents are all at least tangentially related to AI. Blocking these agents will definitely save the operator some bandwidth, and it will block very few direct user requests. However, there are a few distinct types of bots on the list:
@@ -24,7 +26,7 @@ When evaluating if you would want to allow one of these scrapers to access your 
 - Accessibility: Is someone using this agent to get information from your site in a way that makes it accessible to them? Often this would cover web browsers but it could be the result of e.g. a Siri search or a browser extension that summarizes your page.
 - Social Value: Is the agent using your data to build social value for your community? Proprietary models may not count for you, but what about open-weight or libre models? What about data used for web research?
 - Attribution: Is the agent providing proper attribution when they use your content? Are they clearly showing what was used and where the source could be found?
-- Cost/Benefit to the Creator: Is use of the agent benefitting the content creator somehow? If they are taking bandwidth but not providing the income a typical ad-viewing visitor would, how are they compensating the site?
+- Cost/Benefit to the Creator: Is use of the agent benefiting the content creator somehow? If they are taking bandwidth but not providing the income a typical ad-viewing visitor would, how are they compensating the site?
 
 ## Evaluating Scrapers
 
