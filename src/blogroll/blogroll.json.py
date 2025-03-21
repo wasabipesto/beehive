@@ -7,7 +7,15 @@ from dotenv import load_dotenv
 load_dotenv()
 api_base = os.environ["FEVER_API_BASE"]
 api_data = {"api_key": os.environ["FEVER_API_KEY"]}
-redact_patterns = ["rss-bridge", "kill-the-newsletter", "memberfulcontent", "mynews"]
+redact_patterns = [
+    "rss-bridge",
+    "kill-the-newsletter",
+    "memberfulcontent",
+    "mynews",
+    ".wasabipesto.",
+    "changedetection",
+    "token",
+]
 
 since_id = None
 item_response = []
@@ -50,13 +58,20 @@ for feed in feed_response["feeds"]:
         for item in item_response
         if item["feed_id"] == feed["id"]
     ]
-    last_item_created = max([item for item in items_created])
-    items_per_week = [
-        len([item for item in items_created if r[0] < item < r[1]])
-        for r in arrow.Arrow.span_range(
-            "week", arrow.utcnow().shift(weeks=-52), arrow.utcnow()
-        )
-    ]
+    if items_created:
+        last_item_created = max([item for item in items_created])
+        last_item_created_text = last_item_created.humanize()
+        items_per_week = [
+            len([item for item in items_created if r[0] < item < r[1]])
+            for r in arrow.Arrow.span_range(
+                "week", arrow.utcnow().shift(weeks=-52), arrow.utcnow()
+            )
+        ]
+        items_per_week_text = format(sum(items_per_week) / len(items_per_week), ".1f")
+    else:
+        last_item_created_text = "No Items"
+        items_per_week = 0
+        items_per_week_text = "No Items"
 
     feeds.update(
         {
@@ -65,10 +80,8 @@ for feed in feed_response["feeds"]:
                 "favicon": favicons[feed["favicon_id"]],
                 "url": feed["url"],
                 "site_url": feed["site_url"],
-                "last_updated": last_item_created.humanize(),
-                "items_per_week_avg": format(
-                    sum(items_per_week) / len(items_per_week), ".1f"
-                ),
+                "last_updated": last_item_created_text,
+                "items_per_week_avg": items_per_week_text,
                 "items_per_week": items_per_week,
             }
         }
