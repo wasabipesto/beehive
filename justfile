@@ -44,3 +44,6 @@ deploy-dev: build copy-assets
 deploy-prod: build copy-assets
     rclone sync dist $RCLONE_PROD_TARGET --progress
     @echo "Deployed to $RCLONE_PROD_TARGET"
+
+# Run nightly build and deploy
+nightly: inv-all deploy-dev
