@@ -41,6 +41,7 @@ deploy-dev: build copy-assets
     @echo "Deployed to $RCLONE_DEV_TARGET"
 
 # Build the site
+[confirm]
 deploy-prod: build copy-assets
     rclone sync dist $RCLONE_PROD_TARGET --progress
     @echo "Deployed to $RCLONE_PROD_TARGET"

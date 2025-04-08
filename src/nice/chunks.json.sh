@@ -1,3 +1,3 @@
 #/bin/sh
 
-curl https://data.nicenumbers.net/chunks?order=id.asc
+curl -sf https://data.nicenumbers.net/chunks?order=id.asc

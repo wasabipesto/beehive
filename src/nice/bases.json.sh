@@ -1,3 +1,3 @@
 #/bin/sh
 
-curl https://data.nicenumbers.net/bases?order=id.asc
+curl -sf https://data.nicenumbers.net/bases?order=id.asc
