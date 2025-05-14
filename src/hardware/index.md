@@ -88,17 +88,16 @@ This is my general-purpose machine for development, gaming, and anything else I 
 | Attribute           | Value                             |
 | ------------------- | --------------------------------- |
 | Operating System    | Debian GNU/Linux trixie/sid       |
-| Desktop Environment | GNOME + Forge                     |
+| Desktop Environment | GNOME + PaperWM                   |
 | CPU                 | AMD Ryzen 5 5600X (12) @ 3.700GHz |
-| GPU                 | NVIDIA GeForce RTX 3060           |
+| GPU                 | Radeon RTX 9070 XT                |
 | RAM                 | 128 GB 3200 MHz                   |
 | Storage             | SAMSUNG 870 EVO 1TB               |
 | Mouse               | Logitech G502                     |
 | Keyboard            | Das Keyboard Prime 13             |
 | Headset             | HyperX Cloud II                   |
-| Monitors            | 25” HP 2511x                      |
+| Monitors            | 34" Gigbyte M34WQ                 |
 |                     | 24” ViewSonic (salvaged)          |
-|                     | 24” Acer (salvaged)               |
 
 <div class="grid grid-cols-3">
   <div class="card">
