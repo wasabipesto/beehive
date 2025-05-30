@@ -59,10 +59,10 @@ Some of my favorite posts are listed here:
 
 <div class="grid grid-cols-2">
   <div class="card gallery">
-  <a href="https://calibration.city/">
-    <h3>Calibration City</h3>
+  <a href="https://brier.fyi/">
+    <h3>Brier.fyi</h3>
     <div>Prediction market calibration and accuracy analysis.</div>
-    <p><img src="homepage/projects/calibrationcity.png" /></p>
+    <p><img src="homepage/projects/brierfyi.png" /></p>
   </a>
   </div>
   <div class="card gallery">
