@@ -35,16 +35,19 @@ inv-all:
 inv arg:
     @just _invalidate "{{arg}}"
 
-# Build the site
-deploy-dev: build copy-assets
+# Push to dev site
+push-dev:
     rclone sync dist $RCLONE_DEV_TARGET --progress
     @echo "Deployed to $RCLONE_DEV_TARGET"
 
 # Build the site
 [confirm]
-deploy-prod: build copy-assets
+push-prod:
     rclone sync dist $RCLONE_PROD_TARGET --progress
     @echo "Deployed to $RCLONE_PROD_TARGET"
 
-# Run nightly build and deploy
-nightly: inv-all deploy-dev
+# Build and deploy to dev, then ask about prod
+deploy: build copy-assets push-dev push-prod
+
+# Re-run loaders, then build and deploy to prod
+nightly: inv-all build copy-assets push-dev
