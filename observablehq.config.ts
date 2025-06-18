@@ -17,7 +17,10 @@ export default {
     },
     {
       name: 'Projects',
-      pages: [{ name: 'Nice Numbers', path: '/nice/' }]
+      pages: [
+        { name: 'Nice Numbers', path: '/nice/' },
+        { name: 'Project Themis', path: '/themis/' }
+      ]
     },
     {
       name: 'HVAC',
