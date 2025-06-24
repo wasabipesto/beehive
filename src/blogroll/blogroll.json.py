@@ -77,7 +77,7 @@ for feed in feed_response["feeds"]:
         {
             feed["id"]: {
                 "title": feed["title"],
-                "favicon": favicons[feed["favicon_id"]],
+                "favicon": favicons.get(feed["favicon_id"]),
                 "url": feed["url"],
                 "site_url": feed["site_url"],
                 "last_updated": last_item_created_text,
