@@ -61,23 +61,23 @@ The little box glued to my side. I use it for communication, photography, note-t
 
 ---
 
-## Laptop: Arwen
+## Laptop: Yumi
 
-I got this laptop after my high school graduation in 2015 and it served me well as a phenomenal little note-taking laptop through college. More recently I use it when I'm away from the house for extended periods and work on some project.
+I got a cute little Framework 12 to replace the XPS 13 I got right before college in 2015. I love having a lightweight, durable machine to take on the go, mainly for coffee work dates and travel. This model is a yoga-style 2-in-1 with a touchscreen, which is nice for the occasional D&D note-taking or wild artistic hair.
 
-If I ever replace Arwen, it will likely be with a Framework 13 to match my wife's FW16.
+Of course for the price point at another manufacturer you'd probably get a bit more performance and battery life, but with a Framework you're buying the modularity, upgradability, and repairability. Plus, with apps like Zed (with remote server over ssh) I don't need a super high-powered laptop very often. Currently my only wish is for a longer battery life.
 
 | Attribute           | Value                          |
 | ------------------- | ------------------------------ |
-| Model               | Dell XPS 13 9343               |
+| Model               | Framework 12 (Lavender)        |
 | Operating System    | Debian GNU/Linux 12 (bookworm) |
 | Desktop Environment | Vanilla GNOME                  |
-| CPU                 | Intel i5-5200U (4) @ 2.700GHz  |
-| GPU                 | Intel HD Graphics 5500         |
-| RAM                 | 8 GB 1600 MHz DDR3L‑RS         |
-| Storage             | Samsung PM851 M.2 128 GB       |
-| Monitor             | 13.3” 1920x1080 60 Hz          |
-| Battery             | 4‑cell 52 WHr Li-ion           |
+| CPU                 | Intel 13th Gen i5-1334U        |
+| RAM                 | 48 GB DDR5-5600                |
+| Storage             | WD Black SN770M 2TB            |
+| Screen              | 12.2” 1920x1200 60 Hz          |
+| Battery             | 50 Whr                         |
+| Case                | MoKo 12.9" Tablet Sleeve Bag   |
 
 ---
 
@@ -94,7 +94,7 @@ This is my general-purpose machine for development, gaming, and anything else I 
 | RAM                 | 128 GB 3200 MHz                   |
 | Storage             | SAMSUNG 870 EVO 1TB               |
 | Mouse               | Logitech G502                     |
-| Keyboard            | Das Keyboard Prime 13             |
+| Keyboard            | Keychron K17 Max                  |
 | Headset             | HyperX Cloud II                   |
 | Monitors            | 34" Gigbyte M34WQ                 |
 |                     | 24” ViewSonic (salvaged)          |
