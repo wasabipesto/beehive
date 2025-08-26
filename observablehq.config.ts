@@ -19,6 +19,7 @@ export default {
       name: 'Projects',
       pages: [
         { name: 'Nice Numbers', path: '/nice/' },
+        { name: 'Better Spotify Wrapped', path: '/spotify/' },
         { name: 'Project Themis', path: '/themis/' }
       ]
     },
@@ -41,14 +42,12 @@ export default {
       name: 'Wrapped',
       pages: [
         { name: 'State of the Apps 2024', path: '/sota-2024/' },
-        { name: 'Reading/Playing/Watching 2024', path: '/media-2024/' },
-        { name: 'Better Spotify Wrapped', path: '/spotify/' }
+        { name: 'Reading/Playing/Watching 2024', path: '/media-2024/' }
       ]
     },
     {
       name: 'Other',
       pages: [
-        { name: 'AI Crawling', path: '/ai-crawling/' },
         { name: 'City Superposition', path: '/city-superposition/' },
         { name: 'Discord Gender', path: '/discord-gender/' },
         { name: 'Genesis 3:1', path: '/genesis/' },
