@@ -151,3 +151,9 @@ title = "Project Themis"
 date = 2025-06-18
 link = "https://wasabipesto.com/themis"
 summary = "Notes on a few years of Project Themis, and some lessons along the way."
+
+[[entries]]
+title = "Notion Graph"
+date = 2025-09-13
+link = "https://wasabipesto.com/notion-graph"
+summary = "Making a knowledge graph of my Notion Workspace like Obsidian has."
