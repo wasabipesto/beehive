@@ -5,5 +5,4 @@ src/.observablehq/cache/
 src/assets/
 node_modules/
 yarn-error.log
-
 **/*cache.json
