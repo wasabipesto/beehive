@@ -45,7 +45,19 @@ You might read this and go “wow, that moron should have spent time up front ma
 
 You can see that project live at [Brier.fyi](https://brier.fyi).
 
-This time around I gave myself another deadline. Not because I thought it would help me get stuff done faster (I think it actually burnt me out a bit) but because I wanted to give a talk about it at a mini-conference I would be attending. I ended up with a ton of great feedback and I really enjoyed giving the talk, so I considered that a good decision. I have decided, however, that my next project will not have a deadline.
+## The Talk
+
+This time around I gave myself a deadline. I signed up to give a talk about it at a mini-conference I would be attending. When I signed up to give the talk I knew it would force me to have something both complete an interesting to show off. I assumed that it would be done well in advance and give me plenty of time to make some slides, but it ended up being down to the wire. Some of the delay was from me adding some new features to the site at the last minute, some was due to beta users' feedback, and some was from me getting sucked into Baldur's Gate 3.
+
+The talk forced me to explain everything from scratch, starting from zero knowledge, which was good. I found some gaps in my own data just by having to write everything out, which led to me crunching data in the hotel lobby the day before my slot. I ran through it with my wife in the hotel room the night before for practice, which had a mixed effect. It was good to practice and understand how long it would take me to say the whole thing out loud, but since I was trying not to be loud I couldn't be as confident and ended up stalling a lot.
+
+The next morning I got there early, got everything set up, and launched right into the talk before most people had even arrived. This was the morning after a party, so there were quite a few people who were still sleeping it off. In the future I'd still do a 8-10AM slot, since I was still operating on Eastern time so that was more like noon to me. The talk itself ended up going great, I almost ran over time and I still had a lot of good questions afterwords. Honestly, the best part in my opinion was the time spent chatting with people who hung out after.
+
+![](./heartrate.png)
+
+<figcaption>A plot of my heart rate over the course of the morning.</figcaption>
+
+I ended up with a ton of great feedback and I really enjoyed giving the talk, so I considered that a good decision. I have decided, however, that my next project will not have a deadline.
 
 ### Commit History
 
