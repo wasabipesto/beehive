@@ -49,5 +49,5 @@ push-prod:
 # Build and deploy to dev, then ask about prod
 deploy: build copy-assets push-dev push-prod
 
-# Re-run loaders, then build and deploy to prod
+# Re-run loaders, then build and deploy to dev
 nightly: inv-all build copy-assets push-dev
