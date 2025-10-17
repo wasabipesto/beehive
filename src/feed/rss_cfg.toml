@@ -157,3 +157,9 @@ title = "Notion Graph"
 date = 2025-09-13
 link = "https://wasabipesto.com/notion-graph"
 summary = "Making a knowledge graph of my Notion Workspace like Obsidian has."
+
+[[entries]]
+title = "Hyperstition"
+date = 2025-10-15
+link = "https://wasabipesto.com/hyperstition"
+summary = "Notes on using the Hyperstition story generator."

@@ -52,11 +52,12 @@ export default {
         { name: 'Discord Gender', path: '/discord-gender/' },
         { name: 'Genesis 3:1', path: '/genesis/' },
         { name: 'Home Budget', path: '/budget/' },
-        { name: 'Syndicate Walrus 2025', path: '/syndicate-walrus-2025/' },
+        { name: 'Hyperstition', path: '/hyperstition/' },
         { name: 'Notion Graph', path: '/notion-graph/' },
         { name: 'Our Wedding', path: '/wedding/' },
         { name: 'Outer Wilds', path: '/outer-wilds/' },
         { name: 'Salary Transparency', path: '/salary/' },
+        { name: 'Syndicate Walrus 2025', path: '/syndicate-walrus-2025/' },
         { name: 'Work Emails', path: '/work-emails/' },
         { name: 'Work Mileage', path: '/work-mileage/' }
       ]
