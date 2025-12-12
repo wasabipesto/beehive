@@ -1,0 +1,57 @@
+{
+  "tzsZCn85RQ": {
+    "label": "humanitys-last-exam-score-in-2025",
+    "slug": "humanitys-last-exam-score-in-2025",
+    "answer_details": {
+      "sU2A5NOS6Z": {
+        "label": "Above 10%",
+        "min_value": 10,
+        "max_value": 100,
+        "threshold_fixing": {
+          "new_label": "10-25%",
+          "new_min": 10,
+          "new_max": 25,
+          "exclude_answers": ["RtZOLnlcZy", "UcShEcSOhg", "lhOu8yO5yN", "sZIU0uNpgy"]
+        }
+      },
+      "RtZOLnlcZy": {
+        "label": "Above 25%",
+        "min_value": 25,
+        "max_value": 100,
+        "threshold_fixing": {
+          "new_label": "25-50%",
+          "new_min": 25,
+          "new_max": 50,
+          "exclude_answers": ["UcShEcSOhg", "lhOu8yO5yN", "sZIU0uNpgy"]
+        }
+      },
+      "UcShEcSOhg": {
+        "label": "Above 50%",
+        "min_value": 50,
+        "max_value": 100,
+        "threshold_fixing": {
+          "new_label": "50-75%",
+          "new_min": 50,
+          "new_max": 75,
+          "exclude_answers": ["lhOu8yO5yN", "sZIU0uNpgy"]
+        }
+      },
+      "lhOu8yO5yN": {
+        "label": "Above 75%",
+        "min_value": 75,
+        "max_value": 100,
+        "threshold_fixing": {
+          "new_label": "75-90%",
+          "new_min": 75,
+          "new_max": 90,
+          "exclude_answers": ["sZIU0uNpgy"]
+        }
+      },
+      "sZIU0uNpgy": {
+        "label": "Above 90%",
+        "min_value": 90,
+        "max_value": 100
+      }
+    }
+  }
+}
