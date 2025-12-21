@@ -1,6 +1,7 @@
-import os
-import requests
 import json
+import os
+
+import requests
 from dotenv import load_dotenv
 
 load_dotenv()
@@ -21,6 +22,7 @@ response = requests.get(
 output = [
     {"date": item["date"], "value": float(item["value"])}
     for item in response["observations"]
+    if not item["value"] == "."
 ]
 
 for i, item in enumerate(output):
