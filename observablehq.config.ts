@@ -33,10 +33,7 @@ export default {
     },
     {
       name: 'Server',
-      pages: [
-        { name: 'Plex', path: '/plex/' },
-        { name: 'SSH Tarpit', path: '/ssh-tarpit/' }
-      ]
+      pages: [{ name: 'SSH Tarpit', path: '/ssh-tarpit/' }]
     },
     {
       name: 'Wrapped',
