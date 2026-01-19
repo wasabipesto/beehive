@@ -6,12 +6,15 @@ If you're reading this around the end of 2025, these will match what's currently
 
 # Art & Games
 
-- Game Library: Steam
-- Virtual Tabletop: Foundry
-- Sketches: Excalidraw
-- Photo Editing: GIMP
-- 2D Art: Krita
-- 3D Art: Blender
+- Game Library: [Steam](https://store.steampowered.com/)
+- Virtual Tabletop: [Foundry](https://foundryvtt.com/)
+- Sketches: [Excalidraw](https://excalidraw.com/)
+- Photo Editing: [GIMP](https://gitlab.gnome.org/GNOME/gimp)
+- 2D Art: [Krita](https://krita.org/en/)
+- 3D Art: [Blender](https://www.blender.org)
+- Other:
+    - [OBS Studio](https://github.com/obsproject/obs-studio)
+    - [Piper](https://github.com/libratbag/piper)
 
 ### Updates
 
@@ -21,10 +24,10 @@ I also started learning Krita and Blender, in the very early stages. So far I li
 
 # Communication
 
-- Primary Messaging: Beeper
-- Other Messaging: Discord, Google Messages
-- Email: Protonmail, SimpleLogin, Mailgun, Thunderbird, Gmail
-- AI: Ollama, Whisper
+- Primary Messaging: [Beeper](https://www.beeper.com/)
+- Other Messaging: [Discord](https://discord.com/), Google Messages
+- Email: [Protonmail](https://proton.me/), [SimpleLogin](https://simplelogin.io/), [Mailgun](https://mailgun.com), [Thunderbird](https://www.thunderbird.net/en-US/), [Gmail](https://mail.google.com/)
+- AI: [Ollama](https://github.com/ollama/ollama), [Whisper](https://github.com/openai/whisper)
 
 ### Updates
 
@@ -34,25 +37,26 @@ I'm still using Thunderbird on my desktop, which I like because I don't have not
 
 # Development/Utility
 
-- DE: GNOME, Forge
-- Desktop Terminal: Alacritty
-- Mobile SSH Client: JuiceSSH
-- Shell: Fish
-- Browser: LibreWolf
-- IDE: Zed
-- Containerization: Docker, Compose, Apptainer
-- Code Forge: GitHub
+- DE: [GNOME](https://gitlab.gnome.org/GNOME), [Forge](https://github.com/forge-ext/forge)
+- Desktop Terminal: [Alacritty](https://github.com/alacritty/alacritty)
+- Mobile SSH Client: [JuiceSSH](https://juicessh.com/)
+- Shell: [Fish](https://github.com/fish-shell/fish-shell)
+- Browser: [LibreWolf](https://codeberg.org/librewolf)
+- IDE: [Zed](https://zed.dev/)
+- Containerization: [Docker](https://docs.docker.com/manuals/), [Compose](https://docs.docker.com/compose/), [Apptainer](https://github.com/apptainer/apptainer)
+- Code Forge: [GitHub](https://github.com/)
 - Languages:
-    - cargo
-    - uv
+    - [cargo](https://github.com/rust-lang/cargo)
+    - [uv](https://github.com/astral-sh/uv)
 - Other:
-    - AppImage Launcher
-    - Chezmoi
-    - Flathub
-    - Hishtory
-    - Virt-Manager
-    - Wine
-    - Waydroid
+    - [AppImage Launcher](https://github.com/TheAssassin/AppImageLauncher)
+    - [Chezmoi](https://github.com/twpayne/chezmoi)
+    - [Flathub](https://flathub.org)
+    - [Hishtory](https://github.com/ddworken/hishtory)
+    - [OpenSCAD](https://github.com/openscad/openscad/)
+    - [Virt-Manager](https://github.com/virt-manager/virt-manager)
+    - [Wine](https://gitlab.winehq.org/wine/wine)
+    - [Waydroid](https://github.com/waydroid/waydroid)
 
 ### Updates
 
@@ -66,17 +70,17 @@ Finally, I tried out Waydroid for an experiment. It seems like a very convenient
 
 # Home
 
-- Calendar: Google Calendar
-- To-Do Lists: Google Tasks
-- Projects: Notion
-- Quick Notes: Obsidian, rnote
-- Search: Kagi
-- Shopping/Recipes: AnyList
-- Password Manager: Bitwarden
-- Documents: Notion
-- Spreadsheets: Google Sheets
-- File Management: Nextcloud, Syncthing
-- Home Automation: Home Assistant
+- Calendar: [Google Calendar](https://calendar.google.com/calendar)
+- To-Do Lists: [Google Tasks](https://tasks.google.com/)
+- Projects: [Notion](https://www.notion.so/)
+- Quick Notes: [Obsidian](https://obsidian.md/), [rnote](https://github.com/flxzt/rnote)
+- Search: [Kagi](https://kagi.com/)
+- Shopping/Recipes: [AnyList](https://www.anylist.com/)
+- Password Manager: [Bitwarden](https://bitwarden.com/)
+- Documents: [Notion](https://www.notion.so/)
+- Spreadsheets: [Google Sheets](https://sheets.google.com/)
+- File Management: [Nextcloud](https://github.com/nextcloud/server), [Syncthing](https://github.com/syncthing/syncthing)
+- Home Automation: [Home Assistant](https://github.com/home-assistant/core)
 
 ### Updates
 
@@ -84,16 +88,17 @@ I got a [laptop with a touchscreen](https://frame.work/laptop12) this year, and 
 
 # Media
 
-- eBooks: Calibre, Calibre-Web, ReadEra
-- Photos: Ente Photos
-- Videos: YouTube, FreeTube
-- RSS Feeds: FreshRSS & Capy Reader
-- Video Streaming & Sharing: Plex
-- Music Streaming: Spotify
-- Podcasts: Spotify, AntennaPod
+- eBooks: [Calibre](https://github.com/kovidgoyal/calibre), [Calibre-Web](https://github.com/janeczku/calibre-web), [ReadEra](https://readera.org/)
+- Photos: [Ente Photos](https://ente.io/)
+- Videos: [YouTube](https://youtube.com), [FreeTube](https://github.com/FreeTubeApp/FreeTube)
+- RSS Feeds: [FreshRSS](https://github.com/FreshRSS/FreshRSS) & [Capy Reader](https://github.com/jocmp/capyreader)
+- Video Streaming & Sharing: [Plex](https://www.plex.tv/)
+- Music Streaming: [Spotify](https://spotify.com/)
+- Podcasts: [Spotify](https://spotify.com/), [AntennaPod](https://github.com/AntennaPod/AntennaPod)
 - Other:
-    - Smarter Playlists
-    - SomaFM
+    - [Smarter Playlists](http://playlistmachinery.com/)
+    - [SomaFM](https://somafm.com/)
+    - [Czkawka](https://github.com/qarmin/czkawka)
 
 ### Updates
 
@@ -105,10 +110,10 @@ I was also able to fully migrate over to Ente this year. I love that Ente is alw
 
 # Media Processing
 
-- Requests: Overseerr
-- Media Ingest: Prowlarr, Sonarr, Radarr, Readarr
-- BitTorrent: rTorrent, ruTorrent
-- Social Archiving: Gallery-DL, YouTube-DL
+- Requests: [Overseerr](https://github.com/sct/overseerr)
+- Media Ingest: [Prowlarr](https://github.com/Prowlarr/Prowlarr), [Sonarr](https://github.com/Sonarr/Sonarr), and [Radarr](https://github.com/Radarr/Radarr)
+- BitTorrent: [rTorrent](https://github.com/rakshasa/rtorrent), [ruTorrent](https://github.com/Novik/ruTorrent)
+- Social Archiving: [Gallery-DL](https://github.com/mikf/gallery-dl), [YouTube-DL](https://github.com/yt-dlp/yt-dlp)
 
 ### Updates
 
@@ -116,12 +121,12 @@ In addition to other sources, I highly recommend Anna’s Archive for finding eB
 
 # Monitoring
 
-- Scrapers:Node-Exporter, cAdvisor
-- Time-Series Database: Prometheus
-- Visualization: Grafana
-- Status Page: Uptime Kuma
+- Scrapers: [Node-Exporter](https://github.com/prometheus/node_exporter), [cAdvisor](https://github.com/google/cadvisor)
+- Time-Series Database: [Prometheus](https://github.com/prometheus/prometheus)
+- Visualization: [Grafana](https://github.com/grafana/grafana)
+- Status Page: [Uptime Kuma](https://github.com/louislam/uptime-kuma)
 - Other:
-    - NUT
+    - [NUT](https://github.com/networkupstools/nut)
 
 ### Updates
 
@@ -129,14 +134,14 @@ I recently migrated my monitoring setup to a new server. I was going to take the
 
 # Networking
 
-- Backups: Restic, Backblaze
-- DNS Nameserver: Cloudflare
-- Ingress Tunnel: Cloudflare
-- VPN: Tailscale
-- DNS Resolver: NextDNS, Pi-Hole
+- Backups: [Restic](https://github.com/restic/restic), [Backblaze](https://backblaze.com)
+- DNS Nameserver: [Cloudflare](https://developers.cloudflare.com/dns/)
+- Ingress Tunnel: [Cloudflare](https://developers.cloudflare.com/cloudflare-one/networks/connectors/cloudflare-tunnel/)
+- VPN: [Tailscale](https://github.com/tailscale/tailscale)
+- DNS Resolver: [NextDNS](https://nextdns.io/), [Pi-Hole](https://github.com/pi-hole/pi-hole)
+- Web Server: [nginx](https://nginx.org/)
 - Other:
-    - EndleSSH
-    - nginx
+    - [EndleSSH](https://github.com/shizunge/endlessh-go)
 
 ### Updates
 
