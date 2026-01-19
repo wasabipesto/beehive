@@ -70,7 +70,7 @@ I started dabbling in tiling window managers and I particularly enjoy how Forge 
 
 After using the default Gnome terminal emulator for a while I tried out Alacritty and didn’t really notice a difference. I might try out Ghostty here soon, or switch back to the default.
 
-### Mobile SSH Client:
+### Mobile SSH Client: JuiceSSH
 
 I honestly forgot I had this installed since I haven’t used it in so long. There’s probably something that works better but this one works well enough for me.
 
