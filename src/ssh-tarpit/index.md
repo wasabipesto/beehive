@@ -110,7 +110,7 @@ Is it fair to categorize anyone trying to connect to port 22 as an attacker? Aft
 
 Well, I'm taking the unfair leap that anyone who gets stuck in this tarpit ten times or more is either an attacker or has a similar enough effect to be categorized as one. If you see your IP on the list below and feel as though you've been miscategorized as an attacker, you can remove yourself from the list by stopping the malicious connections. For more information, see [Dr. Neal Krawetz's post about scans vs attacks](https://www.hackerfactor.com/blog/index.php?/archives/775-Scans-and-Attacks.html).
 
-With that hurdle crossed, let's look at the data. Here's the top offending IPs from the last three months, ranked by total number of connections. I also ran a reverse DNS lookup on each to see if they had any associated hostnames.
+With that hurdle crossed, let's look at the data. Here's the top offending IPs from the last month, ranked by total number of connections. I also ran a reverse DNS lookup on each to see if they had any associated hostnames.
 
 ```js
 Inputs.table(top_clients, {
@@ -200,7 +200,7 @@ top_countries = top_countries.slice(0, 20)
 ```js
 Plot.plot({
   title: 'Top Countries by Attacking Connections',
-  subtitle: 'IPs with at least 10 connections in the last 90d',
+  subtitle: 'IPs with at least 10 connections in the last 30d',
   marginLeft: 120,
   x: { grid: true, label: 'connections' },
   marks: [
@@ -232,7 +232,7 @@ top_domains = top_domains.slice(0, 20)
 ```js
 Plot.plot({
   title: 'Top Domains by Attacking Connections',
-  subtitle: 'IPs with at least 10 connections in the last 90d',
+  subtitle: 'IPs with at least 10 connections in the last 30d',
   marginLeft: 120,
   x: { grid: true, label: 'connections' },
   marks: [

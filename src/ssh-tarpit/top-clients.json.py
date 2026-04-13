@@ -1,11 +1,10 @@
-import os
-import re
-import requests
 import json
-from datetime import datetime, timedelta
-from dotenv import load_dotenv
-import geohash2
+import os
 import socket
+
+import geohash2
+import requests
+from dotenv import load_dotenv
 
 load_dotenv()
 api_base = os.environ["PROMETHEUS_API_BASE"]
@@ -56,7 +55,7 @@ cache = load_cache()
 
 # Query Prometheus API
 data = get_data_inst(
-    "sum(increase(endlessh_client_open_count[90d])) by (ip, country, geohash) >= 10"
+    "sum(increase(endlessh_client_open_count[30d])) by (ip, country, geohash) >= 10"
 )
 
 # Process the data
