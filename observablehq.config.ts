@@ -52,6 +52,7 @@ export default {
         { name: 'Genesis 3:1', path: '/genesis/' },
         { name: 'Home Budget', path: '/budget/' },
         { name: 'Hyperstition', path: '/hyperstition/' },
+        { name: 'I-465', path: '/465/' },
         { name: 'Notion Graph', path: '/notion-graph/' },
         { name: 'Our Wedding', path: '/wedding/' },
         { name: 'Outer Wilds', path: '/outer-wilds/' },

@@ -175,3 +175,9 @@ title = "Reading/Playing/Watching 2025"
 date = 2026-01-19
 link = "https://wasabipesto.com/media-2025"
 summary = "A list of things I read, played, or watched in 2025 and some brief thoughts for each."
+
+[[entries]]
+title = "I-465"
+date = 2026-07-06
+link = "https://wasabipesto.com/465"
+summary = "Driving the I-465 beltway with graph theory."
