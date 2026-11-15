@@ -3,14 +3,18 @@
 Every year Spotify shows me a summary of my music listening for the year, but I'm never impressed because I feel like I didn't actually learn anything. Let's see what we can actually learn from my listening habits.
 
 ```js
-const artists = FileAttachment('artists.json').json()
+// Built from the takeout by the data loaders in this folder.
+const artist_stats = FileAttachment('artist_stats.json').json()
 const discovered_monthly = FileAttachment('discovered_monthly.json').json()
-const genre_attrs = FileAttachment('genre_attrs.json').json()
-const songs = FileAttachment('songs.json').json()
-const top_genres = FileAttachment('top_genres.json').json()
 const monthly_summary = FileAttachment('monthly_summary.json').json()
 const monthly_listen_data = FileAttachment('monthly_listen_data.json').json()
-const monthly_top_genres = FileAttachment('monthly_top_genres.json').json()
+// Frozen data from the original analysis (through January 2025), pending genre/popularity loaders.
+const artists = FileAttachment('legacy/artists.json').json()
+const genre_attrs = FileAttachment('legacy/genre_attrs.json').json()
+const songs = FileAttachment('legacy/songs.json').json()
+const top_genres = FileAttachment('legacy/top_genres.json').json()
+const legacy_listen_data = FileAttachment('legacy/monthly_listen_data.json').json()
+const monthly_top_genres = FileAttachment('legacy/monthly_top_genres.json').json()
 ```
 
 # Genre Space
@@ -335,7 +339,7 @@ Plot.plot({
   color: { legend: true, scheme: 'Paired', domain: ['Explicit', 'Not Explicit'] },
   marks: [
     Plot.rectY(
-      monthly_listen_data.filter((i) => i.trend == 'explicit'),
+      legacy_listen_data.filter((i) => i.trend == 'explicit'),
       Plot.binX(
         { y: 'sum' },
         {
@@ -417,7 +421,7 @@ Plot.plot({
   color: { legend: true, domain: ['Super', 'High', 'Medium', 'Low'] },
   marks: [
     Plot.rectY(
-      monthly_listen_data.filter((i) => i.trend == 'popularity'),
+      legacy_listen_data.filter((i) => i.trend == 'popularity'),
       Plot.binX(
         { y: 'sum' },
         {
@@ -443,7 +447,7 @@ Plot.plot({
   color: { legend: true, domain: ['Under 1 year', '1-2 years', '2-5 years', '5+ years'] },
   marks: [
     Plot.rectY(
-      monthly_listen_data.filter((i) => i.trend == 'release_age'),
+      legacy_listen_data.filter((i) => i.trend == 'release_age'),
       Plot.binX(
         { y: 'sum' },
         {
@@ -473,7 +477,7 @@ Plot.plot({
   x: { label: 'hours' },
   marks: [
     Plot.rectY(
-      artists,
+      artist_stats,
       Plot.binX({ y: 'count' }, { x: (i) => i.ms_played / 1000 / 3600, tip: true })
     ),
     Plot.ruleY([0])
@@ -482,8 +486,8 @@ Plot.plot({
 ```
 
 ```js
-const num_artists_over_20h = artists.filter((i) => i.ms_played > 20 * 1000 * 3600).length
-const num_artists = artists.length
+const num_artists_over_20h = artist_stats.filter((i) => i.ms_played > 20 * 1000 * 3600).length
+const num_artists = artist_stats.length
 ```
 
 Well it's certainly not equal. I have just a couple artists I listen to a lot and a lot that I've only listened to once or twice. Just ${num_artists_over_20h} got more than 20 hours of stream time, but I've listened to ${num_artists} artists total! This actually does seem like a good thing overall for my exploration - listening to a lot of artists just a few times is a great way to find new favorites.
@@ -497,13 +501,13 @@ Plot.plot({
   y: { label: 'artists', grid: true },
   x: { label: 'songs played' },
   marks: [
-    Plot.rectY(artists, Plot.binX({ y: 'count' }, { x: 'num_played_songs', tip: true })),
+    Plot.rectY(artist_stats, Plot.binX({ y: 'count' }, { x: 'num_played_songs', tip: true })),
     Plot.ruleY([0])
   ]
 })
 ```
 
-Well that's also a pretty clear "no". There's only ${artists.filter((i) => i.num_played_songs > 12).length} artists where I've listened to over a dozen songs.
+Well that's also a pretty clear "no". There's only ${artist_stats.filter((i) => i.num_played_songs > 12).length} artists where I've listened to over a dozen songs.
 
 Now if we combine these two attributes, we can find which artists I've listed to a lot but not explored thoroughly. Any artists in the bottom-right strip would good to listen to more of.
 
@@ -514,7 +518,7 @@ Plot.plot({
   y: { label: 'songs played', grid: true },
   marks: [
     Plot.dot(
-      artists.filter((i) => i.ms_played > 1 * 1000 * 3600),
+      artist_stats.filter((i) => i.ms_played > 1 * 1000 * 3600),
       {
         x: (i) => i.ms_played / 1000 / 3600,
         y: 'num_played_songs',
@@ -545,7 +549,7 @@ const dursong_plays = view(Inputs.range([-10, 10], { label: 'Play Shift', step: 
 ```
 
 ```js
-const artists_to_explore = artists
+const artists_to_explore = artist_stats
   .map((artist) => ({
     ...artist,
     dursong_score:
@@ -733,13 +737,12 @@ Plot.plot({
   y: { label: 'skipped count', grid: true },
   marks: [
     Plot.dot(
-      artists.filter((i) => i.ms_played > 1 * 1000 * 3600),
+      artist_stats.filter((i) => i.ms_played > 1 * 1000 * 3600),
       {
         x: 'play_count',
         y: 'skipped_count',
-        stroke: 'genre_color',
         channels: { Artist: 'name' },
-        tip: { format: { genre_color: null } }
+        tip: true
       }
     ),
     Plot.ruleX([0]),
