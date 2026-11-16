@@ -7,7 +7,7 @@ from datetime import timedelta
 from lastfm import LastFM
 from takeout import Play
 
-RECENT_DAYS = 90
+RECENT_DAYS = 180
 
 
 def _top_track(plays: list[Play], artist: str) -> Play | None:

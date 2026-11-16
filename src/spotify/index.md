@@ -13,13 +13,11 @@ const monthly_top_genres = FileAttachment('monthly_top_genres.json').json()
 const discovered_monthly = FileAttachment('discovered_monthly.json').json()
 const monthly_summary = FileAttachment('monthly_summary.json').json()
 const monthly_listen_data = FileAttachment('monthly_listen_data.json').json()
-// Frozen: the explicit and release-age trends from the original analysis (through January 2025).
-const legacy_listen_data = FileAttachment('legacy/monthly_listen_data.json').json()
 ```
 
 # My Taste
 
-These are the groups my favorite artists fall into, by genre, and the artists from the biggest groups that I keep coming back to.
+First off, something similar to the standard Spotify presentation. Which bands do I listen to a lot?
 
 ```js
 function favoriteCards(items) {
@@ -30,7 +28,7 @@ function favoriteCards(items) {
           ? html`<a href="https://open.spotify.com/track/${f.track_uri?.split(':').at(-1)}"><img src="${f.cover}" alt="" loading="lazy" /></a>`
           : html`<div class="no-cover"></div>`}
         <div class="favorite-artist">${f.artist}</div>
-        <div>${f.track ?? ''}</div>
+        <!--<div>${f.track ?? ''}</div>-->
         <div class="favorite-cluster" style="color: ${f.color};">${f.cluster} · ${f.hours} h</div>
       </div>`
     )}
@@ -48,7 +46,7 @@ function favoriteCards(items) {
 
 ## Consistent Favorites
 
-The artist from each of my top genre groups that I've listened to most steadily over the years, with their song I've played most.
+We'll break these out into bands across a variety of genres, so we get a nice diverse sample.
 
 ```js
 favoriteCards(clusters.favorites.consistent)
@@ -56,37 +54,15 @@ favoriteCards(clusters.favorites.consistent)
 
 ## Recent Favorites
 
-The same, for what I've been listening to since ${clusters.favorites.recent_since}.
+And here's a similar selection of bands, but just for what I've been listening to since ${clusters.favorites.recent_since}.
 
 ```js
 favoriteCards(clusters.favorites.recent)
 ```
 
-## Genre Groups
-
-My artists (everyone I've played for at least an hour) grouped by their genres. Each group is labeled with the genres that set it apart.
-
-```js
-html`
-  <div class="grid grid-cols-2" style="grid-auto-rows: auto">
-    ${clusters.clusters.map(
-      (c) => html`
-        <div class="card" style="margin: 0px;">
-          <h2 style="color: ${c.color};">${c.genres.join(' / ')}</h2>
-          <h3>${c.hours} hours, ${c.artist_count} artists</h3>
-          <ul>
-            ${c.artists.slice(0, 6).map((a) => html`<li>${a.name} (${a.hours} h)</li>`)}
-          </ul>
-        </div>
-      `
-    )}
-  </div>
-`
-```
-
 # Genre Space
 
-Let's start with the coolest chart: a map of my top genres compared to everyone else's. Hover over each dot to see what that point represents.
+Let's go to the coolest chart: a map of my top genres compared to everyone else's. Hover over each dot to see what that point represents.
 
 ```js
 const genres_to_show = [
@@ -130,14 +106,14 @@ const contour_weight = contours === 'Last.fm listeners' ? (d) => Math.sqrt(d.rea
 
 ```js
 Plot.plot({
-  title: 'Genre Map',
-  caption: 'My top genres overlaid on a "map" of global genres.',
+  title: 'Artist Map',
+  caption: 'Artists I listen to, placed at the average position of their genres.',
   inset: 10,
   width: 900,
   height: 600,
   x: { label: 'density/bounciness' },
   y: { label: 'organic/mechanical' },
-  r: { range: [5, 20] },
+  r: { range: [1.5, 16] },
   marks: [
     Plot.density(genre_attrs, { x: 'x_norm', y: 'y_norm', weight: contour_weight, strokeWidth: 0.25 }),
     Plot.text(
@@ -151,16 +127,19 @@ Plot.plot({
         fontWeight: 'lighter'
       }
     ),
-    Plot.dot(top_genres, {
-      x: 'x_norm',
-      y: 'y_norm',
-      r: 'hours_played',
-      sort: { channel: '-r' },
-      fill: 'color',
-      fillOpacity: 0.8,
-      channels: { Genre: 'genre', 'Top Artist': 'top_artist', 'Hours Played': 'hours_played' },
-      tip: { format: { x: null, y: null, r: null, fill: null } }
-    })
+    Plot.dot(
+      artists.filter((i) => i.ms_played > 1 * 1000 * 3600 && i.x != null),
+      {
+        x: 'x',
+        y: 'y',
+        r: (i) => i.ms_played / 1000 / 3600,
+        sort: { channel: '-r' },
+        fill: 'genre_color',
+        fillOpacity: 0.7,
+        channels: { Artist: 'name', Genre: 'genre', Hours: (i) => Math.round(i.ms_played / 1000 / 360) / 10 },
+        tip: { format: { x: null, y: null, r: null, fill: null } }
+      }
+    )
   ]
 })
 ```
@@ -225,49 +204,7 @@ Plot.plot({
 
 Breaking these out, you can see that I have a large preference for genres with a high dynamic variation and, to a lesser extent, high energy and mechanicality. I think these all match very closely with how I would describe my tastes - I get bored with music easily and it needs to "tickle my brain" to keep me interested.
 
-## Artist Map
-
-Here's every artist I've played for at least an hour, placed by their genres and sized by how long I've listened.
-
-```js
-Plot.plot({
-  title: 'Artist Map',
-  caption: 'Artists I listen to, placed at the average position of their genres.',
-  inset: 10,
-  width: 900,
-  height: 600,
-  x: { label: 'density/bounciness' },
-  y: { label: 'organic/mechanical' },
-  r: { range: [1.5, 16] },
-  marks: [
-    Plot.density(genre_attrs, { x: 'x_norm', y: 'y_norm', weight: contour_weight, strokeWidth: 0.25 }),
-    Plot.text(
-      genre_attrs.filter((i) => genres_to_show.includes(i.name)),
-      {
-        x: 'x_norm',
-        y: 'y_norm',
-        text: 'name',
-        textAnchor: 'middle',
-        fontSize: 12,
-        fontWeight: 'lighter'
-      }
-    ),
-    Plot.dot(
-      artists.filter((i) => i.ms_played > 1 * 1000 * 3600 && i.x != null),
-      {
-        x: 'x',
-        y: 'y',
-        r: (i) => i.ms_played / 1000 / 3600,
-        sort: { channel: '-r' },
-        fill: 'genre_color',
-        fillOpacity: 0.7,
-        channels: { Artist: 'name', Genre: 'genre', Hours: (i) => Math.round(i.ms_played / 1000 / 360) / 10 },
-        tip: { format: { x: null, y: null, r: null, fill: null } }
-      }
-    )
-  ]
-})
-```
+# Taste Shift
 
 Now how have these genres shifted over time?
 
@@ -292,14 +229,6 @@ Plot.plot({
         fontWeight: 'lighter'
       }
     ),
-    /*Plot.density(monthly_top_genres[genre_month]['top_genres'], {
-      x: 'x_norm',
-      y: 'y_norm',
-      //weight: 'hours_played',
-      thresholds: 4,
-      bandwidth: 30,
-      strokeWidth: 0.5
-    }),*/
     Plot.dot(monthly_top_genres[genre_month]['top_genres'], {
       x: 'x_norm',
       y: 'y_norm',
@@ -317,7 +246,7 @@ Plot.plot({
 ```js
 const num_months = Object.keys(monthly_top_genres).length
 const month_num = view(
-  Inputs.range([0, num_months - 1], { step: 1, value: 39, width: 450, label: 'Month Index' })
+  Inputs.range([0, num_months - 1], { step: 1, value: 90, width: 450, label: 'Month Index' })
 )
 ```
 
@@ -328,50 +257,6 @@ const genre_month = Object.keys(monthly_top_genres).sort()[month_num]
 Here, I'll let you scrub through my entire musical history. I've isolated the top genres for every month of my listening and you can show each of them by dragging the slider.
 
 You can see the early days where I mainly listened to pop punk (Panic!) and slowly migrated to a more varied pop and indie palette. You can also see the months where I listened to a bunch of jazz (December 2021) or vocaloid (July 2024). In the end, though I'm still centered firmly in that rock/pop region.
-
-For even more proof that my tastes don't really change, here are the centroids of my genre distributions for each month with the routes between them.
-
-```js
-Plot.plot({
-  title: 'Genre Map',
-  subtitle: 'The journey of my taste over time',
-  inset: 10,
-  x: { label: 'density/bounciness' },
-  y: { label: 'organic/mechanical' },
-  marks: [
-    Plot.density(genre_attrs, { x: 'x_norm', y: 'y_norm', strokeWidth: 0.25 }),
-    Plot.text(
-      genre_attrs.filter((i) => genres_to_show.includes(i.name)),
-      {
-        x: 'x_norm',
-        y: 'y_norm',
-        text: 'name',
-        textAnchor: 'middle',
-        fontSize: 10,
-        fontWeight: 'lighter'
-      }
-    ),
-    Plot.line(Object.values(monthly_top_genres), {
-      x: 'centroid_x',
-      y: 'centroid_y',
-      curve: 'catmull-rom',
-      marker: true,
-      strokeWidth: 0.5,
-      channels: { Month: 'month' },
-      tip: true //{ format: { x: null, y: null } }
-    })
-    /*Plot.text(Object.values(monthly_top_genres), {
-      filter: (d) => d.month.includes('01'),
-      x: 'centroid_x',
-      y: 'centroid_y',
-      text: 'month',
-      dx: -8
-    })*/
-  ]
-})
-```
-
-It's like the tracks after an ice skater does a spin right around (38, 68).
 
 # Listening History
 
@@ -424,7 +309,7 @@ Plot.plot({
 })
 ```
 
-This plot was very surprising to me - I thought I was listening to a lot of music recently, but apparently I was listening _way_ more in 2019. For a few months during the summer of 2019 I was listening over 8 hours per day, essentially non-stop from when I woke up to when I got home after work.
+This plot was very surprising to me - I thought I was listening to a lot of music recently, but apparently I was listening _way_ more in 2019. For a few months during the summer of 2019 I was listening nearly 6 hours per day, essentially non-stop from when I woke up to when I got home after work.
 
 ```js
 Plot.plot({
@@ -452,33 +337,6 @@ Plot.plot({
 ```
 
 How picky am I about what plays? This chart shows the total duration of song I've ever skipped, which is quite a lot. In fact, there were even a few months where I skipped more music than I actually played. It seems I just wasn’t feeling whatever Spotify was recommending during that time.
-
-```js
-Plot.plot({
-  title: 'Proportion Explicit',
-  height: 200,
-  x: { label: 'date' },
-  y: { label: 'percent', percent: true, grid: true },
-  color: { legend: true, scheme: 'Paired', domain: ['Explicit', 'Not Explicit'] },
-  marks: [
-    Plot.rectY(
-      legacy_listen_data.filter((i) => i.trend == 'explicit'),
-      Plot.binX(
-        { y: 'sum' },
-        {
-          x: { interval: 'month', value: 'month' },
-          y: 'value',
-          fill: 'label',
-          tip: true
-        }
-      )
-    ),
-    Plot.ruleY([0])
-  ]
-})
-```
-
-I don't listen to a ton of explicit music, but I'd be very curious to see how this stacks up against other users or what proportion of songs on the platform are marked explicit. Apparently my tastes have gotten only slightly edgier over time.
 
 ```js
 Plot.plot({
@@ -533,60 +391,6 @@ Plot.plot({
 ```
 
 Here I've separated out each play into morning (4AM-12PM), afternoon (12PM-8PM), and night (8PM-4AM). Most of my listening nowadays happens sporadically through the workday or evening, so this distribution rings true.
-
-```js
-/* Commented out because I think I misinterpreted Spotify's popularity metric.
-Plot.plot({
-  title: 'Proportion by Popularity',
-  height: 200,
-  x: { label: 'date' },
-  y: { label: 'percent', percent: true, grid: true },
-  color: { legend: true, domain: ['Super', 'High', 'Medium', 'Low'] },
-  marks: [
-    Plot.rectY(
-      legacy_listen_data.filter((i) => i.trend == 'popularity'),
-      Plot.binX(
-        { y: 'sum' },
-        {
-          x: { interval: 'month', value: 'month' },
-          y: 'value',
-          fill: 'label',
-          tip: true
-        }
-      )
-    ),
-    Plot.ruleY([0])
-  ]
-})
-*/
-```
-
-```js
-Plot.plot({
-  title: 'Proportion by Release Age',
-  height: 200,
-  x: { label: 'date' },
-  y: { label: 'percent', percent: true, grid: true },
-  color: { legend: true, domain: ['Under 1 year', '1-2 years', '2-5 years', '5+ years'] },
-  marks: [
-    Plot.rectY(
-      legacy_listen_data.filter((i) => i.trend == 'release_age'),
-      Plot.binX(
-        { y: 'sum' },
-        {
-          x: { interval: 'month', value: 'month' },
-          y: 'value',
-          fill: 'label',
-          tip: true
-        }
-      )
-    ),
-    Plot.ruleY([0])
-  ]
-})
-```
-
-This chart is shaming me very thoroughly - I've been doing a decent job at finding music new to me, but that music is still pretty old on average. I should work on finding some music that's a little more current, or looking into the albums that my favorite artists have released recently.
 
 # Artist Diversity
 
@@ -734,33 +538,7 @@ Plot.plot({
 })
 ```
 
-Well it's certainly not a straight line, except maybe a vertical one. Let's stick the x-axis on a log plot, since it seems it may be scored that way. (The Dragons have skewed my plot once more.)
-
-```js
-Plot.plot({
-  title: 'Popularity of My Artists',
-  subtitle: "But it's a log plot this time",
-  height: 300,
-  x: { label: 'Last.fm listeners', type: 'log' },
-  y: { label: 'hours played', grid: true },
-  marks: [
-    Plot.dot(
-      artists.filter((i) => i.ms_played > 1 * 1000 * 3600 && i.listeners > 0),
-      {
-        x: 'listeners',
-        y: (i) => i.ms_played / 1000 / 3600,
-        stroke: 'genre_color',
-        channels: { Artist: 'name' },
-        tip: { format: { stroke: null } }
-      }
-    ),
-    Plot.ruleX([0]),
-    Plot.ruleY([0])
-  ]
-})
-```
-
-Here we can actually see something! My favorite bands seem to already be reasonably popular, above Spotify's popularity score of 70,000. I do still have a fair number of bands I like below that point (hipster cred) but I don't listen to them as much.
+There are a few interesting outliers here, Saint Motel chief among them. I do still have a fair number of bands I like below that point (hipster cred) but I don't listen to them as much.
 
 Now let's do the same thing for individual songs:
 
@@ -768,7 +546,7 @@ Now let's do the same thing for individual songs:
 Plot.plot({
   title: 'Popularity of My Songs',
   height: 300,
-  x: { label: 'Last.fm listeners', type: 'log' },
+  x: { label: 'Last.fm listeners' },
   y: { label: 'hours played', grid: true },
   marks: [
     Plot.dot(
@@ -787,7 +565,7 @@ Plot.plot({
 })
 ```
 
-My tastes in individual songs are much more evenly-spread. I've listened to super-popular songs just as much as some that basically nobody has ever heard of, according to Spotify. Though I do doubt some of these - are you telling me that I'm the only one listening to Australia by The Shins?
+My tastes in individual songs are much more evenly-spread. I've listened to super-popular songs just as much as some that basically nobody has ever heard of, according to Spotify. Note the outlier in the top-left corner, that's not a bug.
 
 ## Underrated
 
@@ -862,7 +640,7 @@ Plot.plot({
 })
 ```
 
-If there is an affect, it is very slight. Neo-synthpop is the longest genre on average, while "alt z" is the shortest, but the spreads on both are wide enough that I don't feel comfortable making any conclusions about this.
+If there is an effect, it is very slight. Excepting post-rock as an outlier, the spreads on these are wide enough that I don't feel comfortable making any conclusions about this.
 
 ## Discoveries
 
@@ -916,6 +694,30 @@ Plot.plot({
 
 Very much yes. Many of my favorite bands get skipped a lot! I think this is a combination of me not being in the mood for everything all of the time and Spotify shuffle bringing up certain artists way more than it should. Anything in the top-left section here is music that Spotify thinks I like _way_ more than I actually do (Mother Mother).
 
+## Genre Groups
+
+Here's some details on the genre groups my artists tend to fall into.
+
+```js
+html`
+  <div class="grid grid-cols-2" style="grid-auto-rows: auto">
+    ${clusters.clusters.map(
+      (c) => html`
+        <div class="card" style="margin: 0px;">
+          <h2 style="color: ${c.color};">${c.genres.join(' / ')}</h2>
+          <h3>${c.hours} hours, ${c.artist_count} artists</h3>
+          <ul>
+            ${c.artists.slice(0, 6).map((a) => html`<li>${a.name} (${a.hours} h)</li>`)}
+          </ul>
+        </div>
+      `
+    )}
+  </div>
+`
+```
+
+<!--
+
 ## Genre Artists
 
 For a nice deep dive into my favorites, here's all ${top_genres.length} of my top genres and my top-played artists in each one.
@@ -936,3 +738,5 @@ html`
   </div>
 `
 ```
+
+-->
