@@ -1,12 +1,12 @@
-set dotenv-load
+set dotenv-load := true
 
 # List commands, default
 default:
-  just --list
+    just --list
 
 # Start the dev server
 dev:
-  npx observable preview
+    npx observable preview
 
 # Clean the dist
 clean:
@@ -33,7 +33,7 @@ inv-all:
 
 # Invalidate specific data files
 inv arg:
-    @just _invalidate "{{arg}}"
+    @just _invalidate "{{ arg }}"
 
 # Push to dev site
 push-dev:
