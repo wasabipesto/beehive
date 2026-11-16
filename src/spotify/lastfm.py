@@ -8,6 +8,8 @@ kept in the same file and synced incrementally.
 The first build after a new export can need thousands of calls (about 3 per new artist at
 Last.fm's 5/s limit), so warm the cache ahead of time:
     uv run src/spotify/lastfm.py warm
+A cache written before responses were compressed shrinks with:
+    uv run src/spotify/lastfm.py compact
 """
 
 import json
@@ -20,6 +22,7 @@ import unicodedata
 import urllib.error
 import urllib.parse
 import urllib.request
+import zlib
 from pathlib import Path
 
 from dotenv import load_dotenv
@@ -103,11 +106,11 @@ class LastFM:
         key = json.dumps({k: str(v).lower() for k, v in sorted(params.items())}, ensure_ascii=False)
         row = self.db.execute("SELECT fetched_at, body FROM responses WHERE method=? AND key=?", (method, key)).fetchone()
         if row and (self.offline or time.time() - row[0] < max_age_days * DAY):
-            return json.loads(row[1])
+            return _decode(row[1])
         if self.offline:
             return {}
         body = fetch()
-        self.db.execute("INSERT OR REPLACE INTO responses VALUES (?, ?, ?, ?)", (method, key, int(time.time()), json.dumps(body)))
+        self.db.execute("INSERT OR REPLACE INTO responses VALUES (?, ?, ?, ?)", (method, key, int(time.time()), _encode(body)))
         self.db.commit()
         return body
 
@@ -214,6 +217,25 @@ class LastFM:
         return self.db.execute("SELECT uts, artist, track, album FROM scrobbles WHERE uts > ? ORDER BY uts", (since,)).fetchall()
 
 
+def _encode(body: dict) -> bytes:
+    # Responses are stored compressed: similar-artist lists are ~80 kB of JSON each.
+    return zlib.compress(json.dumps(body).encode(), 6)
+
+
+def _decode(stored: bytes | str) -> dict:
+    return json.loads(zlib.decompress(stored) if isinstance(stored, bytes) else stored)
+
+
+def compact():
+    """Compress any uncompressed rows (from older versions) and reclaim the space."""
+    fm = LastFM(offline=True)
+    rows = fm.db.execute("SELECT method, key, body FROM responses WHERE typeof(body) = 'text'").fetchall()
+    fm.db.executemany("UPDATE responses SET body = ? WHERE method = ? AND key = ?", [(_encode(json.loads(b)), m, k) for m, k, b in rows])
+    fm.db.commit()
+    fm.db.execute("VACUUM")
+    print(f"compressed {len(rows)} rows")
+
+
 def warm():
     """Fill the cache for everything the loaders will ask for, most important first."""
     sys.path.insert(0, str(Path(__file__).parent))
@@ -246,5 +268,7 @@ def warm():
 if __name__ == "__main__":
     if sys.argv[1:] == ["warm"]:
         warm()
+    elif sys.argv[1:] == ["compact"]:
+        compact()
     else:
         print(__doc__)
