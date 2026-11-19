@@ -104,7 +104,7 @@ def quilt(plays: list[Play], clusters: list[dict], fm: LastFM, rows: int = 5) ->
     return columns
 
 
-def underrated(plays: list[Play], profiles: dict[str, dict], fm: LastFM, n: int = 15, cards: int = 5) -> dict:
+def underrated(plays: list[Play], profiles: dict[str, dict], fm: LastFM, n: int = 30, cards: int = 5) -> dict:
     """Artists (2+ hours) and songs (10+ plays) I play a lot that few Last.fm users do."""
     artists = sorted(
         (p for p in profiles.values() if p["hours"] >= 2 and p["listeners"]),

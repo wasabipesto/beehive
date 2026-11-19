@@ -73,94 +73,6 @@ And here's a similar selection of bands, but just for what I've been listening t
 trackCards(clusters.recent.items)
 ```
 
-## Find Something Similar
-
-Type in an artist you like and I'll suggest a few from my own library that are similar, leaning towards the ones closest to the center of my taste.
-
-```js
-const recommend_input = Inputs.text({ placeholder: 'An artist you like', width: 320, autocomplete: 'off', spellcheck: false })
-const recommend_query = view(recommend_input)
-```
-
-```js
-// Artist names compared without case, accents, spaces or punctuation.
-const artist_key = (s) =>
-  s
-    .normalize('NFKD')
-    .replace(/[\u0300-\u036f]/g, '')
-    .toLowerCase()
-    .replace(/[^\p{L}\p{N}]+/gu, '')
-// The index (~1 MB) is only fetched once someone starts typing.
-const recommender_cache = { promise: null }
-function load_recommender() {
-  return (recommender_cache.promise ??= FileAttachment('recommender.json')
-    .json()
-    .then((d) => {
-      const keys = new Map()
-      const add = (n, i) => {
-        const k = artist_key(n)
-        keys.set(k, [...(keys.get(k) ?? []), i])
-      }
-      d.names.forEach(add)
-      d.aliases.forEach(([n, i]) => add(n, i))
-      return { ...d, keys }
-    }))
-}
-```
-
-```js
-{
-  const query = artist_key(recommend_query)
-  if (!query) {
-    display(html`<p class="muted">For example: ${['Lorde', 'Radiohead', 'The 1975'].map(
-      (n) => html`<button class="suggest" onclick=${() => setQuery(n)}>${n}</button> `
-    )}</p>`)
-  } else {
-    const rec = await load_recommender()
-    const hits = rec.keys.get(query)
-    if (!hits) {
-      const near = rec.names
-        .filter((n) => artist_key(n).includes(query))
-        // Names that start with what was typed first, then shorter names.
-        .sort((a, b) => artist_key(b).startsWith(query) - artist_key(a).startsWith(query) || a.length - b.length)
-        .slice(0, 8)
-      display(
-        html`<p>That artist isn't near anything I listen to.${near.length
-          ? html` Did you mean ${near.map((n) => html`<button class="suggest" onclick=${() => setQuery(n)}>${n}</button> `)}?`
-          : ''}</p>`
-      )
-    } else {
-      const isQuery = (m) => artist_key(m.artist) === query || (m.lastfm_name && artist_key(m.lastfm_name) === query)
-      const self = rec.mine.find(isQuery)
-      const match = new Map()
-      for (const i of hits) for (const [m, pct] of rec.links[i]) match.set(m, Math.max(match.get(m) ?? 0, pct / 100))
-      // Similarity (squared, so it leads), times a gentle boost for how much I listen to
-      // them, times how close they sit to the center of my listening on the artist map.
-      const closeness = (m) => Math.exp(-((m.x - rec.center.x) ** 2 + (m.y - rec.center.y) ** 2) / (2 * 20 ** 2))
-      const picks = [...match]
-        .map(([m, sim]) => ({ ...rec.mine[m], match: sim }))
-        .filter((m) => !isQuery(m))
-        .map((m) => ({ ...m, score: m.match ** 2 * m.hours ** 0.25 * closeness(m) }))
-        .sort((a, b) => b.score - a.score)
-        .slice(0, 5)
-      display(
-        html`<p>${self ? html`${self.artist} is one of mine (${self.hours} hours). ` : ''}${picks.length
-          ? 'If you like them, try:'
-          : "I don't have anything close enough to suggest."}</p>`
-      )
-      if (picks.length) display(trackCards(picks, (d) => `${Math.round(d.match * 100)}% similar · ${d.genre ?? ''}`))
-    }
-  }
-}
-```
-
-```js
-function setQuery(name) {
-  recommend_input.value = name
-  recommend_input.dispatchEvent(new Event('input', { bubbles: true }))
-}
-```
-
 # Genre Space
 
 Let's go to the coolest chart: a map of my top genres compared to everyone else's. Hover over each dot to see what that point represents.
@@ -377,6 +289,135 @@ const month_centers = monthly_artists.months.map((m) => {
 Here, I'll let you scrub through my entire musical history. I've isolated the top genres for every month of my listening and you can show each of them by dragging the slider.
 
 You can see the early days where I mainly listened to pop punk (Panic!) and slowly migrated to a more varied pop and indie palette. You can also see the months where I listened to a bunch of jazz (December 2021) or vocaloid (July 2024). In the end, though I'm still centered firmly in that rock/pop region.
+
+## Discoveries
+
+Every now and then, you come across a song that gets lodged in your head. To track those, I've compiled a list of the most-played songs each month that were played for the first time that month (with a minimum of four plays). Skimming through the list was a fun trip down memory lane, since several of these were songs I played a lot for a short time but never added to a playlist I listen to now.
+
+```js
+monthTimeline(
+  instant_favorites,
+  (d) => `${d.track} by ${d.artist} (${d.plays_first_30d} plays in the first 30 days, ${d.plays_total} in total)`
+)
+```
+
+## Underrated
+
+Artists and songs I play a lot that few others do: everything I've listened to for at least two hours (artists) or ten plays (songs), sorted by Last.fm listeners.
+
+```js
+trackCards(underrated.artists.slice(0, 5), (d) => `${d.listeners.toLocaleString()} listeners · ${d.hours} h`)
+```
+
+```js
+Inputs.table(underrated.artists, {
+  maxWidth: 640,
+  columns: ['artist', 'genre', 'listeners', 'hours'],
+  header: { artist: 'Artist', genre: 'Genre', listeners: 'Last.fm Listeners', hours: 'My Hours' },
+  select: false
+})
+```
+
+```js
+/*
+Inputs.table(underrated.songs, {
+  maxWidth: 640,
+  columns: ['preview', 'track', 'artist', 'listeners', 'plays'],
+  header: { preview: '', track: 'Title', artist: 'Artist', listeners: 'Last.fm Listeners', plays: 'My Plays' },
+  format: { preview: (_, i, data) => playButton(data[i]) },
+  width: { preview: 36 },
+  select: false
+})
+*/
+```
+
+## Find Something Similar
+
+Type in an artist you like and I'll suggest a few from my own library that are similar, leaning towards the ones closest to the center of my taste.
+
+```js
+const recommend_input = Inputs.text({ placeholder: 'An artist you like', width: 320, autocomplete: 'off', spellcheck: false })
+const recommend_query = view(recommend_input)
+```
+
+```js
+// Artist names compared without case, accents, spaces or punctuation.
+const artist_key = (s) =>
+  s
+    .normalize('NFKD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .toLowerCase()
+    .replace(/[^\p{L}\p{N}]+/gu, '')
+// The index (~1 MB) is only fetched once someone starts typing.
+const recommender_cache = { promise: null }
+function load_recommender() {
+  return (recommender_cache.promise ??= FileAttachment('recommender.json')
+    .json()
+    .then((d) => {
+      const keys = new Map()
+      const add = (n, i) => {
+        const k = artist_key(n)
+        keys.set(k, [...(keys.get(k) ?? []), i])
+      }
+      d.names.forEach(add)
+      d.aliases.forEach(([n, i]) => add(n, i))
+      return { ...d, keys }
+    }))
+}
+```
+
+```js
+{
+  const query = artist_key(recommend_query)
+  if (!query) {
+    display(html`<p class="muted">For example: ${['Lorde', 'Radiohead', 'The 1975'].map(
+      (n) => html`<button class="suggest" onclick=${() => setQuery(n)}>${n}</button> `
+    )}</p>`)
+  } else {
+    const rec = await load_recommender()
+    const hits = rec.keys.get(query)
+    if (!hits) {
+      const near = rec.names
+        .filter((n) => artist_key(n).includes(query))
+        // Names that start with what was typed first, then shorter names.
+        .sort((a, b) => artist_key(b).startsWith(query) - artist_key(a).startsWith(query) || a.length - b.length)
+        .slice(0, 8)
+      display(
+        html`<p>That artist isn't near anything I listen to.${near.length
+          ? html` Did you mean ${near.map((n) => html`<button class="suggest" onclick=${() => setQuery(n)}>${n}</button> `)}?`
+          : ''}</p>`
+      )
+    } else {
+      const isQuery = (m) => artist_key(m.artist) === query || (m.lastfm_name && artist_key(m.lastfm_name) === query)
+      const self = rec.mine.find(isQuery)
+      const match = new Map()
+      for (const i of hits) for (const [m, pct] of rec.links[i]) match.set(m, Math.max(match.get(m) ?? 0, pct / 100))
+      // Similarity (squared, so it leads), times a gentle boost for how much I listen to
+      // them, times how close they sit to the center of my listening on the artist map.
+      const closeness = (m) => Math.exp(-((m.x - rec.center.x) ** 2 + (m.y - rec.center.y) ** 2) / (2 * 20 ** 2))
+      const picks = [...match]
+        .map(([m, sim]) => ({ ...rec.mine[m], match: sim }))
+        .filter((m) => !isQuery(m))
+        .map((m) => ({ ...m, score: m.match ** 2 * m.hours ** 0.25 * closeness(m) }))
+        .sort((a, b) => b.score - a.score)
+        .slice(0, 5)
+      display(
+        html`<p>${self ? html`${self.artist} is one of mine (${self.hours} hours). ` : ''}${picks.length
+          ? 'If you like them, try:'
+          : "I don't have anything close enough to suggest."}</p>`
+      )
+      if (picks.length) display(trackCards(picks, (d) => `${Math.round(d.match * 100)}% similar · ${d.genre ?? ''}`))
+    }
+  }
+}
+```
+
+```js
+function setQuery(name) {
+  recommend_input.value = name
+  recommend_input.dispatchEvent(new Event('input', { bubbles: true }))
+}
+```
 
 # Listening History
 
@@ -687,34 +728,6 @@ Plot.plot({
 
 My tastes in individual songs are much more evenly-spread. I've listened to super-popular songs just as much as some that basically nobody has ever heard of, according to Spotify. Note the outlier in the top-left corner, that's not a bug.
 
-## Underrated
-
-Artists and songs I play a lot that few others do: everything I've listened to for at least two hours (artists) or ten plays (songs), sorted by Last.fm listeners.
-
-```js
-trackCards(underrated.artists.slice(0, 5), (d) => `${d.listeners.toLocaleString()} listeners · ${d.hours} h`)
-```
-
-```js
-Inputs.table(underrated.artists, {
-  maxWidth: 640,
-  columns: ['artist', 'genre', 'listeners', 'hours'],
-  header: { artist: 'Artist', genre: 'Genre', listeners: 'Last.fm Listeners', hours: 'My Hours' },
-  select: false
-})
-```
-
-```js
-Inputs.table(underrated.songs, {
-  maxWidth: 640,
-  columns: ['preview', 'track', 'artist', 'listeners', 'plays'],
-  header: { preview: '', track: 'Title', artist: 'Artist', listeners: 'Last.fm Listeners', plays: 'My Plays' },
-  format: { preview: (_, i, data) => playButton(data[i]) },
-  width: { preview: 36 },
-  select: false
-})
-```
-
 # Miscellaneous
 
 For fun, let's look at some other random stats.
@@ -750,17 +763,6 @@ Plot.plot({
 ```
 
 If there is an effect, it is very slight. Excepting post-rock as an outlier, the spreads on these are wide enough that I don't feel comfortable making any conclusions about this.
-
-## Discoveries
-
-Every now and then, you come across a song that gets lodged in your head. To track those, I've compiled a list of the most-played songs each month that were played for the first time that month (with a minimum of four plays). Skimming through the list was a fun trip down memory lane, since several of these were songs I played a lot for a short time but never added to a playlist I listen to now.
-
-```js
-monthTimeline(
-  instant_favorites,
-  (d) => `${d.track} by ${d.artist} (${d.plays_first_30d} plays in the first 30 days, ${d.plays_total} in total)`
-)
-```
 
 ## Often-Skipped Artists
 
