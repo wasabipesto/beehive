@@ -1,4 +1,4 @@
-"""Cached Last.fm (and Spotify oEmbed) client for the spotify data loaders.
+"""Cached Last.fm (and Spotify embed page) client for the spotify data loaders.
 
 Every response is stored in $SPOTIFY_CACHE_DIR/lastfm.sqlite, so a build only calls the
 API for artists, tracks and genres it has not seen (or whose entry has expired). The
@@ -30,7 +30,9 @@ from dotenv import load_dotenv
 load_dotenv()
 
 API = "https://ws.audioscrobbler.com/2.0/"
-OEMBED = "https://open.spotify.com/oembed"
+EMBED = "https://open.spotify.com/embed/track"
+# The embed page serves an error page to non-browser user agents.
+BROWSER_UA = "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36"
 USER_AGENT = "beehive-spotify/1.0 (+https://wasabipesto.com/spotify/)"
 MIN_INTERVAL = 0.25  # seconds between calls; Last.fm asks for at most 5/s averaged
 NOT_FOUND = 6  # Last.fm error code for an unknown artist/track/tag
@@ -176,21 +178,42 @@ class LastFM:
         t = self.get("tag.getInfo", tag=tag).get("tag") or {}
         return int(t.get("reach", 0) or 0)
 
-    def spotify_cover(self, track_uri: str) -> str | None:
-        """Album art URL for a Spotify track, via oEmbed (no Spotify credentials needed)."""
+    def spotify_track(self, track_uri: str) -> dict:
+        """Cover art, 30-second preview and release info for a Spotify track.
+
+        Read from the public embed page (open.spotify.com/embed/track/<id>), which needs no
+        credentials. It isn't an official API: if the page changes, fields come back None and
+        the page falls back to plain links.
+        """
 
         def fetch():
-            self._throttle()
-            url = f"{OEMBED}?{urllib.parse.urlencode({'url': track_uri})}"
+            for _ in range(2):  # Spotify allows ~2/s here; slow the shared throttle down
+                self._throttle()
+            url = f"{EMBED}/{track_uri.rsplit(':', 1)[-1]}"
             try:
-                with urllib.request.urlopen(urllib.request.Request(url, headers={"User-Agent": USER_AGENT}), timeout=30) as r:
-                    return {"thumbnail_url": json.load(r).get("thumbnail_url")}
+                req = urllib.request.Request(url, headers={"User-Agent": BROWSER_UA})
+                with urllib.request.urlopen(req, timeout=30) as r:
+                    html = r.read().decode("utf-8")
             except urllib.error.HTTPError as e:
-                if e.code == 404:
-                    return {"thumbnail_url": None}
+                if e.code in (400, 404):
+                    return {}
                 raise
+            m = re.search(r'<script id="__NEXT_DATA__" type="application/json">(.*?)</script>', html, re.S)
+            try:
+                e = json.loads(m.group(1))["props"]["pageProps"]["state"]["data"]["entity"]
+            except (AttributeError, KeyError, TypeError, ValueError):
+                return {}
+            images = {i.get("maxWidth"): i["url"] for i in (e.get("visualIdentity") or {}).get("image", [])}
+            return {
+                "cover": images.get(300) or next(iter(images.values()), None),
+                "cover_small": images.get(64) or images.get(300),
+                "preview": (e.get("audioPreview") or {}).get("url"),
+                "release_date": ((e.get("releaseDate") or {}).get("isoString") or "")[:10] or None,
+                "explicit": e.get("isExplicit"),
+                "duration_ms": e.get("duration"),
+            }
 
-        return self._cached("spotify.oembed", {"uri": track_uri}, 365, fetch).get("thumbnail_url")
+        return self._cached("spotify.embed", {"uri": track_uri}, 180, fetch)
 
     # --- scrobbles ---------------------------------------------------------------------
 

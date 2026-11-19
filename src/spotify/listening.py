@@ -96,25 +96,6 @@ def monthly_listen_data(plays: list[Play]) -> list[dict]:
     return out
 
 
-def discovered_monthly(plays: list[Play], min_plays: int = 3) -> list[dict]:
-    """For each month, the new track played most on the day it was first heard."""
-    first_day = {}
-    for p in plays:
-        first_day.setdefault(p.track_key, p.ts.date())
-    counts = defaultdict(Counter)
-    meta = {}
-    for p in plays:
-        if p.ts.date() == first_day[p.track_key]:
-            counts[p.month][p.track_key] += 1
-            meta[p.track_key] = (p.track, p.artist)
-    out = []
-    for month, c in sorted(counts.items(), reverse=True):
-        uri, n = c.most_common(1)[0]
-        if n >= min_plays:
-            out.append({"month": month, "title": meta[uri][0], "artist": meta[uri][1], "plays": n})
-    return out
-
-
 def artist_stats(plays: list[Play]) -> list[dict]:
     """Per-artist totals. Artists are Spotify's album-artist names (the takeout has no IDs)."""
     stats = {}
