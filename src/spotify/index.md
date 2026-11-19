@@ -48,6 +48,8 @@ import { scrubber } from './scrubber.js'
   .scrubber input[type='range'] { width: min(450px, 60vw); vertical-align: middle; }
   .scrubber .play-button { position: static; background: var(--theme-foreground-faint); }
   .taste-subtitle > div { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 900px; }
+  button.suggest { font: inherit; font-size: 13px; margin: 0.15rem 0.1rem; padding: 0.1rem 0.5rem; border-radius: 999px; border: 1px solid var(--theme-foreground-faint); background: none; color: inherit; cursor: pointer; }
+  button.suggest:hover { background: var(--theme-background-alt); }
   .timeline-empty { background: var(--theme-background-alt); border-radius: 3px; opacity: 0.4; }
 </style>
 
@@ -69,6 +71,94 @@ And here's a similar selection of bands, but just for what I've been listening t
 
 ```js
 trackCards(clusters.recent.items)
+```
+
+## Find Something Similar
+
+Type in an artist you like and I'll suggest a few from my own library that are similar, leaning towards the ones closest to the center of my taste.
+
+```js
+const recommend_input = Inputs.text({ placeholder: 'An artist you like', width: 320, autocomplete: 'off', spellcheck: false })
+const recommend_query = view(recommend_input)
+```
+
+```js
+// Artist names compared without case, accents, spaces or punctuation.
+const artist_key = (s) =>
+  s
+    .normalize('NFKD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .toLowerCase()
+    .replace(/[^\p{L}\p{N}]+/gu, '')
+// The index (~1 MB) is only fetched once someone starts typing.
+const recommender_cache = { promise: null }
+function load_recommender() {
+  return (recommender_cache.promise ??= FileAttachment('recommender.json')
+    .json()
+    .then((d) => {
+      const keys = new Map()
+      const add = (n, i) => {
+        const k = artist_key(n)
+        keys.set(k, [...(keys.get(k) ?? []), i])
+      }
+      d.names.forEach(add)
+      d.aliases.forEach(([n, i]) => add(n, i))
+      return { ...d, keys }
+    }))
+}
+```
+
+```js
+{
+  const query = artist_key(recommend_query)
+  if (!query) {
+    display(html`<p class="muted">For example: ${['Lorde', 'Radiohead', 'The 1975'].map(
+      (n) => html`<button class="suggest" onclick=${() => setQuery(n)}>${n}</button> `
+    )}</p>`)
+  } else {
+    const rec = await load_recommender()
+    const hits = rec.keys.get(query)
+    if (!hits) {
+      const near = rec.names
+        .filter((n) => artist_key(n).includes(query))
+        // Names that start with what was typed first, then shorter names.
+        .sort((a, b) => artist_key(b).startsWith(query) - artist_key(a).startsWith(query) || a.length - b.length)
+        .slice(0, 8)
+      display(
+        html`<p>That artist isn't near anything I listen to.${near.length
+          ? html` Did you mean ${near.map((n) => html`<button class="suggest" onclick=${() => setQuery(n)}>${n}</button> `)}?`
+          : ''}</p>`
+      )
+    } else {
+      const isQuery = (m) => artist_key(m.artist) === query || (m.lastfm_name && artist_key(m.lastfm_name) === query)
+      const self = rec.mine.find(isQuery)
+      const match = new Map()
+      for (const i of hits) for (const [m, pct] of rec.links[i]) match.set(m, Math.max(match.get(m) ?? 0, pct / 100))
+      // Similarity (squared, so it leads), times a gentle boost for how much I listen to
+      // them, times how close they sit to the center of my listening on the artist map.
+      const closeness = (m) => Math.exp(-((m.x - rec.center.x) ** 2 + (m.y - rec.center.y) ** 2) / (2 * 20 ** 2))
+      const picks = [...match]
+        .map(([m, sim]) => ({ ...rec.mine[m], match: sim }))
+        .filter((m) => !isQuery(m))
+        .map((m) => ({ ...m, score: m.match ** 2 * m.hours ** 0.25 * closeness(m) }))
+        .sort((a, b) => b.score - a.score)
+        .slice(0, 5)
+      display(
+        html`<p>${self ? html`${self.artist} is one of mine (${self.hours} hours). ` : ''}${picks.length
+          ? 'If you like them, try:'
+          : "I don't have anything close enough to suggest."}</p>`
+      )
+      if (picks.length) display(trackCards(picks, (d) => `${Math.round(d.match * 100)}% similar · ${d.genre ?? ''}`))
+    }
+  }
+}
+```
+
+```js
+function setQuery(name) {
+  recommend_input.value = name
+  recommend_input.dispatchEvent(new Event('input', { bubbles: true }))
+}
 ```
 
 # Genre Space
