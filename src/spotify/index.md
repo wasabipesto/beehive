@@ -10,11 +10,13 @@ const clusters = FileAttachment('clusters.json').json()
 const genre_attrs = FileAttachment('genre_map.json').json()
 const top_genres = FileAttachment('top_genres.json').json()
 const monthly_top_genres = FileAttachment('monthly_top_genres.json').json()
+const monthly_artists = FileAttachment('monthly_artists.json').json()
 const instant_favorites = FileAttachment('instant_favorites.json').json()
 const underrated = FileAttachment('underrated.json').json()
 const monthly_summary = FileAttachment('monthly_summary.json').json()
 const monthly_listen_data = FileAttachment('monthly_listen_data.json').json()
 import { trackCards, playButton, quilt, monthTimeline } from './tracks.js'
+import { scrubber } from './scrubber.js'
 ```
 
 <style>
@@ -42,6 +44,9 @@ import { trackCards, playButton, quilt, monthTimeline } from './tracks.js'
   .timeline .cover-tile { width: 48px; height: 48px; }
   .timeline-month { align-self: end; text-align: center; height: auto; }
   .timeline-year { align-self: center; }
+  .scrubber { display: flex; align-items: center; gap: 0.75rem; margin: 0.5rem 0; font: 13px var(--sans-serif); }
+  .scrubber input[type='range'] { width: min(450px, 60vw); vertical-align: middle; }
+  .scrubber .play-button { position: static; background: var(--theme-foreground-faint); }
   .timeline-empty { background: var(--theme-background-alt); border-radius: 3px; opacity: 0.4; }
 </style>
 
@@ -214,49 +219,54 @@ Breaking these out, you can see that I have a large preference for genres with a
 Now how have these genres shifted over time?
 
 ```js
-Plot.plot({
-  title: 'Genre Map',
-  subtitle: 'My top genres circa ' + genre_month,
-  inset: 10,
-  x: { label: 'density/bounciness' },
-  y: { label: 'organic/mechanical' },
-  r: { range: [2, 12] },
-  marks: [
-    Plot.density(genre_attrs, { x: 'x_norm', y: 'y_norm', strokeWidth: 0.25 }),
-    Plot.text(
-      genre_attrs.filter((i) => genres_to_show.includes(i.name)),
-      {
-        x: 'x_norm',
-        y: 'y_norm',
-        text: 'name',
-        textAnchor: 'middle',
-        fontSize: 10,
-        fontWeight: 'lighter'
-      }
-    ),
-    Plot.dot(monthly_top_genres[genre_month]['top_genres'], {
-      x: 'x_norm',
-      y: 'y_norm',
-      r: 'hours_played',
-      sort: { channel: '-r' },
-      fill: 'color',
-      fillOpacity: 0.8,
-      channels: { Genre: 'genre', 'Top Artist': 'top_artist', 'Hours Played': 'hours_played' },
-      tip: { format: { x: null, y: null, r: null, fill: null } }
+const month_name = (m) => new Date(`${m}-15T12:00`).toLocaleDateString('en-US', { month: 'long', year: 'numeric' })
+const taste_month = view(scrubber(monthly_artists.months, { format: (d) => month_name(d.month), delay: 600 }))
+```
+
+```js
+// One size scale for every month, so busy months look busy.
+const max_month_artist_hours = d3.max(monthly_artists.months, (m) => d3.max(m.points, (p) => p[1]))
+```
+
+```js
+{
+  const points = taste_month.points.map(([i, hours]) => ({ ...monthly_artists.artists[i], hours }))
+  const total = d3.sum(points, (d) => d.hours)
+  const center = total ? [{ x: d3.sum(points, (d) => d.x * d.hours) / total, y: d3.sum(points, (d) => d.y * d.hours) / total }] : []
+  display(
+    Plot.plot({
+      title: 'Artist Map',
+      subtitle: `${month_name(taste_month.month)}: ${taste_month.hours} hours, ${points.length} artists. Most played: ${points
+        .slice(0, 3)
+        .map((d) => d.name)
+        .join(', ')}`,
+      inset: 10,
+      width: 900,
+      height: 600,
+      x: { label: 'density/bounciness', domain: [0, 100] },
+      y: { label: 'organic/mechanical', domain: [0, 100] },
+      r: { domain: [0, max_month_artist_hours], range: [0, 24] },
+      marks: [
+        Plot.density(genre_attrs, { x: 'x_norm', y: 'y_norm', strokeWidth: 0.25 }),
+        Plot.text(
+          genre_attrs.filter((i) => genres_to_show.includes(i.name)),
+          { x: 'x_norm', y: 'y_norm', text: 'name', textAnchor: 'middle', fontSize: 10, fontWeight: 'lighter' }
+        ),
+        Plot.dot(points, {
+          x: 'x',
+          y: 'y',
+          r: 'hours',
+          sort: { channel: '-r' },
+          fill: 'color',
+          fillOpacity: 0.75,
+          channels: { Artist: 'name', Genre: 'genre', Hours: 'hours' },
+          tip: { format: { x: null, y: null, r: null, fill: null } }
+        }),
+        Plot.dot(center, { x: 'x', y: 'y', symbol: 'times', r: 6, strokeWidth: 2, stroke: 'currentColor' })
+      ]
     })
-  ]
-})
-```
-
-```js
-const num_months = Object.keys(monthly_top_genres).length
-const month_num = view(
-  Inputs.range([0, num_months - 1], { step: 1, value: 90, width: 450, label: 'Month Index' })
-)
-```
-
-```js
-const genre_month = Object.keys(monthly_top_genres).sort()[month_num]
+  )
+}
 ```
 
 Here, I'll let you scrub through my entire musical history. I've isolated the top genres for every month of my listening and you can show each of them by dragging the slider.
