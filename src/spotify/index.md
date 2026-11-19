@@ -47,6 +47,7 @@ import { scrubber } from './scrubber.js'
   .scrubber { display: flex; align-items: center; gap: 0.75rem; margin: 0.5rem 0; font: 13px var(--sans-serif); }
   .scrubber input[type='range'] { width: min(450px, 60vw); vertical-align: middle; }
   .scrubber .play-button { position: static; background: var(--theme-foreground-faint); }
+  .taste-subtitle > div { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 900px; }
   .timeline-empty { background: var(--theme-background-alt); border-radius: 3px; opacity: 0.4; }
 </style>
 
@@ -226,20 +227,31 @@ const taste_month = view(scrubber(monthly_artists.months, { format: (d) => month
 ```js
 // One size scale for every month, so busy months look busy.
 const max_month_artist_hours = d3.max(monthly_artists.months, (m) => d3.max(m.points, (p) => p[1]))
+// Each month's centre of listening, weighted by hours.
+const month_centers = monthly_artists.months.map((m) => {
+  const total = d3.sum(m.points, (p) => p[1])
+  if (!total) return null
+  const at = (dim) => d3.sum(m.points, ([i, h]) => monthly_artists.artists[i][dim] * h) / total
+  return { x: at('x'), y: at('y') }
+})
 ```
 
 ```js
 {
+  const index = monthly_artists.months.indexOf(taste_month)
   const points = taste_month.points.map(([i, hours]) => ({ ...monthly_artists.artists[i], hours }))
-  const total = d3.sum(points, (d) => d.hours)
-  const center = total ? [{ x: d3.sum(points, (d) => d.x * d.hours) / total, y: d3.sum(points, (d) => d.y * d.hours) / total }] : []
+  const center = month_centers[index]
+  const previous = month_centers.slice(0, index).findLast((c) => c)
+  const trace = center && previous ? [{ x1: previous.x, y1: previous.y, x2: center.x, y2: center.y }] : []
+  // Two fixed lines, so the chart doesn't jump as the text length changes.
+  const subtitle = html`<div class="taste-subtitle">
+    <div>${month_name(taste_month.month)}: ${taste_month.hours} hours, ${points.length} artists</div>
+    <div>Most played: ${points.slice(0, 3).map((d) => d.name).join(', ') || 'nothing'}</div>
+  </div>`
   display(
     Plot.plot({
       title: 'Artist Map',
-      subtitle: `${month_name(taste_month.month)}: ${taste_month.hours} hours, ${points.length} artists. Most played: ${points
-        .slice(0, 3)
-        .map((d) => d.name)
-        .join(', ')}`,
+      subtitle,
       inset: 10,
       width: 900,
       height: 600,
@@ -259,10 +271,13 @@ const max_month_artist_hours = d3.max(monthly_artists.months, (m) => d3.max(m.po
           sort: { channel: '-r' },
           fill: 'color',
           fillOpacity: 0.75,
-          channels: { Artist: 'name', Genre: 'genre', Hours: 'hours' },
+          channels: { Artist: 'name', Genre: 'genre', Hours: (d) => d.hours.toFixed(2) },
           tip: { format: { x: null, y: null, r: null, fill: null } }
         }),
-        Plot.dot(center, { x: 'x', y: 'y', symbol: 'times', r: 6, strokeWidth: 2, stroke: 'currentColor' })
+        // Last month's centre and the step to this month's (stopping short of the ✕).
+        Plot.dot(previous && center ? [previous] : [], { x: 'x', y: 'y', r: 3, stroke: 'currentColor', strokeWidth: 1.5 }),
+        Plot.arrow(trace, { x1: 'x1', y1: 'y1', x2: 'x2', y2: 'y2', stroke: 'currentColor', strokeWidth: 1.5, headLength: 6, insetStart: 3, insetEnd: 8 }),
+        Plot.dot(center ? [center] : [], { x: 'x', y: 'y', symbol: 'times', r: 6, strokeWidth: 2, stroke: 'currentColor' })
       ]
     })
   )
