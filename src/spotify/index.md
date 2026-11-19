@@ -54,12 +54,6 @@ First off, something similar to the standard Spotify presentation. Which bands d
 We'll break these out into bands across a variety of genres, so we get a nice diverse sample.
 
 ```js
-trackCards(clusters.consistent, (d) => `${d.label} · ${d.hours} h`)
-```
-
-And here are the top artists in each of my genre groups (more on those below), shown by the album of theirs I've played most. Hover for names, click to play a preview.
-
-```js
 quilt(clusters.quilt)
 ```
 
@@ -644,12 +638,12 @@ If there is an effect, it is very slight. Excepting post-rock as an outlier, the
 
 ## Discoveries
 
-Every now and then, you come across a song that gets lodged in your head. For each month, this is the new song I played most in the 30 days after first hearing it (at least four plays of 30 seconds or more). Hover for details, click to play a preview.
+Every now and then, you come across a song that gets lodged in your head. To track those, I've compiled a list of the most-played songs each month that were played for the first time that month (with a minimum of four plays). Skimming through the list was a fun trip down memory lane, since several of these were songs I played a lot for a short time but never added to a playlist I listen to now.
 
 ```js
 monthTimeline(
   instant_favorites,
-  (d) => `${d.track} — ${d.artist} (${d.plays_first_30d} plays in the first 30 days, ${d.plays_total} in total)`
+  (d) => `${d.track} by ${d.artist} (${d.plays_first_30d} plays in the first 30 days, ${d.plays_total} in total)`
 )
 ```
 
